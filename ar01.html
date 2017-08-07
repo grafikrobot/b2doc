@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Extra Tools</title>
+<link rel="stylesheet" href="boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Boost.Build User Manual">
+<link rel="up" href="extra-tools.html" title="Appendix&#160;A.&#160;Extra Tools">
+<link rel="prev" href="extra-tools.html" title="Appendix&#160;A.&#160;Extra Tools">
+<link rel="next" href="examples.html" title="Appendix&#160;A.&#160;Examples">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr><td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="./boost.png"></td></tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="extra-tools.html"><img src="images/prev.png" alt="Prev"></a><a accesskey="u" href="extra-tools.html"><img src="images/up.png" alt="Up"></a><a accesskey="h" href="index.html"><img src="images/home.png" alt="Home"></a><a accesskey="n" href="examples.html"><img src="images/next.png" alt="Next"></a>
+</div>
+<div lang="en" class="article">
+<div class="titlepage">
+<div><div><h2 class="title">
+<a name="idm237704402128"></a>Extra Tools</h2></div></div>
+<hr>
+</div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc"><dt><span class="section"><a href="ar01.html#_documentation_tools">Documentation Tools</a></span></dt></dl>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="_documentation_tools"></a>Documentation Tools</h2></div></div></div>
+<div class="toc"><dl class="toc"><dt><span class="section"><a href="ar01.html#_asciidoctor">Asciidoctor</a></span></dt></dl></div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="_asciidoctor"></a>Asciidoctor</h3></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="section"><a href="ar01.html#_feature_literal_asciidoctor_attribute_literal">Feature: <code class="literal">asciidoctor-attribute</code></a></span></dt>
+<dt><span class="section"><a href="ar01.html#_feature_literal_asciidoctor_doctype_literal">Feature: <code class="literal">asciidoctor-doctype</code></a></span></dt>
+<dt><span class="section"><a href="ar01.html#_feature_literal_asciidoctor_backend_literal">Feature: <code class="literal">asciidoctor-backend</code></a></span></dt>
+<dt><span class="section"><a href="ar01.html#_initialization">Initialization</a></span></dt>
+</dl></div>
+<p>The asciidoctor tool converts the ascidoc documentation format to various
+backend formats for either viewing or further processing by documentation
+tools. This tool supports the baseline asciidoctor distribution (i.e. the
+Ruby based tool).</p>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="_feature_literal_asciidoctor_attribute_literal"></a>Feature: <code class="literal">asciidoctor-attribute</code>
+</h4></div></div></div>
+<p>Defines arbitrary asciidoctor attributes. The value of the feature should be
+specified with the CLI syntax for attributes.
+For example to use as a target requirement:</p>
+<pre class="screen">html example : example.adoc :
+    &lt;asciidoctor-attribute&gt;idprefix=ex ;</pre>
+<p>This is a <code class="literal">free</code> feature and is not <code class="literal">propagated</code>. I.e. it applies only to the
+target it&#8217;s specified on.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="_feature_literal_asciidoctor_doctype_literal"></a>Feature: <code class="literal">asciidoctor-doctype</code>
+</h4></div></div></div>
+<p>Specifies the <code class="literal">doctype</code> to use for generating the output format. Allowed
+<code class="literal">doctype</code> values are: <code class="literal">article</code>, <code class="literal">book</code>, <code class="literal">manpage</code>, and <code class="literal">inline</code>.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="_feature_literal_asciidoctor_backend_literal"></a>Feature: <code class="literal">asciidoctor-backend</code>
+</h4></div></div></div>
+<p>Specifies the <code class="literal">backend</code> to use to produce output from the source asciidoc.
+This feature is automatically applied to fit the build target type. For
+example, when specifying an <code class="literal">html</code> target for an <code class="literal">asciidoc</code> source:</p>
+<pre class="screen">html example : example.adoc ;</pre>
+<p>The target will by default acquire the <code class="literal">&lt;asciidoctor-backend&gt;html5</code>
+requirement. The default for each target type are:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<code class="literal">html</code>: <code class="literal">&lt;asciidoctor-backend&gt;html5</code>
+</li>
+<li class="listitem">
+<code class="literal">docbook</code>: <code class="literal">&lt;asciidoctor-backend&gt;docbook45</code>
+</li>
+<li class="listitem">
+<code class="literal">man</code>: <code class="literal">&lt;asciidoctor-backend&gt;manpage</code>
+</li>
+<li class="listitem">
+<code class="literal">pdf</code>: <code class="literal">&lt;asciidoctor-backend&gt;pdf</code>
+</li>
+</ul></div>
+<p>To override the defaults you specify it as a requirement on the target:</p>
+<pre class="screen">docbook example : example.adoc :
+    &lt;asciidoctor-backend&gt;docbook5 ;</pre>
+<p>Allowed <code class="literal">backend</code> values are: <code class="literal">html5</code>, <code class="literal">docbook45</code>, <code class="literal">docbook5</code>, <code class="literal">pdf</code>.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="_initialization"></a>Initialization</h4></div></div></div>
+<p>To use the <code class="literal">asciidoctor</code> tool you need to declare it in a configuration file
+with the <code class="literal">using</code> rule. The initialiation takes the following arguments:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<code class="literal">command</code>: The command, with any extra arguments, to execute.</li></ul></div>
+<p>For example you could insert the following in your <code class="literal">user-config.jam</code>:</p>
+<pre class="screen">using asciidoctor : "/usr/local/bin/asciidoctor" ;</pre>
+<p>If no <code class="literal">command</code> is given it defaults to just <code class="literal">asciidoctor</code> with assumption
+that the <code class="literal">asciidoctor</code> is available in the search <code class="literal">PATH</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
+<td align="left"></td>
+<td align="right"><div class="copyright-footer"></div></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="extra-tools.html"><img src="images/prev.png" alt="Prev"></a><a accesskey="u" href="extra-tools.html"><img src="images/up.png" alt="Up"></a><a accesskey="h" href="index.html"><img src="images/home.png" alt="Home"></a><a accesskey="n" href="examples.html"><img src="images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>
