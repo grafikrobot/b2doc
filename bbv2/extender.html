@@ -87,7 +87,7 @@
         and can be called with specific properties to generate concrete
         targets. At the code level it is represented by an instance of
         class derived from <a class="link" href="reference/class.html#bbv2.reference.class.abstract-target" title="Class abstract-target">abstract-target</a>. 
-        <a href="#ftn.idm237704663920" class="footnote" name="idm237704663920"><sup class="footnote">[4]</sup></a>
+        <a href="#ftn.idm287055277968" class="footnote" name="idm287055277968"><sup class="footnote">[4]</sup></a>
         </p>
 <p>The <a class="link" href="reference/class.html#bbv2.reference.class.abstract-target.generate">generate</a>
         method takes the build properties
@@ -179,7 +179,7 @@ local t = [ new file-target $(name) : CPP : $(project) : $(a) ] ;
         returning targets you should pass them via the <code class="computeroutput">virtual-target.register</code>
         function, besides allowing Boost.Build to track which virtual targets
         got created for each metatarget, this will also replace targets with previously created identical
-        ones, as necessary.<a href="#ftn.idm237804002560" class="footnote" name="idm237804002560"><sup class="footnote">[5]</sup></a>
+        ones, as necessary.<a href="#ftn.idm287055238560" class="footnote" name="idm287055238560"><sup class="footnote">[5]</sup></a>
         Here are a couple of examples:
 </p>
 <pre class="programlisting">
@@ -201,7 +201,7 @@ return [ sequence.transform virtual-target.register : $(targets) ] ;
 <p>In practice, most files have specific types, and most tools
         consume and produce files of specific type. To take advantage of this
         fact, Boost.Build defines concept of target type and
-        <a class="indexterm" name="idm237804046576"></a>
+        <a class="indexterm" name="idm287055232288"></a>
         <em class="firstterm">generators</em>, and has special metatarget class
         <a class="link" href="reference/class.html#bbv2.reference.class.typed-target" title="Class typed-target">typed-target</a>.  Target type is merely an
         identifier. It is associated with a set of file extensions that
@@ -219,9 +219,9 @@ return [ sequence.transform virtual-target.register : $(targets) ] ;
 </div>
 <div class="footnotes">
 <br><hr style="width:100; text-align:left;margin-left: 0">
-<div id="ftn.idm237704663920" class="footnote"><p><a href="#idm237704663920" class="para"><sup class="para">[4] </sup></a>This name is historic, and will be eventuall changed to 
+<div id="ftn.idm287055277968" class="footnote"><p><a href="#idm287055277968" class="para"><sup class="para">[4] </sup></a>This name is historic, and will be eventuall changed to 
         <code class="computeroutput">metatarget</code></p></div>
-<div id="ftn.idm237804002560" class="footnote"><p><a href="#idm237804002560" class="para"><sup class="para">[5] </sup></a>This create-then-register pattern is caused by limitations 
+<div id="ftn.idm287055238560" class="footnote"><p><a href="#idm287055238560" class="para"><sup class="para">[5] </sup></a>This create-then-register pattern is caused by limitations 
         of the Boost.Jam language. Python port is likely to never create duplicate targets.</p></div>
 </div>
 </div>

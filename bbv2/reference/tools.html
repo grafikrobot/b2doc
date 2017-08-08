@@ -20,8 +20,8 @@
 <a name="bbv2.reference.tools"></a>Builtin tools</h2></div></div></div>
 <div class="toc"><dl class="toc">
 <dt><span class="section"><a href="tools.html#bbv2.reference.tools.compilers">C++ Compilers</a></span></dt>
-<dt><span class="section"><a href="tools.html#idm237705919056">Third-party libraries</a></span></dt>
-<dt><span class="section"><a href="tools.html#idm237705860736">Documentation tools</a></span></dt>
+<dt><span class="section"><a href="tools.html#idm287056531824">Third-party libraries</a></span></dt>
+<dt><span class="section"><a href="tools.html#idm287056473552">Documentation tools</a></span></dt>
 </dl></div>
 <p>Boost.Build comes with support for a large number of C++ compilers,
       and other tools. This section documents how to use those tools.</p>
@@ -122,7 +122,7 @@ using gcc : [<span class="optional"><em class="replaceable"><code>version</code>
                 be either <code class="computeroutput">windres</code> for msvc resource compiler,
                 or <code class="computeroutput">rc</code> for borland's resource compiler.</p></dd>
 </dl></div>
-<a class="indexterm" name="idm237706187120"></a>
+<a class="indexterm" name="idm287056799888"></a>
 
           In order to compile 64-bit applications, you have to specify
           <code class="computeroutput">address-model=64</code>, and the <code class="computeroutput">instruction-set</code>
@@ -139,7 +139,7 @@ using gcc : [<span class="optional"><em class="replaceable"><code>version</code>
           to that of the gcc module.
           </p>
 <p>
-          <a class="indexterm" name="idm237706178896"></a>
+          <a class="indexterm" name="idm287056791664"></a>
           The darwin toolset can generate so called "fat"
           binaries&#8212;binaries that can run support more than one
           architecture, or address mode. To build a binary that can run both
@@ -266,7 +266,7 @@ using msvc : [<span class="optional"><em class="replaceable"><code>version</code
 <div class="section">
 <div class="titlepage"><div><div><h5 class="title">
 <a name="v2.reference.tools.compiler.msvc.64"></a>64-bit support</h5></div></div></div>
-<a class="indexterm" name="idm237706121248"></a><p>Starting with version 8.0, Microsoft Visual Studio can
+<a class="indexterm" name="idm287056734048"></a><p>Starting with version 8.0, Microsoft Visual Studio can
             generate binaries for 64-bit processor, both 64-bit flavours of x86
             (codenamed AMD64/EM64T), and Itanium (codenamed IA64). In addition,
             compilers that are itself run in 64-bit mode, for better
@@ -313,7 +313,7 @@ using msvc : [<span class="optional"><em class="replaceable"><code>version</code
 <div class="section">
 <div class="titlepage"><div><div><h5 class="title">
 <a name="v2.reference.tools.compiler.msvc.winrt"></a>Windows Runtime support</h5></div></div></div>
-<a class="indexterm" name="idm237706105168"></a><p>
+<a class="indexterm" name="idm287056717920"></a><p>
             Starting with version 11.0, Microsoft Visual Studio can
             produce binaries for Windows Store and Phone in addition to 
             traditional Win32 desktop. To specify which Windows API set
@@ -642,7 +642,7 @@ using sun : [<span class="optional"><em class="replaceable"><code>version</code>
 <dd><p>Specifies additional command line options that will be
       passed to the linker.</p></dd>
 </dl></div>
-<a class="indexterm" name="idm237705928176"></a>
+<a class="indexterm" name="idm287056540896"></a>
           Starting with Sun Studio 12, you can create 64-bit applications
           by using the <code class="computeroutput">address-model=64</code> property.
 
@@ -667,7 +667,7 @@ using vacpp ;</pre>
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idm237705919056"></a>Third-party libraries</h3></div></div></div>
+<a name="idm287056531824"></a>Third-party libraries</h3></div></div></div>
 <div class="toc"><dl class="toc">
 <dt><span class="section"><a href="tools.html#bbv2.reference.tools.libraries.stlport">STLport library</a></span></dt>
 <dt><span class="section"><a href="tools.html#bbv2.reference.tools.libraries.zlib">zlib</a></span></dt>
@@ -678,7 +678,7 @@ using vacpp ;</pre>
 <div class="section">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="bbv2.reference.tools.libraries.stlport"></a>STLport library</h4></div></div></div>
-<a class="indexterm" name="idm237705916736"></a><p>The <a href="http://stlport.org" target="_top">STLport</a> library
+<a class="indexterm" name="idm287056529552"></a><p>The <a href="http://stlport.org" target="_top">STLport</a> library
           is an alternative implementation of C++ runtime library. Boost.Build
           supports using that library on Windows platform.  Linux is
           hampered by different naming of libraries in each STLport
@@ -707,7 +707,7 @@ using stlport : [<span class="optional"><em class="replaceable"><code>version</c
 <div class="section">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="bbv2.reference.tools.libraries.zlib"></a>zlib</h4></div></div></div>
-<a class="indexterm" name="idm237705906176"></a><p>Provides support for the
+<a class="indexterm" name="idm287056519024"></a><p>Provides support for the
           <a href="http://www.zlib.net" target="_top">zlib</a> library.  zlib
           can be configured either to use precompiled binaries or to
           build the library from source.</p>
@@ -757,7 +757,7 @@ using zlib : 1.2.7 : : &lt;toolset&gt;gcc ;
 <div class="section">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="bbv2.reference.tools.libraries.bzip2"></a>bzip2</h4></div></div></div>
-<a class="indexterm" name="idm237705883040"></a><p>Provides support for the
+<a class="indexterm" name="idm287056495856"></a><p>Provides support for the
           <a href="http://www.bzip.org" target="_top">bzip2</a> library.  bzip2
           can be configured either to use precompiled binaries or to
           build the library from source.</p>
@@ -807,7 +807,7 @@ using bzip2 : 1.0.6 : : &lt;toolset&gt;gcc ;
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idm237705860736"></a>Documentation tools</h3></div></div></div>
+<a name="idm287056473552"></a>Documentation tools</h3></div></div></div>
 <div class="toc"><dl class="toc">
 <dt><span class="section"><a href="tools.html#bbv2.reference.tools.doc.xsltproc">xsltproc</a></span></dt>
 <dt><span class="section"><a href="tools.html#bbv2.reference.tools.doc.boostbook">boostbook</a></span></dt>
@@ -821,7 +821,7 @@ using bzip2 : 1.0.6 : : &lt;toolset&gt;gcc ;
 <div class="section">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="bbv2.reference.tools.doc.xsltproc"></a>xsltproc</h4></div></div></div>
-<a class="indexterm" name="idm237705858736"></a><p>To use xsltproc, you first need to configure it using the following syntax:</p>
+<a class="indexterm" name="idm287056471552"></a><p>To use xsltproc, you first need to configure it using the following syntax:</p>
 <pre class="programlisting">
 using xsltproc : [<span class="optional"><em class="replaceable"><code>xsltproc</code></em></span>] ;
 </pre>
@@ -869,7 +869,7 @@ rule xslt-dir ( target : source stylesheet : properties * : dirname )
 <div class="section">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="bbv2.reference.tools.doc.boostbook"></a>boostbook</h4></div></div></div>
-<a class="indexterm" name="idm237705833680"></a><p>To use boostbook, you first need to configure it using the following syntax:</p>
+<a class="indexterm" name="idm287056446496"></a><p>To use boostbook, you first need to configure it using the following syntax:</p>
 <pre class="programlisting">
 using boostbook : [<span class="optional"><em class="replaceable"><code>docbook-xsl-dir</code></em></span>] : [<span class="optional"><em class="replaceable"><code>docbook-dtd-dir</code></em></span>] : [<span class="optional"><em class="replaceable"><code>boostbook-dir</code></em></span>] ;
 </pre>
@@ -923,7 +923,7 @@ rule boostbook ( target-name : sources * : requirements * : default-build * )
 <div class="section">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="bbv2.reference.tools.doc.doxygen"></a>doxygen</h4></div></div></div>
-<a class="indexterm" name="idm237705799744"></a><p>To use doxygen, you first need to configure it using the following syntax:</p>
+<a class="indexterm" name="idm287056412464"></a><p>To use doxygen, you first need to configure it using the following syntax:</p>
 <pre class="programlisting">
 using doxygen : [<span class="optional"><em class="replaceable"><code>name</code></em></span>] ;
 </pre>
@@ -979,7 +979,7 @@ rule doxygen ( target : sources * : requirements * : default-build * : usage-req
 <div class="section">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="bbv2.reference.tools.doc.quickbook"></a>quickbook</h4></div></div></div>
-<a class="indexterm" name="idm237705774960"></a><p>The quickbook module provides a generator to convert from
+<a class="indexterm" name="idm287056387728"></a><p>The quickbook module provides a generator to convert from
           Quickbook to BoostBook XML.</p>
 <p>To use quickbook, you first need to configure it using the following syntax:</p>
 <pre class="programlisting">
@@ -995,7 +995,7 @@ using quickbook : [<span class="optional"><em class="replaceable"><code>command<
 <div class="section">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="bbv2.reference.tools.doc.fop"></a>fop</h4></div></div></div>
-<a class="indexterm" name="idm237705769792"></a><p>The fop module provides generators to convert from
+<a class="indexterm" name="idm287056382560"></a><p>The fop module provides generators to convert from
           XSL formatting objects to Postscript and PDF.</p>
 <p>To use fop, you first need to configure it using the following syntax:</p>
 <pre class="programlisting">
