@@ -23,7 +23,7 @@
       files.
     </p>
 <h3>
-<a name="idm287057264992"></a>Basic install</h3>
+<a name="idm182936794448"></a>Basic install</h3>
 <p>
       For installing a built target you should use the <code class="computeroutput">install</code>
       rule, which follows the <a class="link" href="../overview/targets.html#bbv2.main-target-rule-syntax">
@@ -62,7 +62,7 @@ install dist2 : hello helpers : &lt;location&gt;$(DIST) ;
       variables</a>
     </p>
 <h3>
-<a name="idm287057254560"></a>Installing with all dependencies</h3>
+<a name="idm182936783296"></a>Installing with all dependencies</h3>
 <p>
       Specifying the names of all libraries to install can be boring. The
       <code class="computeroutput">install</code> allows you to specify only the top-level executable
@@ -86,8 +86,8 @@ install dist : hello
       otherwise, all found target will be installed.
     </p>
 <h3>
-<a name="idm287057249936"></a>Preserving Directory Hierarchy</h3>
-<a class="indexterm" name="idm287057249552"></a><p>
+<a name="idm182936778352"></a>Preserving Directory Hierarchy</h3>
+<a class="indexterm" name="idm182936777968"></a><p>
       By default, the <code class="computeroutput">install</code> rule will strip paths from its
       sources. So, if sources include <code class="filename">a/b/c.hpp</code>, the
       <code class="filename">a/b</code> part will be ignored. To make the
@@ -111,7 +111,7 @@ install headers
       an entire directory tree.
     </p>
 <h3>
-<a name="idm287057242544"></a>Installing into Several Directories</h3>
+<a name="idm182936770592"></a>Installing into Several Directories</h3>
 <p>
       The <a class="link" href="alias.html" title="Alias"><code class="computeroutput">alias</code></a> rule can be
       used when targets need to be installed into several directories:
@@ -125,7 +125,7 @@ install install-lib : helper : /usr/lib ;
     </p>
 <p>
       Because the <code class="computeroutput">install</code> rule just copies targets, most free
-      features <a href="#ftn.idm287057239104" class="footnote" name="idm287057239104"><sup class="footnote">[3]</sup></a> have no
+      features <a href="#ftn.idm182936766896" class="footnote" name="idm182936766896"><sup class="footnote">[3]</sup></a> have no
       effect when used in requirements of the <code class="computeroutput">install</code> rule. The
       only two that matter are <a class="link" href="../overview/builtins/features.html#bbv2.builtin.features.dependency">
       <code class="varname">dependency</code></a> and, on Unix, <a class="link" href="../overview/builtins/features.html#bbv2.reference.features.dll-path"><code class="varname">dll-path</code>
@@ -143,7 +143,7 @@ install install-lib : helper : /usr/lib ;
 </div>
 <div class="footnotes">
 <br><hr style="width:100; text-align:left;margin-left: 0">
-<div id="ftn.idm287057239104" class="footnote"><p><a href="#idm287057239104" class="para"><sup class="para">[3] </sup></a>see the definition of "free" in <a class="xref" href="../reference/definitions.html#bbv2.reference.features.attributes" title="Feature Attributes">the section called &#8220;Feature Attributes&#8221;</a>.</p></div>
+<div id="ftn.idm182936766896" class="footnote"><p><a href="#idm182936766896" class="para"><sup class="para">[3] </sup></a>see the definition of "free" in <a class="xref" href="../reference/definitions.html#bbv2.reference.features.attributes" title="Feature Attributes">the section called &#8220;Feature Attributes&#8221;</a>.</p></div>
 </div>
 </div>
 <table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>

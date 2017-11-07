@@ -19,11 +19,11 @@
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="bbv2.overview.targets"></a>Declaring Targets</h2></div></div></div>
 <div class="toc"><dl class="toc">
-<dt><span class="section"><a href="targets.html#idm287057434320">Name</a></span></dt>
-<dt><span class="section"><a href="targets.html#idm287057429072">Sources</a></span></dt>
+<dt><span class="section"><a href="targets.html#idm182936970176">Name</a></span></dt>
+<dt><span class="section"><a href="targets.html#idm182936964928">Sources</a></span></dt>
 <dt><span class="section"><a href="targets.html#bbv2.overview.targets.requirements">Requirements</a></span></dt>
-<dt><span class="section"><a href="targets.html#idm287057398768">Default Build</a></span></dt>
-<dt><span class="section"><a href="targets.html#idm287057396192">Additional Information</a></span></dt>
+<dt><span class="section"><a href="targets.html#idm182936934016">Default Build</a></span></dt>
+<dt><span class="section"><a href="targets.html#idm182936931328">Additional Information</a></span></dt>
 </dl></div>
 <p><a name="bbv2.overview.targets.main"></a>
         A <em class="firstterm">Main target</em> is a user-defined named
@@ -32,9 +32,9 @@
         target rules described in <a class="xref" href="../reference/rules.html" title="Builtin rules">the section called &#8220;Builtin rules&#8221;</a>.  The user can also declare
         custom main target rules as shown in <a class="xref" href="../extending/rules.html" title="Main target rules">the section called &#8220;Main target rules&#8221;</a>.
       </p>
-<a class="indexterm" name="idm287057449360"></a><p>Most main target rules in Boost.Build have the same common
+<a class="indexterm" name="idm182936985216"></a><p>Most main target rules in Boost.Build have the same common
       signature:</p>
-<a class="indexterm" name="idm287057447904"></a><a name="bbv2.main-target-rule-syntax"></a><pre class="programlisting">
+<a class="indexterm" name="idm182936983760"></a><a name="bbv2.main-target-rule-syntax"></a><pre class="programlisting">
 rule <em class="replaceable"><code>rule-name</code></em> (
      main-target-name :
      sources + :
@@ -82,7 +82,7 @@ rule <em class="replaceable"><code>rule-name</code></em> (
       </p>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idm287057434320"></a>Name</h3></div></div></div>
+<a name="idm182936970176"></a>Name</h3></div></div></div>
 <p>The name of main target has two purposes. First, it's used to refer to this target from
         other targets and from command line. Second, it's used to compute the names of the generated files.
         Typically, filenames are obtained from main target name by appending system-dependent suffixes and
@@ -102,7 +102,7 @@ obj test.debug : test.cpp : &lt;variant&gt;debug ;
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idm287057429072"></a>Sources</h3></div></div></div>
+<a name="idm182936964928"></a>Sources</h3></div></div></div>
 <p>The list of sources specifies what should be processed to
         get the resulting targets. Most of the time, it's just a list of
         files. Sometimes, you'll want to automatically construct the
@@ -149,7 +149,7 @@ exe c : c.cpp /boost/program_options//program_options ;
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="bbv2.overview.targets.requirements"></a>Requirements</h3></div></div></div>
-<a class="indexterm" name="idm287057420464"></a><p>Requirements are the properties that should always be present when
+<a class="indexterm" name="idm182936956320"></a><p>Requirements are the properties that should always be present when
         building a target. Typically, they are includes and defines:
 </p>
 <pre class="programlisting">
@@ -168,7 +168,7 @@ obj main : main.cpp : &lt;optimization&gt;off ;
 <p>
         </p>
 <p><a name="bbv2.overview.targets.requirements.conditional"></a>
-          <a class="indexterm" name="idm287057416464"></a>
+          <a class="indexterm" name="idm182936952320"></a>
           Sometimes, particular relationships need to be maintained
         among a target's build properties. This can be achieved with
         <em class="firstterm">conditional
@@ -200,7 +200,7 @@ lib network : network.cpp
 <p>
         </p>
 <p><a name="bbv2.overview.targets.requirements.indirect"></a>
-          <a class="indexterm" name="idm287057408304"></a>
+          <a class="indexterm" name="idm182936943776"></a>
           A more powerful variant of conditional requirements
           is <em class="firstterm">indirect conditional requirements</em>.
           You can provide a rule that will be called with the current build properties and can compute additional properties
@@ -257,7 +257,7 @@ exe test3 : test3.cpp : -&lt;threading&gt;multi ;
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idm287057398768"></a>Default Build</h3></div></div></div>
+<a name="idm182936934016"></a>Default Build</h3></div></div></div>
 <p>The <code class="varname">default-build</code> parameter
         is a set of properties to be used if the build request does
         not otherwise specify a value for features in the set. For example:
@@ -274,7 +274,7 @@ exe hello : hello.cpp : : &lt;threading&gt;multi ;
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idm287057396192"></a>Additional Information</h3></div></div></div>
+<a name="idm182936931328"></a>Additional Information</h3></div></div></div>
 <p>
           The ways a target is built can be so different that
           describing them using conditional requirements would be

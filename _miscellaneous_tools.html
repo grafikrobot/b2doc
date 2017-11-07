@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Miscellaneous Tools</title>
+<link rel="stylesheet" href="boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="Boost.Build User Manual">
+<link rel="up" href="extra-tools.html" title="Appendix&#160;A.&#160;Extra Tools">
+<link rel="prev" href="extra-tools.html" title="Appendix&#160;A.&#160;Extra Tools">
+<link rel="next" href="examples.html" title="Appendix&#160;B.&#160;Examples">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table cellpadding="2" width="100%"><tr><td valign="top"><img alt="Boost C++ Libraries" width="277" height="86" src="./boost.png"></td></tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="extra-tools.html"><img src="images/prev.png" alt="Prev"></a><a accesskey="u" href="extra-tools.html"><img src="images/up.png" alt="Up"></a><a accesskey="h" href="index.html"><img src="images/home.png" alt="Home"></a><a accesskey="n" href="examples.html"><img src="images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="_miscellaneous_tools"></a>Miscellaneous Tools</h2></div></div></div>
+<div class="toc"><dl class="toc"><dt><span class="section"><a href="_miscellaneous_tools.html#_sass">Sass</a></span></dt></dl></div>
+<div class="section">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="_sass"></a>Sass</h3></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="section"><a href="_miscellaneous_tools.html#_feature_literal_sass_style_literal">Feature: <code class="literal">sass-style</code></a></span></dt>
+<dt><span class="section"><a href="_miscellaneous_tools.html#_feature_literal_sass_line_numbers_literal">Feature: <code class="literal">sass-line-numbers</code></a></span></dt>
+<dt><span class="section"><a href="_miscellaneous_tools.html#_initialization_2">Initialization</a></span></dt>
+</dl></div>
+<p>This tool converts SASS and SCSS files into CSS. This tool explicitly supports
+both the version written in C (sassc) and the original Ruby implementation
+(scss) but other variants might also work.  In addition to tool-specific
+features, described in this section, the tool recognizes features <code class="literal">&lt;flags&gt;</code>
+and <code class="literal">&lt;include&gt;</code>.</p>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="_feature_literal_sass_style_literal"></a>Feature: <code class="literal">sass-style</code>
+</h4></div></div></div>
+<p>Sets the output style. Available values are</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<code class="literal">nested</code>: each property is put on its own line, rules are indented based on
+how deeply they are nested;</li>
+<li class="listitem">
+<code class="literal">expanded</code>: each property is put on its own line, rules are not indented;</li>
+<li class="listitem">
+<code class="literal">compact</code>: each rule is put on a single line, nested rules occupy adjacent
+lines, while groups of unrelated rules are separated by newlines;</li>
+<li class="listitem">
+<code class="literal">compressed</code>: takes minimum amount of space: all unnecessary whitespace is
+removed, property values are compressed to have minimal representation.</li>
+</ul></div>
+<p>The feature is <code class="literal">optional</code> and is not <code class="literal">propagated</code> to dependent targets. If no
+style is specified, then, if property set contains property <code class="literal">&lt;optimization&gt;on</code>,
+<code class="literal">compressed</code> style is selected.  Otherwise, <code class="literal">nested</code> style is selected.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="_feature_literal_sass_line_numbers_literal"></a>Feature: <code class="literal">sass-line-numbers</code>
+</h4></div></div></div>
+<p>Enables emitting comments showing original line numbers for rules. This can be
+useful for debugging a stylesheet. Available values are <code class="literal">on</code> and <code class="literal">off</code>. The
+feature is <code class="literal">optional</code> and is not <code class="literal">propagated</code> to dependent targets. If no value
+for this feature is specified, then one is copied from the feature
+<code class="literal">debug-symbols</code>.</p>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="_initialization_2"></a>Initialization</h4></div></div></div>
+<p>To use the <code class="literal">sass</code> tool you need to declare it in a configuration file with the
+<code class="literal">using</code> rule. The initialization takes the following arguments:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<code class="literal">command</code>: the command, with any extra arguments, to execute.</li></ul></div>
+<p>For example you could insert the following in your <code class="literal">user-config.jam</code>:</p>
+<pre class="screen">using sass : /usr/local/bin/psass -p2 ; # Perl libsass-based version</pre>
+<p>If no <code class="literal">command</code> is given, <code class="literal">sassc</code> is tried, after which <code class="literal">scss</code> is tried.</p>
+</div>
+</div>
+</div>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
+<td align="left"></td>
+<td align="right"><div class="copyright-footer"></div></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="extra-tools.html"><img src="images/prev.png" alt="Prev"></a><a accesskey="u" href="extra-tools.html"><img src="images/up.png" alt="Up"></a><a accesskey="h" href="index.html"><img src="images/home.png" alt="Home"></a><a accesskey="n" href="examples.html"><img src="images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

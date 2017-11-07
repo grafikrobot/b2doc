@@ -20,8 +20,8 @@
 <a name="bbv2.overview.build_process"></a>The Build Process</h2></div></div></div>
 <div class="toc"><dl class="toc">
 <dt><span class="section"><a href="build_process.html#bbv2.overview.build_request">Build Request</a></span></dt>
-<dt><span class="section"><a href="build_process.html#idm287057343392">Building a main target</a></span></dt>
-<dt><span class="section"><a href="build_process.html#idm287057332800">Building a Project</a></span></dt>
+<dt><span class="section"><a href="build_process.html#idm182936877152">Building a main target</a></span></dt>
+<dt><span class="section"><a href="build_process.html#idm182936866128">Building a Project</a></span></dt>
 </dl></div>
 <p>When you've described your targets, you want Boost.Build to run the
       right tools and create the needed targets.
@@ -75,7 +75,7 @@ b2 app1 lib1//lib1 gcc debug optimization=full
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idm287057343392"></a>Building a main target</h3></div></div></div>
+<a name="idm182936877152"></a>Building a main target</h3></div></div></div>
 <p>When you request, directly or indirectly, a build of a main target
         with specific requirements, the following steps are done. Some brief
         explanation is provided, and more details are given in <a class="xref" href="../reference/buildprocess.html" title="Build process">the section called &#8220;Build process&#8221;</a>.
@@ -135,7 +135,7 @@ b2 app1 lib1//lib1 gcc debug optimization=full
 </div>
 <div class="section">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="idm287057332800"></a>Building a Project</h3></div></div></div>
+<a name="idm182936866128"></a>Building a Project</h3></div></div></div>
 <p>Often, a user builds a complete project, not just one main
       target. In fact, invoking <span class="command"><strong>b2</strong></span> without
       arguments
