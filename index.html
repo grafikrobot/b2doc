@@ -426,16 +426,242 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>Boost.Build User Manual</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#bbv2.installation">1. Installation</a></li>
+<li><a href="#bbv2.tutorial">2. Tutorial</a>
+<ul class="sectlevel2">
+<li><a href="#bbv2.tutorial.hello">2.1. Hello, world</a></li>
+<li><a href="#bbv2.tutorial.properties">2.2. Properties</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.tutorial.properties.requirements">2.2.1. Build Requests and Target Requirements</a></li>
+<li><a href="#bbv2.tutorial.properties.project_attributes">2.2.2. Project Attributes</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.tutorial.hierarchy">2.3. Project Hierarchies</a></li>
+<li><a href="#bbv2.tutorial.libs">2.4. Dependent Targets</a></li>
+<li><a href="#bbv2.tutorial.linkage">2.5. Static and shared libraries</a></li>
+<li><a href="#bbv2.tutorial.conditions">2.6. Conditions and alternatives</a></li>
+<li><a href="#bbv2.tutorial.prebuilt">2.7. Prebuilt targets</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.overview">3. Overview</a>
+<ul class="sectlevel2">
+<li><a href="#bbv2.overview.concepts">3.1. Concepts</a></li>
+<li><a href="#bbv2.overview.jam_language">3.2. Boost.Jam Language</a></li>
+<li><a href="#bbv2.overview.configuration">3.3. Configuration</a></li>
+<li><a href="#bbv2.overview.invocation">3.4. Invocation</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.overview.invocation.examples">3.4.1. Examples</a></li>
+<li><a href="#bbv2.overview.invocation.options">3.4.2. Options</a></li>
+<li><a href="#bbv2.overview.invocation.properties">3.4.3. Properties</a></li>
+<li><a href="#bbv2.overview.invocation.targets">3.4.4. Targets</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.overview.targets">3.5. Declaring Targets</a>
+<ul class="sectlevel3">
+<li><a href="#_name">3.5.1. Name</a></li>
+<li><a href="#_sources">3.5.2. Sources</a></li>
+<li><a href="#bbv2.overview.targets.requirements">3.5.3. Requirements</a></li>
+<li><a href="#_default_build">3.5.4. Default Build</a></li>
+<li><a href="#_additional_information">3.5.5. Additional Information</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.overview.projects">3.6. Projects</a></li>
+<li><a href="#bbv2.overview.build_process">3.7. The Build Process</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.overview.build_request">3.7.1. Build Request</a></li>
+<li><a href="#_building_a_main_target">3.7.2. Building a main target</a></li>
+<li><a href="#_building_a_project">3.7.3. Building a Project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#bbv2.tasks">4. Common tasks</a>
+<ul class="sectlevel2">
+<li><a href="#bbv2.tasks.programs">4.1. Programs</a></li>
+<li><a href="#bbv2.tasks.libraries">4.2. Libraries</a></li>
+<li><a href="#bbv2.tasks.alias">4.3. Alias</a></li>
+<li><a href="#bbv2.tasks.installing">4.4. Installing</a>
+<ul class="sectlevel3">
+<li><a href="#_basic_install">4.4.1. Basic install</a></li>
+<li><a href="#_installing_with_all_dependencies">4.4.2. Installing with all dependencies</a></li>
+<li><a href="#_preserving_directory_hierarchy">4.4.3. Preserving Directory Hierarchy</a></li>
+<li><a href="#_installing_into_several_directories">4.4.4. Installing into Several Directories</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.builtins.testing">4.5. Testing</a></li>
+<li><a href="#bbv2.builtins.raw">4.6. Custom commands</a></li>
+<li><a href="#bbv2.reference.precompiled_headers">4.7. Precompiled Headers</a></li>
+<li><a href="#bbv2.reference.generated_headers">4.8. Generated headers</a></li>
+<li><a href="#bbv2.tasks.crosscompile">4.9. Cross-compilation</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.reference">5. Reference</a>
+<ul class="sectlevel2">
+<li><a href="#bbv2.reference.general">5.1. General information</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.reference.init">5.1.1. Initialization</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.reference.rules">5.2. Builtin rules</a></li>
+<li><a href="#bbv2.overview.builtins.features">5.3. Builtin features</a></li>
+<li><a href="#bbv2.reference.tools">5.4. Builtin tools</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.reference.tools.compilers">5.4.1. C++ Compilers</a></li>
+<li><a href="#_third_party_libraries">5.4.2. Third-party libraries</a></li>
+<li><a href="#_documentation_tools">5.4.3. Documentation tools</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.reference.modules">5.5. Builtin modules</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.reference.modules.modules">5.5.1. modules</a></li>
+<li><a href="#bbv2.reference.modules.path">5.5.2. path</a></li>
+<li><a href="#bbv2.reference.modules.regex">5.5.3. regex</a></li>
+<li><a href="#bbv2.reference.modules.sequence">5.5.4. sequence</a></li>
+<li><a href="#bbv2.reference.modules.type">5.5.5. type</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.reference.class">5.6. Builtin classes</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.reference.class.abstract-target">5.6.1. Class abstract-target</a></li>
+<li><a href="#bbv2.reference.class.project-target">5.6.2. Class project-target</a></li>
+<li><a href="#bbv2.reference.class.main-target">5.6.3. Class main-target</a></li>
+<li><a href="#bbv2.reference.class.basic-target">5.6.4. Class basic-target</a></li>
+<li><a href="#bbv2.reference.class.typed-target">5.6.5. Class typed-target</a></li>
+<li><a href="#bbv2.reference.class.property-set">5.6.6. Class property-set</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.reference.buildprocess">5.7. Build process</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.reference.buildprocess.alternatives">5.7.1. Alternative selection</a></li>
+<li><a href="#bbv2.reference.buildprocess.common">5.7.2. Determining common properties</a></li>
+<li><a href="#bbv2.reference.buildprocess.targetpath">5.7.3. Target Paths</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.reference.definitions">5.8. Definitions</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.reference.features">5.8.1. Features and properties</a></li>
+<li><a href="#bbv2.reference.features.validity">5.8.2. Property Validity</a></li>
+<li><a href="#bbv2.reference.features.attributes">5.8.3. Feature Attributes</a></li>
+<li><a href="#bbv2.reference.features.declaration">5.8.4. Feature Declaration</a></li>
+<li><a href="#bbv2.reference.variants.proprefine">5.8.5. Property refinement</a></li>
+<li><a href="#bbv2.reference.variants.propcond">5.8.6. Conditional properties</a></li>
+<li><a href="#bbv2.reference.ids">5.8.7. Target identifiers and references</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#bbv2.util">6. Utilities</a>
+<ul class="sectlevel2">
+<li><a href="#bbv2.util.debugger">6.1. Debugger</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.util.debugger.overview">6.1.1. Overview</a></li>
+<li><a href="#bbv2.util.debugger.running">6.1.2. Running the Program</a></li>
+<li><a href="#bbv2.util.debugger.break">6.1.3. Breakpoints</a></li>
+<li><a href="#bbv2.util.debugger.stack">6.1.4. Examining the Stack</a></li>
+<li><a href="#bbv2.util.debugger.misc">6.1.5. Miscellaneous Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#bbv2.extender">7. Extender Manual</a>
+<ul class="sectlevel2">
+<li><a href="#bbv2.extender.intro">7.1. Introduction</a>
+<ul class="sectlevel3">
+<li><a href="#bbv2.extender.overview.metatargets">7.1.1. Metatargets</a></li>
+<li><a href="#bbv2.extender.overview.targets">7.1.2. Concrete targets</a></li>
+<li><a href="#bbv2.extender.overview.generators">7.1.3. Generators</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.extender.example">7.2. Example: 1-to-1 generator</a></li>
+<li><a href="#bbv2.extending.targets">7.3. Target types</a></li>
+<li><a href="#bbv2.extending.scanners">7.4. Scanners</a></li>
+<li><a href="#bbv2.extending.tools">7.5. Tools and generators</a></li>
+<li><a href="#bbv2.extending.features">7.6. Features</a></li>
+<li><a href="#bbv2.extending.rules">7.7. Main target rules</a></li>
+<li><a href="#bbv2.extending.toolset_modules">7.8. Toolset modules</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.faq">8. Frequently Asked Questions</a>
+<ul class="sectlevel2">
+<li><a href="#bbv2.faq.featurevalue">8.1. How do I get the current value of feature in Jamfile?</a></li>
+<li><a href="#bbv2.faq.duplicate">8.2. I am getting a "Duplicate name of actual target" error. What does that mean?</a></li>
+<li><a href="#bbv2.faq.envar">8.3. Accessing environment variables</a></li>
+<li><a href="#bbv2.faq.proporder">8.4. How to control properties order?</a></li>
+<li><a href="#bbv2.faq.liborder">8.5. How to control the library linking order on Unix?</a></li>
+<li><a href="#bbv2.faq.external">8.6. Can I get capture external program output using a Boost.Jam variable?</a></li>
+<li><a href="#bbv2.faq.projectroot">8.7. How to get the project root (a.k.a. Jamroot) location?</a></li>
+<li><a href="#bbv2.faq.flags">8.8. How to change compilation flags for one file?</a></li>
+<li><a href="#bbv2.faq.dll-path">8.9. Why are the <code>dll-path</code> and <code>hardcode-dll-paths</code> properties useful?</a></li>
+<li><a href="#bbv2.recipies.site-config">8.10. Targets in site-config.jam</a></li>
+<li><a href="#bbv2.faq.header-only-libraries">8.11. Header-only libraries</a></li>
+<li><a href="#bbv2.faq.names">8.12. What is the difference between Boost.Build, <code>b2</code>, <code>bjam</code> and Perforce Jam?</a></li>
+</ul>
+</li>
+<li><a href="#_extra_tools">9. Extra Tools</a>
+<ul class="sectlevel2">
+<li><a href="#_documentation_tools_2">9.1. Documentation Tools</a>
+<ul class="sectlevel3">
+<li><a href="#_asciidoctor">9.1.1. Asciidoctor</a></li>
+</ul>
+</li>
+<li><a href="#_miscellaneous_tools">9.2. Miscellaneous Tools</a>
+<ul class="sectlevel3">
+<li><a href="#_sass">9.2.1. Sass</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_examples">10. Examples</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction">10.1. Introduction</a></li>
+</ul>
+</li>
+<li><a href="#bbv2.jam">11. Boost.Jam Documentation</a>
+<ul class="sectlevel2">
+<li><a href="#jam.building">11.1. Building B2</a></li>
+<li><a href="#jam.language">11.2. Language</a>
+<ul class="sectlevel3">
+<li><a href="#jam.language.lexical">11.2.1. Lexical Features</a></li>
+<li><a href="#jam.language.target">11.2.2. Targets</a></li>
+<li><a href="#jam.language.rules">11.2.3. Rules</a></li>
+<li><a href="#jam.language.rules.builtins">11.2.4. Built-in Rules</a></li>
+<li><a href="#jam.language.flow_of_control">11.2.5. Flow-of-Control</a></li>
+<li><a href="#jam.language.variables">11.2.6. Variables</a></li>
+<li><a href="#jam.language.modules">11.2.7. Modules</a></li>
+</ul>
+</li>
+<li><a href="#jam.miscellaneous">11.3. Miscellaneous</a>
+<ul class="sectlevel3">
+<li><a href="#jam.miscellaneous.diagnostics">11.3.1. Diagnostics</a></li>
+<li><a href="#jam.miscellaneous.bugs__limitations">11.3.2. Bugs, Limitations</a></li>
+<li><a href="#jam.miscellaneous.fundamentals">11.3.3. Fundamentals</a></li>
+</ul>
+</li>
+<li><a href="#jam.history">11.4. History</a>
+<ul class="sectlevel3">
+<li><a href="#_3_1_18">11.4.1. 3.1.18</a></li>
+<li><a href="#_3_1_17">11.4.2. 3.1.17</a></li>
+<li><a href="#_3_1_16">11.4.3. 3.1.16</a></li>
+<li><a href="#_3_1_15">11.4.4. 3.1.15</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Want to learn about Boost.Build features? Start with the
-<a href="#bbv2.tutorial">totorial</a> and continue with the <a href="#bbv2.overview">overview</a>.
+<a href="#bbv2.tutorial">tutorial</a> and continue with the <a href="#bbv2.overview">overview</a>.
 When you&#8217;re ready to try Boost.Build in practice, go to the
 <a href="#bbv2.installation">installation</a>.</p>
 </div>
@@ -464,111 +690,7 @@ under the Boost Software License, Version 1.0. (See accompanying file
 </div>
 </div>
 </div>
-<div id="toc" class="toc">
-<div id="toctitle" class="title">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#bbv2.installation">1. Installation</a></li>
-<li><a href="#bbv2.tutorial">2. Tutorial</a>
-<ul class="sectlevel2">
-<li><a href="#bbv2.tutorial.hello">2.1. Hello, world</a></li>
-<li><a href="#bbv2.tutorial.properties">2.2. Properties</a></li>
-<li><a href="#bbv2.tutorial.hierarchy">2.3. Project Hierarchies</a></li>
-<li><a href="#bbv2.tutorial.libs">2.4. Dependent Targets</a></li>
-<li><a href="#bbv2.tutorial.linkage">2.5. Static and shared libraries</a></li>
-<li><a href="#bbv2.tutorial.conditions">2.6. Conditions and alternatives</a></li>
-<li><a href="#bbv2.tutorial.prebuilt">2.7. Prebuilt targets</a></li>
-</ul>
-</li>
-<li><a href="#bbv2.overview">3. Overview</a>
-<ul class="sectlevel2">
-<li><a href="#bbv2.overview.concepts">3.1. Concepts</a></li>
-<li><a href="#bbv2.overview.jam_language">3.2. Boost.Jam Language</a></li>
-<li><a href="#bbv2.overview.configuration">3.3. Configuration</a></li>
-<li><a href="#bbv2.overview.invocation">3.4. Invocation</a></li>
-<li><a href="#bbv2.overview.targets">3.5. Declaring Targets</a></li>
-<li><a href="#bbv2.overview.projects">3.6. Projects</a></li>
-<li><a href="#bbv2.overview.build_process">3.7. The Build Process</a></li>
-</ul>
-</li>
-<li><a href="#bbv2.tasks">4. Common tasks</a>
-<ul class="sectlevel2">
-<li><a href="#bbv2.tasks.programs">4.1. Programs</a></li>
-<li><a href="#bbv2.tasks.libraries">4.2. Libraries</a></li>
-<li><a href="#bbv2.tasks.alias">4.3. Alias</a></li>
-<li><a href="#bbv2.tasks.installing">4.4. Installing</a></li>
-<li><a href="#bbv2.builtins.testing">4.5. Testing</a></li>
-<li><a href="#bbv2.builtins.raw">4.6. Custom commands</a></li>
-<li><a href="#bbv2.reference.precompiled_headers">4.7. Precompiled Headers</a></li>
-<li><a href="#bbv2.reference.generated_headers">4.8. Generated headers</a></li>
-<li><a href="#bbv2.tasks.crosscompile">4.9. Cross-compilation</a></li>
-</ul>
-</li>
-<li><a href="#bbv2.reference">5. Reference</a>
-<ul class="sectlevel2">
-<li><a href="#bbv2.reference.general">5.1. General information</a></li>
-<li><a href="#bbv2.reference.rules">5.2. Builtin rules</a></li>
-<li><a href="#bbv2.overview.builtins.features">5.3. Builtin features</a></li>
-<li><a href="#bbv2.reference.tools">5.4. Builtin tools</a></li>
-<li><a href="#bbv2.reference.modules">5.5. Builtin modules</a></li>
-<li><a href="#bbv2.reference.class">5.6. Builtin classes</a></li>
-<li><a href="#bbv2.reference.buildprocess">5.7. Build process</a></li>
-<li><a href="#bbv2.reference.definitions">5.8. Definitions</a></li>
-</ul>
-</li>
-<li><a href="#bbv2.util">6. Utilities</a>
-<ul class="sectlevel2">
-<li><a href="#bbv2.util.debugger">6.1. Debugger</a></li>
-</ul>
-</li>
-<li><a href="#bbv2.extender">7. Extender Manual</a>
-<ul class="sectlevel2">
-<li><a href="#bbv2.extender.intro">7.1. Introduction</a></li>
-<li><a href="#bbv2.extender.example">7.2. Example: 1-to-1 generator</a></li>
-<li><a href="#bbv2.extending.targets">7.3. Target types</a></li>
-<li><a href="#bbv2.extending.scanners">7.4. Scanners</a></li>
-<li><a href="#bbv2.extending.tools">7.5. Tools and generators</a></li>
-<li><a href="#bbv2.extending.features">7.6. Features</a></li>
-<li><a href="#bbv2.extending.rules">7.7. Main target rules</a></li>
-<li><a href="#bbv2.extending.toolset_modules">7.8. Toolset modules</a></li>
-</ul>
-</li>
-<li><a href="#bbv2.faq">8. Frequently Asked Questions</a>
-<ul class="sectlevel2">
-<li><a href="#bbv2.faq.featurevalue">8.1. How do I get the current value of feature in Jamfile?</a></li>
-<li><a href="#bbv2.faq.duplicate">8.2. I am getting a "Duplicate name of actual target" error. What does that mean?</a></li>
-<li><a href="#bbv2.faq.envar">8.3. Accessing environment variables</a></li>
-<li><a href="#bbv2.faq.proporder">8.4. How to control properties order?</a></li>
-<li><a href="#bbv2.faq.liborder">8.5. How to control the library linking order on Unix?</a></li>
-<li><a href="#bbv2.faq.external">8.6. Can I get capture external program output using a Boost.Jam variable?</a></li>
-<li><a href="#bbv2.faq.projectroot">8.7. How to get the project root (a.k.a. Jamroot) location?</a></li>
-<li><a href="#bbv2.faq.flags">8.8. How to change compilation flags for one file?</a></li>
-<li><a href="#bbv2.faq.dll-path">8.9. Why are the <code>dll-path</code> and <code>hardcode-dll-paths</code> properties useful?</a></li>
-<li><a href="#bbv2.recipies.site-config">8.10. Targets in site-config.jam</a></li>
-<li><a href="#bbv2.faq.header-only-libraries">8.11. Header-only libraries</a></li>
-<li><a href="#bbv2.faq.names">8.12. What is the difference between Boost.Build, <code>b2</code>, <code>bjam</code> and Perforce Jam?</a></li>
-</ul>
-</li>
-<li><a href="#_extra_tools">9. Extra Tools</a>
-<ul class="sectlevel2">
-<li><a href="#_documentation_tools_2">9.1. Documentation Tools</a></li>
-<li><a href="#_miscellaneous_tools">9.2. Miscellaneous Tools</a></li>
-</ul>
-</li>
-<li><a href="#_examples">10. Examples</a>
-<ul class="sectlevel2">
-<li><a href="#_introduction">10.1. Introduction</a></li>
-</ul>
-</li>
-<li><a href="#bbv2.jam">11. Boost.Jam Documentation</a>
-<ul class="sectlevel2">
-<li><a href="#jam.building">11.1. Building B2</a></li>
-<li><a href="#jam.language">11.2. Language</a></li>
-<li><a href="#jam.miscellaneous">11.3. Miscellaneous</a></li>
-<li><a href="#jam.history">11.4. History</a></li>
-</ul>
-</li>
-</ul>
-</div>
+<!-- toc disabled -->
 </div>
 </div>
 <div class="sect1">
@@ -12676,7 +12798,7 @@ and WEXITSTATUS.&#8201;&#8212;&#8201;<em>Markus S.</em></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-01-13 11:07:03 CST
+Last updated 2018-01-14 20:10:28 CST
 </div>
 </div>
 </body>
