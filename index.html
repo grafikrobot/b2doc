@@ -646,10 +646,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#jam.history">11.4. History</a>
 <ul class="sectlevel3">
-<li><a href="#_3_1_18">11.4.1. 3.1.18</a></li>
-<li><a href="#_3_1_17">11.4.2. 3.1.17</a></li>
-<li><a href="#_3_1_16">11.4.3. 3.1.16</a></li>
-<li><a href="#_3_1_15">11.4.4. 3.1.15</a></li>
+<li><a href="#_version_3_1_18">11.4.1. Version 3.1.18</a></li>
+<li><a href="#_version_3_1_17">11.4.2. Version 3.1.17</a></li>
+<li><a href="#_version_3_1_16">11.4.3. Version 3.1.16</a></li>
+<li><a href="#_version_3_1_15">11.4.4. Version 3.1.15</a></li>
 </ul>
 </li>
 </ul>
@@ -714,9 +714,9 @@ other operating systems).</p>
 </li>
 <li>
 <p>Run</p>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>./b2 install --prefix=PREFIX</pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ ./b2 install --prefix=PREFIX</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -738,9 +738,9 @@ in the <code>tools/build</code> directory.</p>
 Copy <code>PREFIX/share/boost-build/examples/hello</code> to a different directory,
 then change to that directory and run:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>PREFIX/bin/b2</pre>
+<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ PREFIX/bin/b2</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -765,7 +765,7 @@ use libraries, and finish with testing and installing features.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">exe hello : hello.cpp ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello : hello.cpp ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -787,7 +787,7 @@ the example by adding another line to our project&#8217;s <code>Jamroot</code>:<
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">exe hello2 : hello.cpp ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello2 : hello.cpp ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -893,7 +893,7 @@ requirements might be specified.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">exe hello
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello
     : hello.cpp
     : &lt;include&gt;boost &lt;threading&gt;multi
     ;</code></pre>
@@ -932,7 +932,7 @@ including requirements:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">project
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project
     : requirements &lt;include&gt;/home/ghost/Work/boost &lt;threading&gt;multi
     ;
 
@@ -1002,7 +1002,7 @@ specified by the subproject. For example, if <code>top/Jamroot</code> has</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">&lt;include&gt;/home/ghost/local</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">&lt;include&gt;/home/ghost/local</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1020,7 +1020,7 @@ the parent project&#8217;s Jamfile explicitly requests it. In our example,
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">build-project app ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">build-project app ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1043,7 +1043,7 @@ example and see how <code>top/app/Jamfile</code> can use libraries from
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">lib bar : bar.cpp ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib bar : bar.cpp ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1051,7 +1051,7 @@ example and see how <code>top/app/Jamfile</code> can use libraries from
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">exe app : app.cpp ../util/foo//bar ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe app : app.cpp ../util/foo//bar ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1099,7 +1099,7 @@ programs that use `foo</code>. A better solution is to modify
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">project
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project
     : usage-requirements &lt;include&gt;.
     ;
 
@@ -1122,7 +1122,7 @@ layout. First, we need to assign a project id by adding this code to
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">use-project /library-example/foo : util/foo ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">use-project /library-example/foo : util/foo ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1130,7 +1130,7 @@ layout. First, we need to assign a project id by adding this code to
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">exe app : app.cpp /library-example/foo//bar ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe app : app.cpp /library-example/foo//bar ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1157,7 +1157,7 @@ requirements, like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">project
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project
    : requirements &lt;library&gt;/boost/filesystem//fs
    ;</code></pre>
 </div>
@@ -1191,7 +1191,7 @@ build either on the command line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">lib l : l.cpp : &lt;link&gt;static ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib l : l.cpp : &lt;link&gt;static ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1203,7 +1203,7 @@ reference</a> to the library as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">exe important : main.cpp helpers/&lt;link&gt;static ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe important : main.cpp helpers/&lt;link&gt;static ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1219,7 +1219,7 @@ references everywhere:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">exe e1 : e1.cpp /other_project//bar/&lt;link&gt;static ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe e1 : e1.cpp /other_project//bar/&lt;link&gt;static ;
 exe e10 : e10.cpp /other_project//bar/&lt;link&gt;static ;</code></pre>
 </div>
 </div>
@@ -1230,7 +1230,7 @@ static (or dynamic) version of <code>foo</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">alias foo : /other_project//bar/&lt;link&gt;static ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">alias foo : /other_project//bar/&lt;link&gt;static ;
 exe e1 : e1.cpp foo ;
 exe e10 : e10.cpp foo ;</code></pre>
 </div>
@@ -1252,7 +1252,7 @@ list of the first. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">lib utils : utils.cpp /boost/filesystem//fs ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib utils : utils.cpp /boost/filesystem//fs ;
 lib core : core.cpp utils ;
 exe app : app.cpp core ;</code></pre>
 </div>
@@ -1298,7 +1298,7 @@ requirements</em>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">lib network : network.cpp
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib network : network.cpp
     : &lt;link&gt;shared:&lt;define&gt;NETWORK_LIB_SHARED
       &lt;variant&gt;release:&lt;define&gt;EXTRA_FAST
     ;</code></pre>
@@ -1319,7 +1319,7 @@ toolset used to build it. We can express this situation using target
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">lib demangler : dummy_demangler.cpp ;                <i class="conum" data-value="1"></i><b>(1)</b>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib demangler : dummy_demangler.cpp ;                <i class="conum" data-value="1"></i><b>(1)</b>
 lib demangler : demangler_gcc.cpp : &lt;toolset&gt;gcc ;   <i class="conum" data-value="2"></i><b>(2)</b>
 lib demangler : demangler_msvc.cpp : &lt;toolset&gt;msvc ; <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </div>
@@ -1343,7 +1343,7 @@ a single conceptual target. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam"># util/lib2/Jamfile
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam"># util/lib2/Jamfile
 lib lib2
     :
     : &lt;file&gt;lib2_release.a &lt;variant&gt;release
@@ -1366,7 +1366,7 @@ other target:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">exe app : app.cpp ../util/lib2//lib2 ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe app : app.cpp ../util/lib2//lib2 ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1382,7 +1382,7 @@ almost like regular ones:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">lib pythonlib : : &lt;name&gt;python22 ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib pythonlib : : &lt;name&gt;python22 ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1396,7 +1396,7 @@ command line (other compilers may use different options).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">lib pythonlib : : &lt;name&gt;python22 &lt;search&gt;/opt/lib ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib pythonlib : : &lt;name&gt;python22 &lt;search&gt;/opt/lib ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1404,7 +1404,7 @@ command line (other compilers may use different options).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">lib pythonlib : : &lt;name&gt;python22 &lt;variant&gt;release ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib pythonlib : : &lt;name&gt;python22 &lt;variant&gt;release ;
 lib pythonlib : : &lt;name&gt;python22_d &lt;variant&gt;debug ;</code></pre>
 </div>
 </div>
@@ -6128,7 +6128,7 @@ this, use <code>modules.binding</code>.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">me = [ modules.binding $(__name__) ] ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">me = [ modules.binding $(__name__) ] ;</code></pre>
 </div>
 </div>
 </li>
@@ -6142,7 +6142,7 @@ this, use <code>modules.binding</code>.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">modules.poke : ZLIB_INCLUDE : /usr/local/include ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">modules.poke : ZLIB_INCLUDE : /usr/local/include ;</code></pre>
 </div>
 </div>
 </li>
@@ -6156,7 +6156,7 @@ this, use <code>modules.binding</code>.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">local ZLIB_INCLUDE = [ modules.peek : ZLIB_INCLUDE ] ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local ZLIB_INCLUDE = [ modules.peek : ZLIB_INCLUDE ] ;</code></pre>
 </div>
 </div>
 </li>
@@ -6185,7 +6185,7 @@ rules called this way may accept at most 8 parameters.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">rule filter ( f : values * )
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule filter ( f : values * )
 {
     local m = [ CALLER_MODULE ] ;
     local result ;
@@ -6252,7 +6252,7 @@ The <code>import</code> rule is available without qualification in all modules.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">import path ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import path ;
 import path : * ;
 import path : join ;
 import path : native make : native-path make-path ;</code></pre>
@@ -6382,7 +6382,7 @@ example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">[ glob . : *.cpp ]
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">[ glob . : *.cpp ]
 [ glob . : */build/Jamfile ]</code></pre>
 </div>
 </div>
@@ -6816,7 +6816,7 @@ tries each suffix. E.g. for name of "file.so.1.2" suffixes "2", "1", and
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">class abstract-target {
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class abstract-target {
     rule __init__ ( name : project )
     rule name ( )
     rule project ( )
@@ -6923,7 +6923,7 @@ in a way specific to the derived class.</p>
 <h4 id="bbv2.reference.class.project-target"><a class="anchor" href="#bbv2.reference.class.project-target"></a>5.6.2. Class project-target</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">class project-target : abstract-target {
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class project-target : abstract-target {
     rule generate ( property-set )
     rule build-dir ( )
     rule main-target ( name )
@@ -7013,7 +7013,7 @@ not found depending on the <code>no-error</code> parameter.</p>
 <h4 id="bbv2.reference.class.main-target"><a class="anchor" href="#bbv2.reference.class.main-target"></a>5.6.3. Class main-target</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">class main-target : abstract-target {
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class main-target : abstract-target {
     rule generate ( property-set )
 
     # Methods inherited from abstract-target
@@ -7066,7 +7066,7 @@ alternative.</p>
 <h4 id="bbv2.reference.class.basic-target"><a class="anchor" href="#bbv2.reference.class.basic-target"></a>5.6.4. Class basic-target</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">class basic-target : abstract-target {
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class basic-target : abstract-target {
     rule __init__ ( name : project : sources * : requirements * : default-build * : usage-requirements * )
     rule generate ( property-set )
     rule construct ( name : source-targets * : property-set )
@@ -7144,7 +7144,7 @@ overriden in derived classes.</p>
 <h4 id="bbv2.reference.class.typed-target"><a class="anchor" href="#bbv2.reference.class.typed-target"></a>5.6.5. Class typed-target</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">class typed-target : basic-target {
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class typed-target : basic-target {
     rule __init__ ( name : project : type : sources * : requirements * : default-build * : usage-requirements * )
     rule type ( )
     rule construct ( name : source-targets * : property-set )
@@ -7233,7 +7233,7 @@ and should not be called directly by users.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">class property-set {
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class property-set {
     rule raw ( )
     rule str ( )
     rule propagated ( )
@@ -8142,8 +8142,8 @@ build properties that should be used for the action.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>local a = [ new action $(source) : common.copy : $(property-set) ] ;
-local t = [ new file-target $(name) : CPP : $(project) : $(a) ] ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local a = [ new action $(source) : common.copy : $(property-set) ] ;
+local t = [ new file-target $(name) : CPP : $(project) : $(a) ] ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8167,8 +8167,8 @@ necessary.<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>return [ virtual-target.register $(t) ] ;
-return [ sequence.transform virtual-target.register : $(targets) ] ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">return [ virtual-target.register $(t) ] ;
+return [ sequence.transform virtual-target.register : $(targets) ] ;</code></pre>
 </div>
 </div>
 </div>
@@ -8242,8 +8242,8 @@ register a new target type. The following code does it:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>import type ;
-type.register VERBATIM : verbatim ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import type ;
+type.register VERBATIM : verbatim ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8263,8 +8263,8 @@ Our generator will be called <code>verbatim.inline-file</code>; it transforms
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>import generators ;
-generators.register-standard verbatim.inline-file : VERBATIM : CPP ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import generators ;
+generators.register-standard verbatim.inline-file : VERBATIM : CPP ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8273,10 +8273,10 @@ make that transformation. That&#8217;s done with an <code>actions</code> declara
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>actions inline-file
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">actions inline-file
 {
     "./inline-file.py" $(&lt;) $(&gt;)
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8286,7 +8286,7 @@ possible to write the following in your Jamfile:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe codegen : codegen.cpp class_template.verbatim usage.verbatim ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe codegen : codegen.cpp class_template.verbatim usage.verbatim ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8307,8 +8307,8 @@ was declaring a new target type:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>import type ;
-type.register VERBATIM : verbatim ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import type ;
+type.register VERBATIM : verbatim ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8332,7 +8332,7 @@ compiler uses extension <code>elf</code> for executable files. You can use the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>type.set-generated-target-suffix EXE : &lt;toolset&gt;elf : elf ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">type.set-generated-target-suffix EXE : &lt;toolset&gt;elf : elf ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8340,7 +8340,7 @@ compiler uses extension <code>elf</code> for executable files. You can use the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>type.register PLUGIN : : SHARED_LIB ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">type.register PLUGIN : : SHARED_LIB ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8374,13 +8374,13 @@ be assigned to a target type.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>class verbatim-scanner : common-scanner
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class verbatim-scanner : common-scanner
 {
     rule pattern ( )
     {
         return "//###include[ ]*\"([^\"]*)\"" ;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8398,7 +8398,7 @@ group to be matched.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>scanner.register verbatim-scanner : include ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">scanner.register verbatim-scanner : include ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8411,7 +8411,7 @@ the included files.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>type.set-scanner VERBATIM : verbatim-scanner ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">type.set-scanner VERBATIM : verbatim-scanner ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8444,12 +8444,12 @@ Let&#8217;s review the example we&#8217;ve seen in the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>import generators ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import generators ;
 generators.register-standard verbatim.inline-file : VERBATIM : CPP ;
 actions inline-file
 {
     "./inline-file.py" $(&lt;) $(&gt;)
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8470,8 +8470,8 @@ are registered with the <code>generators.register-standard</code> and the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>generators.register-standard verbatim.inline-file : VERBATIM : CPP ;
-generators.register-composing mex.mex : CPP LIB : MEX ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">generators.register-standard verbatim.inline-file : VERBATIM : CPP ;
+generators.register-composing mex.mex : CPP LIB : MEX ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8506,7 +8506,7 @@ how you can create your own generator class:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>class custom-generator : generator
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class custom-generator : generator
 {
     rule __init__ ( * : * )
     {
@@ -8516,7 +8516,7 @@ how you can create your own generator class:</p>
 }
 
 generators.register
-  [ new custom-generator verbatim.inline-file : VERBATIM : CPP ] ;</pre>
+  [ new custom-generator verbatim.inline-file : VERBATIM : CPP ] ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8542,7 +8542,7 @@ automatically:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>class itrace-generator : generator {
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class itrace-generator : generator {
 ...
     rule generated-targets ( sources + : property-set : project name ? )
     {
@@ -8559,7 +8559,7 @@ automatically:</p>
           : $(property-set) : $(project) $(name) ] ;
     }
 }
-generators.register [ new itrace-generator nm.itrace : EXE : ITRACE ] ;</pre>
+generators.register [ new itrace-generator nm.itrace : EXE : ITRACE ] ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8582,7 +8582,7 @@ Here&#8217;s how it can be done:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule run ( project name ? : property-set : sources * )
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule run ( project name ? : property-set : sources * )
 {
     local python ;
     for local s in $(sources)
@@ -8619,7 +8619,7 @@ Here&#8217;s how it can be done:</p>
 
     result = [ construct-result $(python) $(new-sources) : $(project) $(name)
                  : $(property-set) ] ;
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8638,7 +8638,7 @@ done with features. Consider an example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># Declare a new free feature
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam"># Declare a new free feature
 import feature : feature ;
 feature verbatim-options : : free ;
 
@@ -8651,7 +8651,7 @@ flags verbatim.inline-file OPTIONS &lt;verbatim-options&gt; ;
 actions inline-file
 {
     "./inline-file.py" $(OPTIONS) $(&lt;) $(&gt;)
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8763,7 +8763,7 @@ be exported. It would be nice to use this file like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib a : a.cpp : &lt;def-file&gt;a.def ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib a : a.cpp : &lt;def-file&gt;a.def ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8836,8 +8836,8 @@ of features.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>variant crazy : &lt;optimization&gt;speed &lt;inlining&gt;off
-                &lt;debug-symbols&gt;on &lt;profiling&gt;on ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">variant crazy : &lt;optimization&gt;speed &lt;inlining&gt;off
+                &lt;debug-symbols&gt;on &lt;profiling&gt;on ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8846,7 +8846,7 @@ also extend an existing variant:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>variant super_release : release : &lt;define&gt;USE_ASM ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">variant super_release : release : &lt;define&gt;USE_ASM ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8859,9 +8859,9 @@ example that defines a brand new feature:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>feature parallelism : mpi fake none : composite link-incompatible ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">feature parallelism : mpi fake none : composite link-incompatible ;
 feature.compose &lt;parallelism&gt;mpi : &lt;library&gt;/mpi//mpi/&lt;parallelism&gt;none ;
-feature.compose &lt;parallelism&gt;fake : &lt;library&gt;/mpi//fake/&lt;parallelism&gt;none ;</pre>
+feature.compose &lt;parallelism&gt;fake : &lt;library&gt;/mpi//fake/&lt;parallelism&gt;none ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8887,11 +8887,11 @@ example, if you create a module <code>obfuscate.jam</code> containing:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>import type ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import type ;
 type.register OBFUSCATED_CPP  : ocpp ;
 
 import generators ;
-generators.register-standard obfuscate.file : CPP : OBFUSCATED_CPP ;</pre>
+generators.register-standard obfuscate.file : CPP : OBFUSCATED_CPP ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8906,7 +8906,7 @@ You can achieve this effect using:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib codegen : [ glob *.cpp ] ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib codegen : [ glob *.cpp ] ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8915,10 +8915,10 @@ definition to the <code>Jamroot.jam</code> file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule glib ( name : extra-sources * : requirements * )
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule glib ( name : extra-sources * : requirements * )
 {
     lib $(name) : [ glob *.cpp ] $(extra-sources) : $(requirements) ;
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8926,7 +8926,7 @@ definition to the <code>Jamroot.jam</code> file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>glib codegen ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">glib codegen ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9062,8 +9062,8 @@ twice, with almost the same, but differing properties. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp : &lt;include&gt;/usr/local/include ;
-exe b : a.cpp ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp : &lt;include&gt;/usr/local/include ;
+exe b : a.cpp ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9086,8 +9086,8 @@ once or twice.</p>
 same for both target requests:</p>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp : &lt;include&gt;/usr/local/include ;
-exe b : a.cpp : &lt;include&gt;/usr/local/include ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp : &lt;include&gt;/usr/local/include ;
+exe b : a.cpp : &lt;include&gt;/usr/local/include ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9095,9 +9095,9 @@ exe b : a.cpp : &lt;include&gt;/usr/local/include ;</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>alias a-with-include : a.cpp : &lt;include&gt;/usr/local/include ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">alias a-with-include : a.cpp : &lt;include&gt;/usr/local/include ;
 exe a : a-with-include ;
-exe b : a-with-include ;</pre>
+exe b : a-with-include ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9106,9 +9106,9 @@ sources added for the built <code>a</code> and <code>b</code> executables would 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>obj a-obj : a.cpp : &lt;include&gt;/usr/local/include ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">obj a-obj : a.cpp : &lt;include&gt;/usr/local/include ;
 exe a : a-obj ;
-exe b : a-obj ;</pre>
+exe b : a-obj ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9122,10 +9122,10 @@ might be added for targets <code>a</code> and <code>b</code>.</p>
 two separate object files like so:</p>
 <div class="listingblock">
 <div class="content">
-<pre>obj a_obj : a.cpp : &lt;include&gt;/usr/local/include ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">obj a_obj : a.cpp : &lt;include&gt;/usr/local/include ;
 obj b_obj : a.cpp ;
 exe a : a_obj ;
-exe b : b_obj ;</pre>
+exe b : b_obj ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9133,8 +9133,8 @@ exe b : b_obj ;</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : [ obj a_obj : a.cpp : &lt;include&gt;/usr/local/include ] ;
-exe b : [ obj a_obj : a.cpp ] ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : [ obj a_obj : a.cpp : &lt;include&gt;/usr/local/include ] ;
+exe b : [ obj a_obj : a.cpp ] ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9176,9 +9176,9 @@ using the helper os.environ rule. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>import os ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import os ;
 local unga-unga = [ os.environ UNGA_UNGA ] ;
-ECHO $(unga-unga) ;</pre>
+ECHO $(unga-unga) ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9186,9 +9186,9 @@ ECHO $(unga-unga) ;</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>import os ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import os ;
 local SOME_LIBRARY_PATH = [ os.environ SOME_LIBRARY_PATH ] ;
-exe a : a.cpp : &lt;include&gt;$(SOME_LIBRARY_PATH) ;</pre>
+exe a : a.cpp : &lt;include&gt;$(SOME_LIBRARY_PATH) ;</code></pre>
 </div>
 </div>
 </div>
@@ -9200,7 +9200,7 @@ alphabetically. This means that if you write:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp : &lt;include&gt;b &lt;include&gt;a ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp : &lt;include&gt;b &lt;include&gt;a ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9212,7 +9212,7 @@ provided:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp : &lt;include&gt;a&amp;&amp;b ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp : &lt;include&gt;a&amp;&amp;b ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9243,8 +9243,8 @@ following lines will cause <code>a</code> to appear before <code>b</code> on the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib a : a.cpp b ;
-lib a : a.cpp : &lt;use&gt;b ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib a : a.cpp b ;
+lib a : a.cpp : &lt;use&gt;b ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9252,9 +9252,9 @@ lib a : a.cpp : &lt;use&gt;b ;</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib z ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib z ;
 lib png : : &lt;use&gt;z ;
-exe viewer : viewer png z ;</pre>
+exe viewer : viewer png z ;</code></pre>
 </div>
 </div>
 </div>
@@ -9265,7 +9265,7 @@ exe viewer : viewer png z ;</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>local gtk_includes = [ SHELL "gtk-config --cflags" ] ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local gtk_includes = [ SHELL "gtk-config --cflags" ] ;</code></pre>
 </div>
 </div>
 </div>
@@ -9277,7 +9277,7 @@ access it just declare a path constant in your Jamroot.jam file using:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>path-constant TOP : . ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">path-constant TOP : . ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9293,8 +9293,8 @@ target in your <code>exe</code> or <code>lib</code> target:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp b ;
-obj b : b.cpp : &lt;optimization&gt;off ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp b ;
+obj b : b.cpp : &lt;optimization&gt;off ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9303,8 +9303,8 @@ C/C++ compiler options:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp b ;
-obj b : b.cpp : &lt;cflags&gt;-g ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp b ;
+obj b : b.cpp : &lt;cflags&gt;-g ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9313,8 +9313,8 @@ for finer control:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp b ;
-obj b : b.cpp : &lt;variant&gt;release:&lt;optimization&gt;off ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp b ;
+obj b : b.cpp : &lt;variant&gt;release:&lt;optimization&gt;off ;</code></pre>
 </div>
 </div>
 </div>
@@ -9367,8 +9367,8 @@ your development tree. (The <code>install</code> rule explicitly disables the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>install installed : application : &lt;dll-path&gt;/usr/lib/snake
-                                  &lt;location&gt;/usr/bin ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">install installed : application : &lt;dll-path&gt;/usr/lib/snake
+                                  &lt;location&gt;/usr/bin ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9407,8 +9407,8 @@ targets in Boost.Build&#8217;s <code>site-config.jam</code> configuration file:<
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>project site-config ;
-lib zlib : : &lt;name&gt;z ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project site-config ;
+lib zlib : : &lt;name&gt;z ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9418,7 +9418,7 @@ well. So, you declare a project id and a target. Now, one can write:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe hello : hello.cpp /site-config//zlib ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello : hello.cpp /site-config//zlib ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9443,11 +9443,11 @@ their include path as a part of its usage requirements, for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>alias my-lib
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">alias my-lib
     : # no sources
     : # no build requirements
     : # no default build
-    : &lt;include&gt;whatever ;</pre>
+    : &lt;include&gt;whatever ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9464,8 +9464,8 @@ them for the <code>alias</code> target:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>project my : usage-requirements &lt;include&gt;whatever ;
-alias mylib ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project my : usage-requirements &lt;include&gt;whatever ;
+alias mylib ;</code></pre>
 </div>
 </div>
 </div>
@@ -9518,7 +9518,7 @@ For example to use as a target requirement:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>html example : example.adoc :
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">html example : example.adoc :
     &lt;asciidoctor-attribute&gt;idprefix=ex ;</code></pre>
 </div>
 </div>
@@ -9543,7 +9543,7 @@ example, when specifying an <code>html</code> target for an <code>asciidoc</code
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>html example : example.adoc ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">html example : example.adoc ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9571,7 +9571,7 @@ requirement. The default for each target type are:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>docbook example : example.adoc :
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">docbook example : example.adoc :
     &lt;asciidoctor-backend&gt;docbook5 ;</code></pre>
 </div>
 </div>
@@ -9597,7 +9597,7 @@ with the <code>using</code> rule. The initialiation takes the following argument
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>using asciidoctor : "/usr/local/bin/asciidoctor" ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">using asciidoctor : "/usr/local/bin/asciidoctor" ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9676,7 +9676,7 @@ for this feature is specified, then one is copied from the feature
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>using sass : /usr/local/bin/psass -p2 ; # Perl libsass-based version</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">using sass : /usr/local/bin/psass -p2 ; # Perl libsass-based version</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9726,7 +9726,7 @@ program:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-jam" data-lang="jam">exe hello : hello.cpp ;</code></pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello : hello.cpp ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9734,7 +9734,7 @@ program:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-console" data-lang="console">&gt; cd /example/hello
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">&gt; cd /example/hello
 &gt; b2
 ...found 8 targets...
 ...updating 4 targets...
@@ -10368,7 +10368,7 @@ should match the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule bind-rule ( target : path )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule bind-rule ( target : path )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10528,14 +10528,14 @@ Dave" to the console:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule report ( pronoun index ? : state : names + )
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule report ( pronoun index ? : state : names + )
 {
     local he.suffix she.suffix it.suffix = s ;
     local I.suffix = m ;
     local they.suffix you.suffix = re ;
     ECHO $(pronoun)'$($(pronoun).suffix) $(state), $(names[$(index)]) ;
 }
-report I 2 : sorry : Joe Dave Pete ;</pre>
+report I 2 : sorry : Joe Dave Pete ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10610,7 +10610,7 @@ are just utility rules.</p>
 <h6 id="jam.language.rules.builtins.dependency_building._depends__"><a class="anchor" href="#jam.language.rules.builtins.dependency_building._depends__"></a><code>DEPENDS</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule DEPENDS ( targets1 * : targets2 * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule DEPENDS ( targets1 * : targets2 * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10623,7 +10623,7 @@ themselves rebuilt or are newer than <em>targets1</em>.</p>
 <h6 id="jam.language.rules.builtins.dependency_building._includes__"><a class="anchor" href="#jam.language.rules.builtins.dependency_building._includes__"></a><code>INCLUDES</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule INCLUDES ( targets1 * : targets2 * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule INCLUDES ( targets1 * : targets2 * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10636,8 +10636,8 @@ other. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>DEPENDS foo.o : foo.c ;
-INCLUDES foo.c : foo.h ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">DEPENDS foo.o : foo.c ;
+INCLUDES foo.c : foo.h ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10660,7 +10660,7 @@ be changed by invoking the following rules:</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._always__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._always__"></a><code>ALWAYS</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule ALWAYS ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule ALWAYS ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10676,7 +10676,7 @@ be updated as well.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._leaves__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._leaves__"></a><code>LEAVES</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule LEAVES ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule LEAVES ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10691,7 +10691,7 @@ updated only if original source files change.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._nocare__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._nocare__"></a><code>NOCARE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule NOCARE ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule NOCARE ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10721,7 +10721,7 @@ nonzero return code, dependent targets will still be built.
 <h6 id="jam.language.rules.builtins.modifying_binding._notfile__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._notfile__"></a><code>NOTFILE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule NOTFILE ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule NOTFILE ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10737,7 +10737,7 @@ pseudotargets.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._noupdate__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._noupdate__"></a><code>NOUPDATE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule NOUPDATE ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule NOUPDATE ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10753,7 +10753,7 @@ directory exists, not when it has last been updated.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._temporary__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._temporary__"></a><code>TEMPORARY</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule TEMPORARY ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule TEMPORARY ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10769,7 +10769,7 @@ archived.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._fail_expected__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._fail_expected__"></a><code>FAIL_EXPECTED</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule FAIL_EXPECTED ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule FAIL_EXPECTED ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10786,7 +10786,7 @@ succeeds, dependent targets are skipped.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._rmold__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._rmold__"></a><code>RMOLD</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule RMOLD ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule RMOLD ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10800,7 +10800,7 @@ arguments to be removed if any of their dependencies fail to build.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._isfile__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._isfile__"></a><code>ISFILE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule ISFILE ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule ISFILE ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10834,7 +10834,7 @@ parsing phase.</p>
 <h6 id="jam.language.rules.builtins.utility._echo__"><a class="anchor" href="#jam.language.rules.builtins.utility._echo__"></a><code>ECHO</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule ECHO ( args * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule ECHO ( args * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10845,7 +10845,7 @@ parsing phase.</p>
 <h6 id="jam.language.rules.builtins.utility._exit__"><a class="anchor" href="#jam.language.rules.builtins.utility._exit__"></a><code>EXIT</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule EXIT ( message * : result-value ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule EXIT ( message * : result-value ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10866,7 +10866,7 @@ rules and not part of the language, like <code>include</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule GLOB ( directories * : patterns * : downcase-opt ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule GLOB ( directories * : patterns * : downcase-opt ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10893,7 +10893,7 @@ Cygwin, and OpenVMS, filenames are always downcased before matching.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule GLOB_ARCHIVE ( archives * : member-patterns * : downcase-opt ? : symbol-patterns ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule GLOB_ARCHIVE ( archives * : member-patterns * : downcase-opt ? : symbol-patterns ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10930,7 +10930,7 @@ specified.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule MATCH ( regexps + : list * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule MATCH ( regexps + : list * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10943,7 +10943,7 @@ for each string in <em>list</em>, and for each regular expression in <em>regexps
 <h6 id="jam.language.rules.builtins.utility._backtrace__"><a class="anchor" href="#jam.language.rules.builtins.utility._backtrace__"></a><code>BACKTRACE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule BACKTRACE ( )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule BACKTRACE ( )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10956,7 +10956,7 @@ to generate useful diagnostic messages from Jam rules.</p>
 <h6 id="jam.language.rules.builtins.utility._update__"><a class="anchor" href="#jam.language.rules.builtins.utility._update__"></a><code>UPDATE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule UPDATE ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule UPDATE ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10984,8 +10984,8 @@ it possible to add targets as such:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>local previous-updates = [ UPDATE ] ;
-UPDATE $(previous-updates) a-new-target ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local previous-updates = [ UPDATE ] ;
+UPDATE $(previous-updates) a-new-target ;</code></pre>
 </div>
 </div>
 </div>
@@ -10993,7 +10993,7 @@ UPDATE $(previous-updates) a-new-target ;</pre>
 <h6 id="jam.language.rules.builtins.utility._w32_getreg__"><a class="anchor" href="#jam.language.rules.builtins.utility._w32_getreg__"></a><code>W32_GETREG</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule W32_GETREG ( path : data ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule W32_GETREG ( path : data ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11032,8 +11032,8 @@ an empty list. For example,</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>local PSDK-location =
-  [ W32_GETREG HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MicrosoftSDK\\Directories : "Install Dir" ] ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local PSDK-location =
+  [ W32_GETREG HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MicrosoftSDK\\Directories : "Install Dir" ] ;</code></pre>
 </div>
 </div>
 </div>
@@ -11041,7 +11041,7 @@ an empty list. For example,</p>
 <h6 id="jam.language.rules.builtins.utility._w32_getregnames__"><a class="anchor" href="#jam.language.rules.builtins.utility._w32_getregnames__"></a><code>W32_GETREGNAMES</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule W32_GETREGNAMES ( path : result-type )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule W32_GETREGNAMES ( path : result-type )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11073,7 +11073,7 @@ retrieved, the rule returns an empty list. Example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>local key = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths" ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local key = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths" ;
 local subkeys = [ W32_GETREGNAMES "$(key)" : subkeys ] ;
 for local subkey in $(subkeys)
 {
@@ -11083,7 +11083,7 @@ for local subkey in $(subkeys)
         local data = [ W32_GETREG "$(key)\\$(subkey)" : "$(value)" ] ;
         ECHO "Registry path: " $(key)\\$(subkey) ":" $(value) "=" $(data) ;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -11091,7 +11091,7 @@ for local subkey in $(subkeys)
 <h6 id="jam.language.rules.builtins.utility._shell__"><a class="anchor" href="#jam.language.rules.builtins.utility._shell__"></a><code>SHELL</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule SHELL ( command : * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule SHELL ( command : * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11131,7 +11131,7 @@ case.</p>
 <h6 id="jam.language.rules.builtins.utility._md5__"><a class="anchor" href="#jam.language.rules.builtins.utility._md5__"></a><code>MD5</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule MD5 ( string )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule MD5 ( string )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11143,7 +11143,7 @@ returns it.</p>
 <h6 id="jam.language.rules.builtins.utility._split_by_characters__"><a class="anchor" href="#jam.language.rules.builtins.utility._split_by_characters__"></a><code>SPLIT_BY_CHARACTERS</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule SPLIT_BY_CHARACTERS ( string : delimiters )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule SPLIT_BY_CHARACTERS ( string : delimiters )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11155,7 +11155,7 @@ character present in <em>delimiters</em> and returns the resulting list.</p>
 <h6 id="jam.language.rules.builtins.utility._precious__"><a class="anchor" href="#jam.language.rules.builtins.utility._precious__"></a><code>PRECIOUS</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule PRECIOUS ( targets * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule PRECIOUS ( targets * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11168,7 +11168,7 @@ fails.</p>
 <h6 id="jam.language.rules.builtins.utility._pad__"><a class="anchor" href="#jam.language.rules.builtins.utility._pad__"></a><code>PAD</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule PAD ( string : width )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule PAD ( string : width )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11181,7 +11181,7 @@ characters on the right, and returns the result. Otherwise, returns
 <h6 id="jam.language.rules.builtins.utility._file_open__"><a class="anchor" href="#jam.language.rules.builtins.utility._file_open__"></a><code>FILE_OPEN</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule FILE_OPEN ( filename : mode )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule FILE_OPEN ( filename : mode )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11195,7 +11195,7 @@ descriptor number.</p>
 <h6 id="jam.language.rules.builtins.utility._update_now__"><a class="anchor" href="#jam.language.rules.builtins.utility._update_now__"></a><code>UPDATE_NOW</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre>rule UPDATE_NOW ( targets * : log ? : ignore-minus-n ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule UPDATE_NOW ( targets * : log ? : ignore-minus-n ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11673,13 +11673,13 @@ in the loop:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>x = 1 2 3 ;
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">x = 1 2 3 ;
 y = 4 5 6 ;
 for local y in $(x)
 {
     ECHO $(y) ; # prints "1", "2", or "3"
 }
-ECHO $(y) ;     # prints "4 5 6"</pre>
+ECHO $(y) ;     # prints "4 5 6"</code></pre>
 </div>
 </div>
 </div>
@@ -11887,7 +11887,7 @@ for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>JAMSHELL = /bin/sh -c % ;</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">JAMSHELL = /bin/sh -c % ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11909,7 +11909,7 @@ a multiple host shell. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>#!/bin/sh
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/sh
 
 # This sample JAMSHELL uses the SunOS on(1) command to execute a
 # command string with an identical environment on another host.
@@ -11926,7 +11926,7 @@ case $1 in
 2|5) on blinken sh -c "$2";;
 3|6) on nod sh -c "$2";;
 *) eval "$2";;
-esac</pre>
+esac</code></pre>
 </div>
 </div>
 </div>
@@ -11940,7 +11940,7 @@ both give diagnostic information about the action that completed. For
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule timing-rule ( args * : target : start end user system )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule timing-rule ( args * : target : start end user system )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11948,7 +11948,7 @@ both give diagnostic information about the action that completed. For
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule action-rule ( args * : target : command status start end user system : output ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule action-rule ( args * : target : command status start end user system : output ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12041,13 +12041,13 @@ without qualification:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>module my_module
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module my_module
 {
     rule salute ( x ) { ECHO $(x), world ; }
     rule greet ( ) { salute hello ; }
     greet ;
 }
-my_module.salute goodbye ;</pre>
+my_module.salute goodbye ;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12057,10 +12057,10 @@ work across modules:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>module your_module
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module your_module
 {
     rule bedtime ( ) { my_module.salute goodnight ; }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
@@ -12074,7 +12074,7 @@ to B. This applies equally to local and global variables:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>module A
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module A
 {
     x = 1 ;
     rule f ( )
@@ -12095,7 +12095,7 @@ module B
         ECHO $(y) ; # always prints "2"
         A.g ;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12104,13 +12104,13 @@ module:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule peek ( module-name ? : variables + )
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule peek ( module-name ? : variables + )
 {
     module $(module-name)
     {
         return $($(&gt;)) ;
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12141,7 +12141,7 @@ the result of:</p>
 <h5 id="jam.language.modules.the__rulenames__rule"><a class="anchor" href="#jam.language.modules.the__rulenames__rule"></a>The <code>RULENAMES</code> Rule</h5>
 <div class="listingblock">
 <div class="content">
-<pre>rule RULENAMES ( module ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule RULENAMES ( module ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12154,7 +12154,7 @@ module are returned.</p>
 <h5 id="jam.language.modules.the__varnames__rule"><a class="anchor" href="#jam.language.modules.the__varnames__rule"></a>The <code>VARNAMES</code> Rule</h5>
 <div class="listingblock">
 <div class="content">
-<pre>rule VARNAMES ( module ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule VARNAMES ( module ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12183,8 +12183,8 @@ have not returned at the time of the <code>VARNAMES</code> invocation.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule IMPORT ( source_module ? : source_rules *
-            : target_module ? : target_rules * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule IMPORT ( source_module ? : source_rules *
+            : target_module ? : target_rules * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12199,10 +12199,10 @@ number of items than <em>target_rules</em>, an error is issued. For example,</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># import m1.rule1 into m2 as local rule m1-rule1.
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam"># import m1.rule1 into m2 as local rule m1-rule1.
 IMPORT m1 : rule1 : m2 : m1-rule1 ;
 # import all non-local rules from m1 into m2
-IMPORT m1 : [ RULENAMES m1 ] : m2 : [ RULENAMES m1 ] ;</pre>
+IMPORT m1 : [ RULENAMES m1 ] : m2 : [ RULENAMES m1 ] ;</code></pre>
 </div>
 </div>
 </div>
@@ -12213,7 +12213,7 @@ IMPORT m1 : [ RULENAMES m1 ] : m2 : [ RULENAMES m1 ] ;</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule EXPORT ( module ? : rules * )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule EXPORT ( module ? : rules * )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12223,12 +12223,12 @@ IMPORT m1 : [ RULENAMES m1 ] : m2 : [ RULENAMES m1 ] ;</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>module X {
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module X {
   local rule r { ECHO X.r ; }
 }
 IMPORT X : r : : r ; # error - r is local in X
 EXPORT X : r ;
-IMPORT X : r : : r ; # OK.</pre>
+IMPORT X : r : : r ; # OK.</code></pre>
 </div>
 </div>
 </div>
@@ -12236,7 +12236,7 @@ IMPORT X : r : : r ; # OK.</pre>
 <h5 id="jam.language.modules.the__caller_module__rule"><a class="anchor" href="#jam.language.modules.the__caller_module__rule"></a>The <code>CALLER_MODULE</code> Rule</h5>
 <div class="listingblock">
 <div class="content">
-<pre>rule CALLER_MODULE ( levels ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule CALLER_MODULE ( levels ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12249,7 +12249,7 @@ exists, returns the empty list. For example, the following prints "{Y}
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>module X {
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module X {
     rule get-caller { return [ CALLER_MODULE ] ; }
     rule get-caller's-caller { return [ CALLER_MODULE 1 ] ; }
     rule call-Y { return Y.call-X2 ; }
@@ -12259,7 +12259,7 @@ module Y {
     rule call-X2 { return X.get-caller's-caller ; }
 }
 callers = [ X.get-caller ] [ Y.call-X ] [ X.call-Y ] ;
-ECHO {$(callers)} ;</pre>
+ECHO {$(callers)} ;</code></pre>
 </div>
 </div>
 </div>
@@ -12267,7 +12267,7 @@ ECHO {$(callers)} ;</pre>
 <h5 id="jam.language.modules.the__delete_module__rule"><a class="anchor" href="#jam.language.modules.the__delete_module__rule"></a>The <code>DELETE_MODULE</code> Rule</h5>
 <div class="listingblock">
 <div class="content">
-<pre>rule DELETE_MODULE ( module ? )</pre>
+<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule DELETE_MODULE ( module ? )</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12570,7 +12570,7 @@ variants accepted as valid for an option:</p>
 <div class="sect2">
 <h3 id="jam.history"><a class="anchor" href="#jam.history"></a>11.4. History</h3>
 <div class="sect3">
-<h4 id="_3_1_18"><a class="anchor" href="#_3_1_18"></a>11.4.1. 3.1.18</h4>
+<h4 id="_version_3_1_18"><a class="anchor" href="#_version_3_1_18"></a>11.4.1. Version 3.1.18</h4>
 <div class="paragraph">
 <p>After years of bjam developments.. This is going to be the last
 unbundled release of the 3.1.x series. From this point forward bjam
@@ -12618,7 +12618,7 @@ from Jonathan Biggar.&#8201;&#8212;&#8201;<em>Vladimir P.</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_3_1_17"><a class="anchor" href="#_3_1_17"></a>11.4.2. 3.1.17</h4>
+<h4 id="_version_3_1_17"><a class="anchor" href="#_version_3_1_17"></a>11.4.2. Version 3.1.17</h4>
 <div class="paragraph">
 <p>A year in the making this release has many stability improvements and
 various performance improvements. And because of the efforts of Jurko
@@ -12791,7 +12791,7 @@ stability.&#8201;&#8212;&#8201;<em>Noel B.</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_3_1_16"><a class="anchor" href="#_3_1_16"></a>11.4.3. 3.1.16</h4>
+<h4 id="_version_3_1_16"><a class="anchor" href="#_version_3_1_16"></a>11.4.3. Version 3.1.16</h4>
 <div class="paragraph">
 <p>This is mostly a bug fix release.</p>
 </div>
@@ -12866,7 +12866,7 @@ that we can override environment on command line.&#8201;&#8212;&#8201;<em>Vladim
 </div>
 </div>
 <div class="sect3">
-<h4 id="_3_1_15"><a class="anchor" href="#_3_1_15"></a>11.4.4. 3.1.15</h4>
+<h4 id="_version_3_1_15"><a class="anchor" href="#_version_3_1_15"></a>11.4.4. Version 3.1.15</h4>
 <div class="paragraph">
 <p>This release sees a variety of fixes for long standing Perforce/Jam
 problems. Most of them relating to running actions in parallel with
@@ -12994,5 +12994,8 @@ and WEXITSTATUS.&#8201;&#8212;&#8201;<em>Markus S.</em></p>
 <a href="#_footnoteref_5">5</a>. This create-then-register pattern is caused by limitations of the Boost.Jam language. Python port is likely to never create duplicate targets.
 </div>
 </div>
+<link rel="stylesheet" href="hljs/styles/github.min.css">
+<script src="hljs/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
 </body>
 </html>
