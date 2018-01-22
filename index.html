@@ -4566,6 +4566,91 @@ shared libraries. This feature corresponds to the IDE option found in the
 project settings dialog, under Configuration Properties &#8594; Manifest
 Tool &#8594; Input and Output &#8594; Additional Manifest Files.</p>
 </dd>
+<dt class="hdlist1"><code>relevant</code></dt>
+<dd>
+<p><strong>Allowed values:</strong> the name of any feature.</p>
+<div class="paragraph">
+<p>This feature is used to indicate which other features are relevant for a
+given target. It is usually not necessary to manage it explicitly, as
+Boost.Build can deduce it in most cases. Features which are not relevant
+will not affect target paths, and will not cause conflicts.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A feature will be considered relevant if any of the following are true</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It is referenced by <code>toolset.flags</code> or <code>toolset.uses-features</code></p>
+</li>
+<li>
+<p>It is used by the requirements of a generator</p>
+</li>
+<li>
+<p>It is a subfeature of a relevant feature</p>
+</li>
+<li>
+<p>It has a subfeature which is relevant</p>
+</li>
+<li>
+<p>It is a composite feature, and any composed feature is relevant</p>
+</li>
+<li>
+<p>It affects target alternative selection for a main target</p>
+</li>
+<li>
+<p>It is a propagated feature and is relevant for any dependency</p>
+</li>
+<li>
+<p>It is relevant for any dependency created by the same main target</p>
+</li>
+<li>
+<p>It is used in the condition of a conditional property and the corresponding
+value is relevant</p>
+</li>
+<li>
+<p>It is explicitly named as relevent</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Relevant features cannot be automatically deduced in the following cases:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Indirect conditionals. Solution: return properties of the form
+<code>&lt;relevant&gt;result-feature:&lt;relevant&gt;condition-feature</code></p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This isn&#8217;t really a conditional, although for most purposes it
+functions like one. In particular, it does not support multiple
+comma-separated elements in the condition, and it does work correctly even
+in contexts where conditional properties are not allowed
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Action rules that read properties. Solution: add toolset.uses-features to
+tell Boost.Build that the feature is actually used.</p>
+</li>
+<li>
+<p>Generators and targets that manipulate property-sets directly. Solution: set &lt;relevant&gt; manually.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
 </dl>
 </div>
 </div>
