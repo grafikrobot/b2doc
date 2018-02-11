@@ -425,6 +425,77 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+.listingblock .pygments .hll { background-color: #ffffcc }
+.listingblock .pygments, .listingblock .pygments code { background: #f0f0f0; }
+.listingblock .pygments .tok-c { color: #60a0b0; font-style: italic } /* Comment */
+.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+.listingblock .pygments .tok-k { color: #007020; font-weight: bold } /* Keyword */
+.listingblock .pygments .tok-o { color: #666666 } /* Operator */
+.listingblock .pygments .tok-ch { color: #60a0b0; font-style: italic } /* Comment.Hashbang */
+.listingblock .pygments .tok-cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.listingblock .pygments .tok-cp { color: #007020 } /* Comment.Preproc */
+.listingblock .pygments .tok-cpf { color: #60a0b0; font-style: italic } /* Comment.PreprocFile */
+.listingblock .pygments .tok-c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.listingblock .pygments .tok-cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.listingblock .pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
+.listingblock .pygments .tok-ge { font-style: italic } /* Generic.Emph */
+.listingblock .pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+.listingblock .pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.listingblock .pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
+.listingblock .pygments .tok-go { color: #888888 } /* Generic.Output */
+.listingblock .pygments .tok-gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.listingblock .pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+.listingblock .pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.listingblock .pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+.listingblock .pygments .tok-kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.listingblock .pygments .tok-kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.listingblock .pygments .tok-kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.listingblock .pygments .tok-kp { color: #007020 } /* Keyword.Pseudo */
+.listingblock .pygments .tok-kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.listingblock .pygments .tok-kt { color: #902000 } /* Keyword.Type */
+.listingblock .pygments .tok-m { color: #40a070 } /* Literal.Number */
+.listingblock .pygments .tok-s { color: #4070a0 } /* Literal.String */
+.listingblock .pygments .tok-na { color: #4070a0 } /* Name.Attribute */
+.listingblock .pygments .tok-nb { color: #007020 } /* Name.Builtin */
+.listingblock .pygments .tok-nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.listingblock .pygments .tok-no { color: #60add5 } /* Name.Constant */
+.listingblock .pygments .tok-nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.listingblock .pygments .tok-ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.listingblock .pygments .tok-ne { color: #007020 } /* Name.Exception */
+.listingblock .pygments .tok-nf { color: #06287e } /* Name.Function */
+.listingblock .pygments .tok-nl { color: #002070; font-weight: bold } /* Name.Label */
+.listingblock .pygments .tok-nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.listingblock .pygments .tok-nt { color: #062873; font-weight: bold } /* Name.Tag */
+.listingblock .pygments .tok-nv { color: #bb60d5 } /* Name.Variable */
+.listingblock .pygments .tok-ow { color: #007020; font-weight: bold } /* Operator.Word */
+.listingblock .pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+.listingblock .pygments .tok-mb { color: #40a070 } /* Literal.Number.Bin */
+.listingblock .pygments .tok-mf { color: #40a070 } /* Literal.Number.Float */
+.listingblock .pygments .tok-mh { color: #40a070 } /* Literal.Number.Hex */
+.listingblock .pygments .tok-mi { color: #40a070 } /* Literal.Number.Integer */
+.listingblock .pygments .tok-mo { color: #40a070 } /* Literal.Number.Oct */
+.listingblock .pygments .tok-sa { color: #4070a0 } /* Literal.String.Affix */
+.listingblock .pygments .tok-sb { color: #4070a0 } /* Literal.String.Backtick */
+.listingblock .pygments .tok-sc { color: #4070a0 } /* Literal.String.Char */
+.listingblock .pygments .tok-dl { color: #4070a0 } /* Literal.String.Delimiter */
+.listingblock .pygments .tok-sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.listingblock .pygments .tok-s2 { color: #4070a0 } /* Literal.String.Double */
+.listingblock .pygments .tok-se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.listingblock .pygments .tok-sh { color: #4070a0 } /* Literal.String.Heredoc */
+.listingblock .pygments .tok-si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.listingblock .pygments .tok-sx { color: #c65d09 } /* Literal.String.Other */
+.listingblock .pygments .tok-sr { color: #235388 } /* Literal.String.Regex */
+.listingblock .pygments .tok-s1 { color: #4070a0 } /* Literal.String.Single */
+.listingblock .pygments .tok-ss { color: #517918 } /* Literal.String.Symbol */
+.listingblock .pygments .tok-bp { color: #007020 } /* Name.Builtin.Pseudo */
+.listingblock .pygments .tok-fm { color: #06287e } /* Name.Function.Magic */
+.listingblock .pygments .tok-vc { color: #bb60d5 } /* Name.Variable.Class */
+.listingblock .pygments .tok-vg { color: #bb60d5 } /* Name.Variable.Global */
+.listingblock .pygments .tok-vi { color: #bb60d5 } /* Name.Variable.Instance */
+.listingblock .pygments .tok-vm { color: #bb60d5 } /* Name.Variable.Magic */
+.listingblock .pygments .tok-il { color: #40a070 } /* Literal.Number.Integer.Long */
+</style>
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
@@ -716,7 +787,7 @@ other operating systems).</p>
 <p>Run</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ ./b2 install --prefix=PREFIX</code></pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>$ ./b2 install --prefix<span class="tok-o">=</span>PREFIX</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -740,7 +811,7 @@ then change to that directory and run:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-shell hljs" data-lang="shell">$ PREFIX/bin/b2</code></pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>$ PREFIX/bin/b2</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -765,7 +836,7 @@ use libraries, and finish with testing and installing features.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello : hello.cpp ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -787,7 +858,7 @@ the example by adding another line to our project&#8217;s <code>Jamroot</code>:<
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello2 : hello.cpp ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello2<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -893,10 +964,10 @@ requirements might be specified.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello
-    : hello.cpp
-    : &lt;include&gt;boost &lt;threading&gt;multi
-    ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;include&gt;boost<span class="tok-w"> </span>&lt;threading&gt;multi<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -932,12 +1003,12 @@ including requirements:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project
-    : requirements &lt;include&gt;/home/ghost/Work/boost &lt;threading&gt;multi
-    ;
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">project</span><span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>&lt;include&gt;/home/ghost/Work/boost<span class="tok-w"> </span>&lt;threading&gt;multi<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span>
 
-exe hello : hello.cpp ;
-exe hello2 : hello.cpp ;</code></pre>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>hello2<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1002,7 +1073,7 @@ specified by the subproject. For example, if <code>top/Jamroot</code> has</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">&lt;include&gt;/home/ghost/local</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>&lt;include&gt;/home/ghost/local<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1020,7 +1091,7 @@ the parent project&#8217;s Jamfile explicitly requests it. In our example,
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">build-project app ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">build-project</span><span class="tok-w"> </span>app<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1043,7 +1114,7 @@ example and see how <code>top/app/Jamfile</code> can use libraries from
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib bar : bar.cpp ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>bar<span class="tok-w"> </span>:<span class="tok-w"> </span>bar.cpp<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1051,7 +1122,7 @@ example and see how <code>top/app/Jamfile</code> can use libraries from
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe app : app.cpp ../util/foo//bar ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>app<span class="tok-w"> </span>:<span class="tok-w"> </span>app.cpp<span class="tok-w"> </span>../util/foo//bar<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1099,11 +1170,11 @@ programs that use `foo</code>. A better solution is to modify
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project
-    : usage-requirements &lt;include&gt;.
-    ;
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">project</span><span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>usage-requirements<span class="tok-w"> </span>&lt;include&gt;.<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span>
 
-lib foo : foo.cpp ;</code></pre>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>foo<span class="tok-w"> </span>:<span class="tok-w"> </span>foo.cpp<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1122,7 +1193,7 @@ layout. First, we need to assign a project id by adding this code to
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">use-project /library-example/foo : util/foo ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">use-project</span><span class="tok-w"> </span>/library-example/foo<span class="tok-w"> </span>:<span class="tok-w"> </span>util/foo<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1130,7 +1201,7 @@ layout. First, we need to assign a project id by adding this code to
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe app : app.cpp /library-example/foo//bar ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>app<span class="tok-w"> </span>:<span class="tok-w"> </span>app.cpp<span class="tok-w"> </span>/library-example/foo//bar<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1157,9 +1228,9 @@ requirements, like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project
-   : requirements &lt;library&gt;/boost/filesystem//fs
-   ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">project</span><span class="tok-w"></span>
+<span class="tok-w">   </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>&lt;library&gt;/boost/filesystem//fs<span class="tok-w"></span>
+<span class="tok-w">   </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </td>
@@ -1191,7 +1262,7 @@ build either on the command line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib l : l.cpp : &lt;link&gt;static ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>l<span class="tok-w"> </span>:<span class="tok-w"> </span>l.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;link&gt;static<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1203,7 +1274,7 @@ reference</a> to the library as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe important : main.cpp helpers/&lt;link&gt;static ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>important<span class="tok-w"> </span>:<span class="tok-w"> </span>main.cpp<span class="tok-w"> </span>helpers/&lt;link&gt;static<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1219,8 +1290,8 @@ references everywhere:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe e1 : e1.cpp /other_project//bar/&lt;link&gt;static ;
-exe e10 : e10.cpp /other_project//bar/&lt;link&gt;static ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>e1<span class="tok-w"> </span>:<span class="tok-w"> </span>e1.cpp<span class="tok-w"> </span>/other_project//bar/&lt;link&gt;static<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>e10<span class="tok-w"> </span>:<span class="tok-w"> </span>e10.cpp<span class="tok-w"> </span>/other_project//bar/&lt;link&gt;static<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1230,9 +1301,9 @@ static (or dynamic) version of <code>foo</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">alias foo : /other_project//bar/&lt;link&gt;static ;
-exe e1 : e1.cpp foo ;
-exe e10 : e10.cpp foo ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">alias</span><span class="tok-w"> </span>foo<span class="tok-w"> </span>:<span class="tok-w"> </span>/other_project//bar/&lt;link&gt;static<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>e1<span class="tok-w"> </span>:<span class="tok-w"> </span>e1.cpp<span class="tok-w"> </span>foo<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>e10<span class="tok-w"> </span>:<span class="tok-w"> </span>e10.cpp<span class="tok-w"> </span>foo<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1252,9 +1323,9 @@ list of the first. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib utils : utils.cpp /boost/filesystem//fs ;
-lib core : core.cpp utils ;
-exe app : app.cpp core ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>utils<span class="tok-w"> </span>:<span class="tok-w"> </span>utils.cpp<span class="tok-w"> </span>/boost/filesystem//fs<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>core<span class="tok-w"> </span>:<span class="tok-w"> </span>core.cpp<span class="tok-w"> </span>utils<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>app<span class="tok-w"> </span>:<span class="tok-w"> </span>app.cpp<span class="tok-w"> </span>core<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1298,10 +1369,10 @@ requirements</em>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib network : network.cpp
-    : &lt;link&gt;shared:&lt;define&gt;NETWORK_LIB_SHARED
-      &lt;variant&gt;release:&lt;define&gt;EXTRA_FAST
-    ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>network<span class="tok-w"> </span>:<span class="tok-w"> </span>network.cpp<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;link&gt;shared:&lt;define&gt;NETWORK_LIB_SHARED<span class="tok-w"></span>
+<span class="tok-w">      </span>&lt;variant&gt;release:&lt;define&gt;EXTRA_FAST<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1319,9 +1390,9 @@ toolset used to build it. We can express this situation using target
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib demangler : dummy_demangler.cpp ;                <i class="conum" data-value="1"></i><b>(1)</b>
-lib demangler : demangler_gcc.cpp : &lt;toolset&gt;gcc ;   <i class="conum" data-value="2"></i><b>(2)</b>
-lib demangler : demangler_msvc.cpp : &lt;toolset&gt;msvc ; <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>dummy_demangler.cpp<span class="tok-w"> </span>;<span class="tok-w">                </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>demangler_gcc.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;gcc<span class="tok-w"> </span>;<span class="tok-w">   </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>demangler_msvc.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;msvc<span class="tok-w"> </span>;<span class="tok-w"> </span><i class="conum" data-value="3"></i><b>(3)</b></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1343,16 +1414,16 @@ a single conceptual target. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam"># util/lib2/Jamfile
-lib lib2
-    :
-    : &lt;file&gt;lib2_release.a &lt;variant&gt;release
-    ;
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-c1"># util/lib2/Jamfile</span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>lib2<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;file&gt;lib2_release.a<span class="tok-w"> </span>&lt;variant&gt;release<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span>
 
-lib lib2
-    :
-    : &lt;file&gt;lib2_debug.a &lt;variant&gt;debug
-    ;</code></pre>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>lib2<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;file&gt;lib2_debug.a<span class="tok-w"> </span>&lt;variant&gt;debug<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1366,7 +1437,7 @@ other target:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe app : app.cpp ../util/lib2//lib2 ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>app<span class="tok-w"> </span>:<span class="tok-w"> </span>app.cpp<span class="tok-w"> </span>../util/lib2//lib2<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1382,7 +1453,7 @@ almost like regular ones:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib pythonlib : : &lt;name&gt;python22 ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>pythonlib<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;python22<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1396,7 +1467,7 @@ command line (other compilers may use different options).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib pythonlib : : &lt;name&gt;python22 &lt;search&gt;/opt/lib ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>pythonlib<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;python22<span class="tok-w"> </span>&lt;search&gt;/opt/lib<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1404,8 +1475,8 @@ command line (other compilers may use different options).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib pythonlib : : &lt;name&gt;python22 &lt;variant&gt;release ;
-lib pythonlib : : &lt;name&gt;python22_d &lt;variant&gt;debug ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>pythonlib<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;python22<span class="tok-w"> </span>&lt;variant&gt;release<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>pythonlib<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;python22_d<span class="tok-w"> </span>&lt;variant&gt;debug<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6213,7 +6284,7 @@ this, use <code>modules.binding</code>.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">me = [ modules.binding $(__name__) ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>me<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>modules.binding<span class="tok-w"> </span><span class="tok-si">$(__name__)</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </li>
@@ -6227,7 +6298,7 @@ this, use <code>modules.binding</code>.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">modules.poke : ZLIB_INCLUDE : /usr/local/include ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>modules.poke<span class="tok-w"> </span>:<span class="tok-w"> </span>ZLIB_INCLUDE<span class="tok-w"> </span>:<span class="tok-w"> </span>/usr/local/include<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </li>
@@ -6241,7 +6312,7 @@ this, use <code>modules.binding</code>.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local ZLIB_INCLUDE = [ modules.peek : ZLIB_INCLUDE ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">local</span><span class="tok-w"> </span>ZLIB_INCLUDE<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>modules.peek<span class="tok-w"> </span>:<span class="tok-w"> </span>ZLIB_INCLUDE<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </li>
@@ -6270,19 +6341,19 @@ rules called this way may accept at most 8 parameters.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule filter ( f : values * )
-{
-    local m = [ CALLER_MODULE ] ;
-    local result ;
-    for v in $(values)
-    {
-        if [ modules.call-in $(m) : $(f) $(v) ]
-        {
-            result += $(v) ;
-        }
-    }
-    return result ;
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">filter</span><span class="tok-w"> </span>(<span class="tok-w"> </span>f<span class="tok-w"> </span>:<span class="tok-w"> </span>values<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>m<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">CALLER_MODULE</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>result<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">for</span><span class="tok-w"> </span>v<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(values)</span><span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span>[<span class="tok-w"> </span>modules.call-in<span class="tok-w"> </span><span class="tok-si">$(m)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(f)</span><span class="tok-w"> </span><span class="tok-si">$(v)</span><span class="tok-w"> </span>]<span class="tok-w"></span>
+<span class="tok-w">        </span>{<span class="tok-w"></span>
+<span class="tok-w">            </span>result<span class="tok-w"> </span>+=<span class="tok-w"> </span><span class="tok-si">$(v)</span><span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">        </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">return</span><span class="tok-w"> </span>result<span class="tok-w"> </span>;<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </li>
@@ -6337,10 +6408,10 @@ The <code>import</code> rule is available without qualification in all modules.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import path ;
-import path : * ;
-import path : join ;
-import path : native make : native-path make-path ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">import</span><span class="tok-w"> </span>path<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">import</span><span class="tok-w"> </span>path<span class="tok-w"> </span>:<span class="tok-w"> </span>*<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">import</span><span class="tok-w"> </span>path<span class="tok-w"> </span>:<span class="tok-w"> </span>join<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">import</span><span class="tok-w"> </span>path<span class="tok-w"> </span>:<span class="tok-w"> </span>native<span class="tok-w"> </span><span class="tok-nb">make</span><span class="tok-w"> </span>:<span class="tok-w"> </span>native-path<span class="tok-w"> </span><span class="tok-nb">make</span>-path<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </li>
@@ -6467,8 +6538,8 @@ example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">[ glob . : *.cpp ]
-[ glob . : */build/Jamfile ]</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>[<span class="tok-w"> </span><span class="tok-nb">glob</span><span class="tok-w"> </span>.<span class="tok-w"> </span>:<span class="tok-w"> </span>*.cpp<span class="tok-w"> </span>]<span class="tok-w"></span>
+[<span class="tok-w"> </span><span class="tok-nb">glob</span><span class="tok-w"> </span>.<span class="tok-w"> </span>:<span class="tok-w"> </span>*/build/Jamfile<span class="tok-w"> </span>]<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </li>
@@ -6901,14 +6972,14 @@ tries each suffix. E.g. for name of "file.so.1.2" suffixes "2", "1", and
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class abstract-target {
-    rule __init__ ( name : project )
-    rule name ( )
-    rule project ( )
-    rule location ( )
-    rule full-name ( )
-    rule generate ( property-set )
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">abstract-target</span><span class="tok-w"> </span>{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">__init__</span><span class="tok-w"> </span>(<span class="tok-w"> </span>name<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-nb">project</span><span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">project</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">location</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">full-name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">generate</span><span class="tok-w"> </span>(<span class="tok-w"> </span>property-set<span class="tok-w"> </span>)<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7008,19 +7079,19 @@ in a way specific to the derived class.</p>
 <h4 id="bbv2.reference.class.project-target"><a class="anchor" href="#bbv2.reference.class.project-target"></a>5.6.2. Class project-target</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class project-target : abstract-target {
-    rule generate ( property-set )
-    rule build-dir ( )
-    rule main-target ( name )
-    rule has-main-target ( name )
-    rule find ( id : no-error ? )
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">project-target</span><span class="tok-w"> </span><span class="tok-p">:</span><span class="tok-w"> </span><span class="tok-nc">abstract-target</span><span class="tok-w"> </span>{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">generate</span><span class="tok-w"> </span>(<span class="tok-w"> </span>property-set<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">build-dir</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">main-target</span><span class="tok-w"> </span>(<span class="tok-w"> </span>name<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">has-main-target</span><span class="tok-w"> </span>(<span class="tok-w"> </span>name<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">find</span><span class="tok-w"> </span>(<span class="tok-w"> </span>id<span class="tok-w"> </span>:<span class="tok-w"> </span>no-error<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span>
 
-    # Methods inherited from abstract-target
-    rule name ( )
-    rule project ( )
-    rule location ( )
-    rule full-name ( )
-}</code></pre>
+<span class="tok-w">    </span><span class="tok-c1"># Methods inherited from abstract-target</span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">project</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">location</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">full-name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7098,15 +7169,15 @@ not found depending on the <code>no-error</code> parameter.</p>
 <h4 id="bbv2.reference.class.main-target"><a class="anchor" href="#bbv2.reference.class.main-target"></a>5.6.3. Class main-target</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class main-target : abstract-target {
-    rule generate ( property-set )
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">main-target</span><span class="tok-w"> </span><span class="tok-p">:</span><span class="tok-w"> </span><span class="tok-nc">abstract-target</span><span class="tok-w"> </span>{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">generate</span><span class="tok-w"> </span>(<span class="tok-w"> </span>property-set<span class="tok-w"> </span>)<span class="tok-w"></span>
 
-    # Methods inherited from abstract-target
-    rule name ( )
-    rule project ( )
-    rule location ( )
-    rule full-name ( )
-}</code></pre>
+<span class="tok-w">    </span><span class="tok-c1"># Methods inherited from abstract-target</span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">project</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">location</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">full-name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7151,17 +7222,17 @@ alternative.</p>
 <h4 id="bbv2.reference.class.basic-target"><a class="anchor" href="#bbv2.reference.class.basic-target"></a>5.6.4. Class basic-target</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class basic-target : abstract-target {
-    rule __init__ ( name : project : sources * : requirements * : default-build * : usage-requirements * )
-    rule generate ( property-set )
-    rule construct ( name : source-targets * : property-set )
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">basic-target</span><span class="tok-w"> </span><span class="tok-p">:</span><span class="tok-w"> </span><span class="tok-nc">abstract-target</span><span class="tok-w"> </span>{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">__init__</span><span class="tok-w"> </span>(<span class="tok-w"> </span>name<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-nb">project</span><span class="tok-w"> </span>:<span class="tok-w"> </span>sources<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>default-build<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>usage-requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">generate</span><span class="tok-w"> </span>(<span class="tok-w"> </span>property-set<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">construct</span><span class="tok-w"> </span>(<span class="tok-w"> </span>name<span class="tok-w"> </span>:<span class="tok-w"> </span>source-targets<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>property-set<span class="tok-w"> </span>)<span class="tok-w"></span>
 
-    # Methods inherited from abstract-target
-    rule name ( )
-    rule project ( )
-    rule location ( )
-    rule full-name ( )
-}</code></pre>
+<span class="tok-w">    </span><span class="tok-c1"># Methods inherited from abstract-target</span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">project</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">location</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">full-name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7229,20 +7300,20 @@ overriden in derived classes.</p>
 <h4 id="bbv2.reference.class.typed-target"><a class="anchor" href="#bbv2.reference.class.typed-target"></a>5.6.5. Class typed-target</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class typed-target : basic-target {
-    rule __init__ ( name : project : type : sources * : requirements * : default-build * : usage-requirements * )
-    rule type ( )
-    rule construct ( name : source-targets * : property-set )
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">typed-target</span><span class="tok-w"> </span><span class="tok-p">:</span><span class="tok-w"> </span><span class="tok-nc">basic-target</span><span class="tok-w"> </span>{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">__init__</span><span class="tok-w"> </span>(<span class="tok-w"> </span>name<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-nb">project</span><span class="tok-w"> </span>:<span class="tok-w"> </span>type<span class="tok-w"> </span>:<span class="tok-w"> </span>sources<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>default-build<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>usage-requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">type</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">construct</span><span class="tok-w"> </span>(<span class="tok-w"> </span>name<span class="tok-w"> </span>:<span class="tok-w"> </span>source-targets<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>property-set<span class="tok-w"> </span>)<span class="tok-w"></span>
 
-    # Methods inherited from abstract-target
-    rule name ( )
-    rule project ( )
-    rule location ( )
-    rule full-name ( )
+<span class="tok-w">    </span><span class="tok-c1"># Methods inherited from abstract-target</span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">project</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">location</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">full-name</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
 
-    # Methods inherited from basic-target
-    rule generate ( property-set )
-  }</code></pre>
+<span class="tok-w">    </span><span class="tok-c1"># Methods inherited from basic-target</span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">generate</span><span class="tok-w"> </span>(<span class="tok-w"> </span>property-set<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">  </span>}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7318,15 +7389,15 @@ and should not be called directly by users.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class property-set {
-    rule raw ( )
-    rule str ( )
-    rule propagated ( )
-    rule add ( ps )
-    rule add-raw ( properties * )
-    rule refine ( ps )
-    rule get ( feature )
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">property-set</span><span class="tok-w"> </span>{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">raw</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">str</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">propagated</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">add</span><span class="tok-w"> </span>(<span class="tok-w"> </span>ps<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">add-raw</span><span class="tok-w"> </span>(<span class="tok-w"> </span>properties<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">refine</span><span class="tok-w"> </span>(<span class="tok-w"> </span>ps<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">get</span><span class="tok-w"> </span>(<span class="tok-w"> </span>feature<span class="tok-w"> </span>)<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8227,8 +8298,8 @@ build properties that should be used for the action.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local a = [ new action $(source) : common.copy : $(property-set) ] ;
-local t = [ new file-target $(name) : CPP : $(project) : $(a) ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">local</span><span class="tok-w"> </span>a<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>new<span class="tok-w"> </span>action<span class="tok-w"> </span><span class="tok-si">$(source)</span><span class="tok-w"> </span>:<span class="tok-w"> </span>common.copy<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(property-set)</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">local</span><span class="tok-w"> </span>t<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>new<span class="tok-w"> </span>file-target<span class="tok-w"> </span><span class="tok-si">$(name)</span><span class="tok-w"> </span>:<span class="tok-w"> </span>CPP<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(project)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(a)</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8252,8 +8323,8 @@ necessary.<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">return [ virtual-target.register $(t) ] ;
-return [ sequence.transform virtual-target.register : $(targets) ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">return</span><span class="tok-w"> </span>[<span class="tok-w"> </span>virtual-target.register<span class="tok-w"> </span><span class="tok-si">$(t)</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">return</span><span class="tok-w"> </span>[<span class="tok-w"> </span>sequence.transform<span class="tok-w"> </span>virtual-target.register<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(targets)</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -8327,8 +8398,8 @@ register a new target type. The following code does it:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import type ;
-type.register VERBATIM : verbatim ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">import</span><span class="tok-w"> </span>type<span class="tok-w"> </span>;<span class="tok-w"></span>
+type.register<span class="tok-w"> </span>VERBATIM<span class="tok-w"> </span>:<span class="tok-w"> </span>verbatim<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8348,8 +8419,8 @@ Our generator will be called <code>verbatim.inline-file</code>; it transforms
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import generators ;
-generators.register-standard verbatim.inline-file : VERBATIM : CPP ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">import</span><span class="tok-w"> </span>generators<span class="tok-w"> </span>;<span class="tok-w"></span>
+generators.register-standard<span class="tok-w"> </span>verbatim.inline-file<span class="tok-w"> </span>:<span class="tok-w"> </span>VERBATIM<span class="tok-w"> </span>:<span class="tok-w"> </span>CPP<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8358,10 +8429,10 @@ make that transformation. That&#8217;s done with an <code>actions</code> declara
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">actions inline-file
-{
-    "./inline-file.py" $(&lt;) $(&gt;)
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">actions</span><span class="tok-w"> </span><span class="tok-nf">inline-file</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-sh"></span>
+<span class="tok-sh">    &quot;./inline-file.py&quot; $(&lt;) $(&gt;)</span>
+<span class="tok-p">}</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8371,7 +8442,7 @@ possible to write the following in your Jamfile:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe codegen : codegen.cpp class_template.verbatim usage.verbatim ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>codegen<span class="tok-w"> </span>:<span class="tok-w"> </span>codegen.cpp<span class="tok-w"> </span>class_template.verbatim<span class="tok-w"> </span>usage.verbatim<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8392,8 +8463,8 @@ was declaring a new target type:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import type ;
-type.register VERBATIM : verbatim ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">import</span><span class="tok-w"> </span>type<span class="tok-w"> </span>;<span class="tok-w"></span>
+type.register<span class="tok-w"> </span>VERBATIM<span class="tok-w"> </span>:<span class="tok-w"> </span>verbatim<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8417,7 +8488,7 @@ compiler uses extension <code>elf</code> for executable files. You can use the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">type.set-generated-target-suffix EXE : &lt;toolset&gt;elf : elf ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>type.set-generated-target-suffix<span class="tok-w"> </span>EXE<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;elf<span class="tok-w"> </span>:<span class="tok-w"> </span>elf<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8425,7 +8496,7 @@ compiler uses extension <code>elf</code> for executable files. You can use the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">type.register PLUGIN : : SHARED_LIB ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>type.register<span class="tok-w"> </span>PLUGIN<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>SHARED_LIB<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8459,13 +8530,13 @@ be assigned to a target type.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class verbatim-scanner : common-scanner
-{
-    rule pattern ( )
-    {
-        return "//###include[ ]*\"([^\"]*)\"" ;
-    }
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">verbatim-scanner</span><span class="tok-w"> </span><span class="tok-p">:</span><span class="tok-w"> </span><span class="tok-nc">common-scanner</span><span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">pattern</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span>&quot;//###include[<span class="tok-w"> </span>]*\&quot;([^\&quot;]*)\&quot;&quot;<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8483,7 +8554,7 @@ group to be matched.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">scanner.register verbatim-scanner : include ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>scanner.register<span class="tok-w"> </span>verbatim-scanner<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-k">include</span><span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8496,7 +8567,7 @@ the included files.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">type.set-scanner VERBATIM : verbatim-scanner ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>type.set-scanner<span class="tok-w"> </span>VERBATIM<span class="tok-w"> </span>:<span class="tok-w"> </span>verbatim-scanner<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8529,12 +8600,12 @@ Let&#8217;s review the example we&#8217;ve seen in the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import generators ;
-generators.register-standard verbatim.inline-file : VERBATIM : CPP ;
-actions inline-file
-{
-    "./inline-file.py" $(&lt;) $(&gt;)
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">import</span><span class="tok-w"> </span>generators<span class="tok-w"> </span>;<span class="tok-w"></span>
+generators.register-standard<span class="tok-w"> </span>verbatim.inline-file<span class="tok-w"> </span>:<span class="tok-w"> </span>VERBATIM<span class="tok-w"> </span>:<span class="tok-w"> </span>CPP<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">actions</span><span class="tok-w"> </span><span class="tok-nf">inline-file</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-sh"></span>
+<span class="tok-sh">    &quot;./inline-file.py&quot; $(&lt;) $(&gt;)</span>
+<span class="tok-p">}</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8555,8 +8626,8 @@ are registered with the <code>generators.register-standard</code> and the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">generators.register-standard verbatim.inline-file : VERBATIM : CPP ;
-generators.register-composing mex.mex : CPP LIB : MEX ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>generators.register-standard<span class="tok-w"> </span>verbatim.inline-file<span class="tok-w"> </span>:<span class="tok-w"> </span>VERBATIM<span class="tok-w"> </span>:<span class="tok-w"> </span>CPP<span class="tok-w"> </span>;<span class="tok-w"></span>
+generators.register-composing<span class="tok-w"> </span>mex.mex<span class="tok-w"> </span>:<span class="tok-w"> </span>CPP<span class="tok-w"> </span>LIB<span class="tok-w"> </span>:<span class="tok-w"> </span>MEX<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8591,17 +8662,17 @@ how you can create your own generator class:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class custom-generator : generator
-{
-    rule __init__ ( * : * )
-    {
-        generator.__init__ $(1) : $(2) : $(3) : $(4) : $(5) : $(6) : $(7) : $(8) : $(9) ;
-    }
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">custom-generator</span><span class="tok-w"> </span><span class="tok-p">:</span><span class="tok-w"> </span><span class="tok-nc">generator</span><span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">__init__</span><span class="tok-w"> </span>(<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span>generator.__init__<span class="tok-w"> </span><span class="tok-si">$(1)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(2)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(3)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(4)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(5)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(6)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(7)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(8)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(9)</span><span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
 
-}
+}<span class="tok-w"></span>
 
-generators.register
-  [ new custom-generator verbatim.inline-file : VERBATIM : CPP ] ;</code></pre>
+generators.register<span class="tok-w"></span>
+<span class="tok-w">  </span>[<span class="tok-w"> </span>new<span class="tok-w"> </span>custom-generator<span class="tok-w"> </span>verbatim.inline-file<span class="tok-w"> </span>:<span class="tok-w"> </span>VERBATIM<span class="tok-w"> </span>:<span class="tok-w"> </span>CPP<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8627,24 +8698,24 @@ automatically:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">class itrace-generator : generator {
-...
-    rule generated-targets ( sources + : property-set : project name ? )
-    {
-        local leaves ;
-        local temp = [ virtual-target.traverse $(sources[1]) : : include-sources ] ;
-        for local t in $(temp)
-        {
-            if ! [ $(t).action ]
-            {
-                leaves += $(t) ;
-            }
-        }
-        return [ generator.generated-targets $(sources) $(leafs)
-          : $(property-set) : $(project) $(name) ] ;
-    }
-}
-generators.register [ new itrace-generator nm.itrace : EXE : ITRACE ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">itrace-generator</span><span class="tok-w"> </span><span class="tok-p">:</span><span class="tok-w"> </span><span class="tok-nc">generator</span><span class="tok-w"> </span>{<span class="tok-w"></span>
+...<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">generated-targets</span><span class="tok-w"> </span>(<span class="tok-w"> </span>sources<span class="tok-w"> </span>+<span class="tok-w"> </span>:<span class="tok-w"> </span>property-set<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-nb">project</span><span class="tok-w"> </span>name<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">local</span><span class="tok-w"> </span>leaves<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">local</span><span class="tok-w"> </span>temp<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>virtual-target.traverse<span class="tok-w"> </span><span class="tok-si">$(sources[1])</span><span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-k">include</span>-sources<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-k">local</span><span class="tok-w"> </span>t<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(temp)</span><span class="tok-w"></span>
+<span class="tok-w">        </span>{<span class="tok-w"></span>
+<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span>!<span class="tok-w"> </span>[<span class="tok-w"> </span>$(t).action<span class="tok-w"> </span>]<span class="tok-w"></span>
+<span class="tok-w">            </span>{<span class="tok-w"></span>
+<span class="tok-w">                </span>leaves<span class="tok-w"> </span>+=<span class="tok-w"> </span><span class="tok-si">$(t)</span><span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">            </span>}<span class="tok-w"></span>
+<span class="tok-w">        </span>}<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span>[<span class="tok-w"> </span>generator.generated-targets<span class="tok-w"> </span><span class="tok-si">$(sources)</span><span class="tok-w"> </span><span class="tok-si">$(leafs)</span><span class="tok-w"></span>
+<span class="tok-w">          </span>:<span class="tok-w"> </span><span class="tok-si">$(property-set)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(project)</span><span class="tok-w"> </span><span class="tok-si">$(name)</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span>
+generators.register<span class="tok-w"> </span>[<span class="tok-w"> </span>new<span class="tok-w"> </span>itrace-generator<span class="tok-w"> </span>nm.itrace<span class="tok-w"> </span>:<span class="tok-w"> </span>EXE<span class="tok-w"> </span>:<span class="tok-w"> </span>ITRACE<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8667,44 +8738,44 @@ Here&#8217;s how it can be done:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule run ( project name ? : property-set : sources * )
-{
-    local python ;
-    for local s in $(sources)
-    {
-        if [ $(s).type ] = PY
-        {
-            python = $(s) ;
-        }
-    }
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">run</span><span class="tok-w"> </span>(<span class="tok-w"> </span><span class="tok-nb">project</span><span class="tok-w"> </span>name<span class="tok-w"> </span>?<span class="tok-w"> </span>:<span class="tok-w"> </span>property-set<span class="tok-w"> </span>:<span class="tok-w"> </span>sources<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>python<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-k">local</span><span class="tok-w"> </span>s<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(sources)</span><span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span>[<span class="tok-w"> </span>$(s).type<span class="tok-w"> </span>]<span class="tok-w"> </span>=<span class="tok-w"> </span>PY<span class="tok-w"></span>
+<span class="tok-w">        </span>{<span class="tok-w"></span>
+<span class="tok-w">            </span>python<span class="tok-w"> </span>=<span class="tok-w"> </span><span class="tok-si">$(s)</span><span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">        </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
 
-    local libs ;
-    for local s in $(sources)
-    {
-        if [ type.is-derived [ $(s).type ] LIB ]
-        {
-            libs += $(s) ;
-        }
-    }
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>libs<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-k">local</span><span class="tok-w"> </span>s<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(sources)</span><span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span>[<span class="tok-w"> </span>type.is-derived<span class="tok-w"> </span>[<span class="tok-w"> </span>$(s).type<span class="tok-w"> </span>]<span class="tok-w"> </span>LIB<span class="tok-w"> </span>]<span class="tok-w"></span>
+<span class="tok-w">        </span>{<span class="tok-w"></span>
+<span class="tok-w">            </span>libs<span class="tok-w"> </span>+=<span class="tok-w"> </span><span class="tok-si">$(s)</span><span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">        </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
 
-    local new-sources ;
-    for local s in $(sources)
-    {
-        if [ type.is-derived [ $(s).type ] CPP ]
-        {
-            local name = [ $(s).name ] ;    # get the target's basename
-            if $(name) = [ $(python).name ]
-            {
-                name = $(name)_ext ;        # rename the target
-            }
-            new-sources += [ generators.construct $(project) $(name) :
-              PYTHON_EXTENSION : $(property-set) : $(s) $(libs) ] ;
-        }
-    }
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>new-sources<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-k">local</span><span class="tok-w"> </span>s<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(sources)</span><span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span>[<span class="tok-w"> </span>type.is-derived<span class="tok-w"> </span>[<span class="tok-w"> </span>$(s).type<span class="tok-w"> </span>]<span class="tok-w"> </span>CPP<span class="tok-w"> </span>]<span class="tok-w"></span>
+<span class="tok-w">        </span>{<span class="tok-w"></span>
+<span class="tok-w">            </span><span class="tok-k">local</span><span class="tok-w"> </span>name<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>$(s).name<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w">    </span><span class="tok-c1"># get the target&#39;s basename</span>
+<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-si">$(name)</span><span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>$(python).name<span class="tok-w"> </span>]<span class="tok-w"></span>
+<span class="tok-w">            </span>{<span class="tok-w"></span>
+<span class="tok-w">                </span>name<span class="tok-w"> </span>=<span class="tok-w"> </span>$(name)_ext<span class="tok-w"> </span>;<span class="tok-w">        </span><span class="tok-c1"># rename the target</span>
+<span class="tok-w">            </span>}<span class="tok-w"></span>
+<span class="tok-w">            </span>new-sources<span class="tok-w"> </span>+=<span class="tok-w"> </span>[<span class="tok-w"> </span>generators.construct<span class="tok-w"> </span><span class="tok-si">$(project)</span><span class="tok-w"> </span><span class="tok-si">$(name)</span><span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">              </span>PYTHON_EXTENSION<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(property-set)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(s)</span><span class="tok-w"> </span><span class="tok-si">$(libs)</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">        </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
 
-    result = [ construct-result $(python) $(new-sources) : $(project) $(name)
-                 : $(property-set) ] ;
-}</code></pre>
+<span class="tok-w">    </span>result<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>construct-result<span class="tok-w"> </span><span class="tok-si">$(python)</span><span class="tok-w"> </span><span class="tok-si">$(new-sources)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(project)</span><span class="tok-w"> </span><span class="tok-si">$(name)</span><span class="tok-w"></span>
+<span class="tok-w">                 </span>:<span class="tok-w"> </span><span class="tok-si">$(property-set)</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8723,20 +8794,20 @@ done with features. Consider an example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam"># Declare a new free feature
-import feature : feature ;
-feature verbatim-options : : free ;
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-c1"># Declare a new free feature</span>
+<span class="tok-nb">import</span><span class="tok-w"> </span>feature<span class="tok-w"> </span>:<span class="tok-w"> </span>feature<span class="tok-w"> </span>;<span class="tok-w"></span>
+feature<span class="tok-w"> </span>verbatim-options<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>free<span class="tok-w"> </span>;<span class="tok-w"></span>
 
-# Cause the value of the 'verbatim-options' feature to be
-# available as 'OPTIONS' variable inside verbatim.inline-file
-import toolset : flags ;
-flags verbatim.inline-file OPTIONS &lt;verbatim-options&gt; ;
+<span class="tok-c1"># Cause the value of the &#39;verbatim-options&#39; feature to be</span>
+<span class="tok-c1"># available as &#39;OPTIONS&#39; variable inside verbatim.inline-file</span>
+<span class="tok-nb">import</span><span class="tok-w"> </span>toolset<span class="tok-w"> </span>:<span class="tok-w"> </span>flags<span class="tok-w"> </span>;<span class="tok-w"></span>
+flags<span class="tok-w"> </span>verbatim.inline-file<span class="tok-w"> </span>OPTIONS<span class="tok-w"> </span>&lt;verbatim-options&gt;<span class="tok-w"> </span>;<span class="tok-w"></span>
 
-# Use the "OPTIONS" variable
-actions inline-file
-{
-    "./inline-file.py" $(OPTIONS) $(&lt;) $(&gt;)
-}</code></pre>
+<span class="tok-c1"># Use the &quot;OPTIONS&quot; variable</span>
+<span class="tok-k">actions</span><span class="tok-w"> </span><span class="tok-nf">inline-file</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-sh"></span>
+<span class="tok-sh">    &quot;./inline-file.py&quot; $(OPTIONS) $(&lt;) $(&gt;)</span>
+<span class="tok-p">}</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8848,7 +8919,7 @@ be exported. It would be nice to use this file like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib a : a.cpp : &lt;def-file&gt;a.def ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;def-file&gt;a.def<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8921,8 +8992,8 @@ of features.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">variant crazy : &lt;optimization&gt;speed &lt;inlining&gt;off
-                &lt;debug-symbols&gt;on &lt;profiling&gt;on ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>variant<span class="tok-w"> </span>crazy<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;optimization&gt;speed<span class="tok-w"> </span>&lt;inlining&gt;off<span class="tok-w"></span>
+<span class="tok-w">                </span>&lt;debug-symbols&gt;on<span class="tok-w"> </span>&lt;profiling&gt;on<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8931,7 +9002,7 @@ also extend an existing variant:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">variant super_release : release : &lt;define&gt;USE_ASM ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>variant<span class="tok-w"> </span>super_release<span class="tok-w"> </span>:<span class="tok-w"> </span>release<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;define&gt;USE_ASM<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8944,9 +9015,9 @@ example that defines a brand new feature:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">feature parallelism : mpi fake none : composite link-incompatible ;
-feature.compose &lt;parallelism&gt;mpi : &lt;library&gt;/mpi//mpi/&lt;parallelism&gt;none ;
-feature.compose &lt;parallelism&gt;fake : &lt;library&gt;/mpi//fake/&lt;parallelism&gt;none ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>feature<span class="tok-w"> </span>parallelism<span class="tok-w"> </span>:<span class="tok-w"> </span>mpi<span class="tok-w"> </span>fake<span class="tok-w"> </span>none<span class="tok-w"> </span>:<span class="tok-w"> </span>composite<span class="tok-w"> </span><span class="tok-nb">link</span>-incompatible<span class="tok-w"> </span>;<span class="tok-w"></span>
+feature.compose<span class="tok-w"> </span>&lt;parallelism&gt;mpi<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;library&gt;/mpi//mpi/&lt;parallelism&gt;none<span class="tok-w"> </span>;<span class="tok-w"></span>
+feature.compose<span class="tok-w"> </span>&lt;parallelism&gt;fake<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;library&gt;/mpi//fake/&lt;parallelism&gt;none<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8972,11 +9043,11 @@ example, if you create a module <code>obfuscate.jam</code> containing:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import type ;
-type.register OBFUSCATED_CPP  : ocpp ;
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">import</span><span class="tok-w"> </span>type<span class="tok-w"> </span>;<span class="tok-w"></span>
+type.register<span class="tok-w"> </span>OBFUSCATED_CPP<span class="tok-w">  </span>:<span class="tok-w"> </span>ocpp<span class="tok-w"> </span>;<span class="tok-w"></span>
 
-import generators ;
-generators.register-standard obfuscate.file : CPP : OBFUSCATED_CPP ;</code></pre>
+<span class="tok-nb">import</span><span class="tok-w"> </span>generators<span class="tok-w"> </span>;<span class="tok-w"></span>
+generators.register-standard<span class="tok-w"> </span>obfuscate.file<span class="tok-w"> </span>:<span class="tok-w"> </span>CPP<span class="tok-w"> </span>:<span class="tok-w"> </span>OBFUSCATED_CPP<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8991,7 +9062,7 @@ You can achieve this effect using:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib codegen : [ glob *.cpp ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>codegen<span class="tok-w"> </span>:<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">glob</span><span class="tok-w"> </span>*.cpp<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9000,10 +9071,10 @@ definition to the <code>Jamroot.jam</code> file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule glib ( name : extra-sources * : requirements * )
-{
-    lib $(name) : [ glob *.cpp ] $(extra-sources) : $(requirements) ;
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">glib</span><span class="tok-w"> </span>(<span class="tok-w"> </span>name<span class="tok-w"> </span>:<span class="tok-w"> </span>extra-sources<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-nb">lib</span><span class="tok-w"> </span><span class="tok-si">$(name)</span><span class="tok-w"> </span>:<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">glob</span><span class="tok-w"> </span>*.cpp<span class="tok-w"> </span>]<span class="tok-w"> </span><span class="tok-si">$(extra-sources)</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-si">$(requirements)</span><span class="tok-w"> </span>;<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9011,7 +9082,7 @@ definition to the <code>Jamroot.jam</code> file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">glib codegen ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>glib<span class="tok-w"> </span>codegen<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9147,8 +9218,8 @@ twice, with almost the same, but differing properties. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp : &lt;include&gt;/usr/local/include ;
-exe b : a.cpp ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/usr/local/include<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9171,8 +9242,8 @@ once or twice.</p>
 same for both target requests:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp : &lt;include&gt;/usr/local/include ;
-exe b : a.cpp : &lt;include&gt;/usr/local/include ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/usr/local/include<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/usr/local/include<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9180,9 +9251,9 @@ exe b : a.cpp : &lt;include&gt;/usr/local/include ;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">alias a-with-include : a.cpp : &lt;include&gt;/usr/local/include ;
-exe a : a-with-include ;
-exe b : a-with-include ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">alias</span><span class="tok-w"> </span>a-with-include<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/usr/local/include<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a-with-include<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>a-with-include<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9191,9 +9262,9 @@ sources added for the built <code>a</code> and <code>b</code> executables would 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">obj a-obj : a.cpp : &lt;include&gt;/usr/local/include ;
-exe a : a-obj ;
-exe b : a-obj ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">obj</span><span class="tok-w"> </span>a-obj<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/usr/local/include<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a-obj<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>a-obj<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9207,10 +9278,10 @@ might be added for targets <code>a</code> and <code>b</code>.</p>
 two separate object files like so:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">obj a_obj : a.cpp : &lt;include&gt;/usr/local/include ;
-obj b_obj : a.cpp ;
-exe a : a_obj ;
-exe b : b_obj ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">obj</span><span class="tok-w"> </span>a_obj<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/usr/local/include<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">obj</span><span class="tok-w"> </span>b_obj<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a_obj<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>b_obj<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9218,8 +9289,8 @@ exe b : b_obj ;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : [ obj a_obj : a.cpp : &lt;include&gt;/usr/local/include ] ;
-exe b : [ obj a_obj : a.cpp ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">obj</span><span class="tok-w"> </span>a_obj<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/usr/local/include<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">obj</span><span class="tok-w"> </span>a_obj<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9261,9 +9332,9 @@ using the helper os.environ rule. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import os ;
-local unga-unga = [ os.environ UNGA_UNGA ] ;
-ECHO $(unga-unga) ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">import</span><span class="tok-w"> </span>os<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">local</span><span class="tok-w"> </span>unga-unga<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>os.environ<span class="tok-w"> </span>UNGA_UNGA<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">ECHO</span><span class="tok-w"> </span><span class="tok-si">$(unga-unga)</span><span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9271,9 +9342,9 @@ ECHO $(unga-unga) ;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">import os ;
-local SOME_LIBRARY_PATH = [ os.environ SOME_LIBRARY_PATH ] ;
-exe a : a.cpp : &lt;include&gt;$(SOME_LIBRARY_PATH) ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">import</span><span class="tok-w"> </span>os<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">local</span><span class="tok-w"> </span>SOME_LIBRARY_PATH<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>os.environ<span class="tok-w"> </span>SOME_LIBRARY_PATH<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;$(SOME_LIBRARY_PATH)<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -9285,7 +9356,7 @@ alphabetically. This means that if you write:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp : &lt;include&gt;b &lt;include&gt;a ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;b<span class="tok-w"> </span>&lt;include&gt;a<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9297,7 +9368,7 @@ provided:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp : &lt;include&gt;a&amp;&amp;b ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;a&amp;&amp;b<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9328,8 +9399,8 @@ following lines will cause <code>a</code> to appear before <code>b</code> on the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib a : a.cpp b ;
-lib a : a.cpp : &lt;use&gt;b ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>b<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;use&gt;b<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9337,9 +9408,9 @@ lib a : a.cpp : &lt;use&gt;b ;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">lib z ;
-lib png : : &lt;use&gt;z ;
-exe viewer : viewer png z ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>z<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>png<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;use&gt;z<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>viewer<span class="tok-w"> </span>:<span class="tok-w"> </span>viewer<span class="tok-w"> </span>png<span class="tok-w"> </span>z<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -9350,7 +9421,7 @@ exe viewer : viewer png z ;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local gtk_includes = [ SHELL "gtk-config --cflags" ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">local</span><span class="tok-w"> </span>gtk_includes<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">SHELL</span><span class="tok-w"> </span>&quot;gtk-config<span class="tok-w"> </span>--cflags&quot;<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -9362,7 +9433,7 @@ access it just declare a path constant in your Jamroot.jam file using:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">path-constant TOP : . ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">path-constant</span><span class="tok-w"> </span>TOP<span class="tok-w"> </span>:<span class="tok-w"> </span>.<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9378,8 +9449,8 @@ target in your <code>exe</code> or <code>lib</code> target:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp b ;
-obj b : b.cpp : &lt;optimization&gt;off ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>b<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">obj</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>b.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;optimization&gt;off<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9388,8 +9459,8 @@ C/C++ compiler options:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp b ;
-obj b : b.cpp : &lt;cflags&gt;-g ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>b<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">obj</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>b.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;cflags&gt;-g<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9398,8 +9469,8 @@ for finer control:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe a : a.cpp b ;
-obj b : b.cpp : &lt;variant&gt;release:&lt;optimization&gt;off ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>b<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">obj</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>b.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;variant&gt;release:&lt;optimization&gt;off<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -9452,8 +9523,8 @@ your development tree. (The <code>install</code> rule explicitly disables the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">install installed : application : &lt;dll-path&gt;/usr/lib/snake
-                                  &lt;location&gt;/usr/bin ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">install</span><span class="tok-w"> </span>installed<span class="tok-w"> </span>:<span class="tok-w"> </span>application<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;dll-path&gt;/usr/lib/snake<span class="tok-w"></span>
+<span class="tok-w">                                  </span>&lt;location&gt;/usr/bin<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9492,8 +9563,8 @@ targets in Boost.Build&#8217;s <code>site-config.jam</code> configuration file:<
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project site-config ;
-lib zlib : : &lt;name&gt;z ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">project</span><span class="tok-w"> </span>site-config<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>zlib<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;z<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9503,7 +9574,7 @@ well. So, you declare a project id and a target. Now, one can write:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello : hello.cpp /site-config//zlib ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>/site-config//zlib<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9528,11 +9599,11 @@ their include path as a part of its usage requirements, for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">alias my-lib
-    : # no sources
-    : # no build requirements
-    : # no default build
-    : &lt;include&gt;whatever ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">alias</span><span class="tok-w"> </span>my-lib<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span><span class="tok-c1"># no sources</span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span><span class="tok-c1"># no build requirements</span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span><span class="tok-c1"># no default build</span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;include&gt;whatever<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9549,8 +9620,8 @@ them for the <code>alias</code> target:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">project my : usage-requirements &lt;include&gt;whatever ;
-alias mylib ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">project</span><span class="tok-w"> </span>my<span class="tok-w"> </span>:<span class="tok-w"> </span>usage-requirements<span class="tok-w"> </span>&lt;include&gt;whatever<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">alias</span><span class="tok-w"> </span>mylib<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -9603,8 +9674,8 @@ For example to use as a target requirement:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">html example : example.adoc :
-    &lt;asciidoctor-attribute&gt;idprefix=ex ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>html<span class="tok-w"> </span>example<span class="tok-w"> </span>:<span class="tok-w"> </span>example.adoc<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">    </span>&lt;asciidoctor-attribute&gt;idprefix=ex<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9628,7 +9699,7 @@ example, when specifying an <code>html</code> target for an <code>asciidoc</code
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">html example : example.adoc ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>html<span class="tok-w"> </span>example<span class="tok-w"> </span>:<span class="tok-w"> </span>example.adoc<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9656,8 +9727,8 @@ requirement. The default for each target type are:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">docbook example : example.adoc :
-    &lt;asciidoctor-backend&gt;docbook5 ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>docbook<span class="tok-w"> </span>example<span class="tok-w"> </span>:<span class="tok-w"> </span>example.adoc<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">    </span>&lt;asciidoctor-backend&gt;docbook5<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9682,7 +9753,7 @@ with the <code>using</code> rule. The initialiation takes the following argument
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">using asciidoctor : "/usr/local/bin/asciidoctor" ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>asciidoctor<span class="tok-w"> </span>:<span class="tok-w"> </span>&quot;/usr/local/bin/asciidoctor&quot;<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9761,7 +9832,7 @@ for this feature is specified, then one is copied from the feature
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">using sass : /usr/local/bin/psass -p2 ; # Perl libsass-based version</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>sass<span class="tok-w"> </span>:<span class="tok-w"> </span>/usr/local/bin/psass<span class="tok-w"> </span>-p2<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># Perl libsass-based version</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9795,13 +9866,13 @@ single executable from a single source file:</p>
 <div class="listingblock">
 <div class="title"><code>hello.cpp</code></div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cpp hljs" data-lang="cpp">#include &lt;iostream&gt;
+<pre class="pygments highlight"><code data-lang="cpp"><span></span><span class="tok-cp">#include</span> <span class="tok-cpf">&lt;iostream&gt;</span><span class="tok-cp"></span>
 
-int main()
-{
-    std::cout &lt;&lt; "Hello!\n";
-    return 1;
-}</code></pre>
+<span class="tok-kt">int</span> <span class="tok-nf">main</span><span class="tok-p">()</span>
+<span class="tok-p">{</span>
+    <span class="tok-n">std</span><span class="tok-o">::</span><span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Hello!</span><span class="tok-se">\n</span><span class="tok-s">&quot;</span><span class="tok-p">;</span>
+    <span class="tok-k">return</span> <span class="tok-mi">1</span><span class="tok-p">;</span>
+<span class="tok-p">}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9811,7 +9882,7 @@ program:</p>
 <div class="listingblock">
 <div class="title"><code>jamroot.jam</code></div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">exe hello : hello.cpp ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9819,15 +9890,15 @@ program:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">&gt; cd /example/hello
+<pre class="pygments highlight"><code data-lang="bash"><span></span>&gt; <span class="tok-nb">cd</span> /example/hello
 &gt; b2
-...found 8 targets...
-...updating 4 targets...
+...found <span class="tok-m">8</span> targets...
+...updating <span class="tok-m">4</span> targets...
 common.mkdir bin/clang-darwin-4.2.1
 common.mkdir bin/clang-darwin-4.2.1/debug
 clang-darwin.compile.c++ bin/clang-darwin-4.2.1/debug/hello.o
 clang-darwin.link bin/clang-darwin-4.2.1/debug/hello
-...updated 4 targets...
+...updated <span class="tok-m">4</span> targets...
 &gt; bin/clang-darwin-4.2.1/debug/hello
 Hello!</code></pre>
 </div>
@@ -10453,7 +10524,7 @@ should match the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule bind-rule ( target : path )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">bind-rule</span><span class="tok-w"> </span>(<span class="tok-w"> </span>target<span class="tok-w"> </span>:<span class="tok-w"> </span>path<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10613,14 +10684,14 @@ Dave" to the console:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule report ( pronoun index ? : state : names + )
-{
-    local he.suffix she.suffix it.suffix = s ;
-    local I.suffix = m ;
-    local they.suffix you.suffix = re ;
-    ECHO $(pronoun)'$($(pronoun).suffix) $(state), $(names[$(index)]) ;
-}
-report I 2 : sorry : Joe Dave Pete ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">report</span><span class="tok-w"> </span>(<span class="tok-w"> </span>pronoun<span class="tok-w"> </span>index<span class="tok-w"> </span>?<span class="tok-w"> </span>:<span class="tok-w"> </span>state<span class="tok-w"> </span>:<span class="tok-w"> </span>names<span class="tok-w"> </span>+<span class="tok-w"> </span>)<span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>he.suffix<span class="tok-w"> </span>she.suffix<span class="tok-w"> </span>it.suffix<span class="tok-w"> </span>=<span class="tok-w"> </span>s<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>I.suffix<span class="tok-w"> </span>=<span class="tok-w"> </span>m<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>they.suffix<span class="tok-w"> </span>you.suffix<span class="tok-w"> </span>=<span class="tok-w"> </span>re<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-nb">ECHO</span><span class="tok-w"> </span>$(pronoun)&#39;$($(pronoun).suffix)<span class="tok-w"> </span>$(state),<span class="tok-w"> </span>$(names[$(index)])<span class="tok-w"> </span>;<span class="tok-w"></span>
+}<span class="tok-w"></span>
+report<span class="tok-w"> </span>I<span class="tok-w"> </span>2<span class="tok-w"> </span>:<span class="tok-w"> </span>sorry<span class="tok-w"> </span>:<span class="tok-w"> </span>Joe<span class="tok-w"> </span>Dave<span class="tok-w"> </span>Pete<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10695,7 +10766,7 @@ are just utility rules.</p>
 <h6 id="jam.language.rules.builtins.dependency_building._depends__"><a class="anchor" href="#jam.language.rules.builtins.dependency_building._depends__"></a><code>DEPENDS</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule DEPENDS ( targets1 * : targets2 * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">DEPENDS</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets1<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>targets2<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10708,7 +10779,7 @@ themselves rebuilt or are newer than <em>targets1</em>.</p>
 <h6 id="jam.language.rules.builtins.dependency_building._includes__"><a class="anchor" href="#jam.language.rules.builtins.dependency_building._includes__"></a><code>INCLUDES</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule INCLUDES ( targets1 * : targets2 * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">INCLUDES</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets1<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>targets2<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10721,8 +10792,8 @@ other. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">DEPENDS foo.o : foo.c ;
-INCLUDES foo.c : foo.h ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">DEPENDS</span><span class="tok-w"> </span>foo.o<span class="tok-w"> </span>:<span class="tok-w"> </span>foo.c<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">INCLUDES</span><span class="tok-w"> </span>foo.c<span class="tok-w"> </span>:<span class="tok-w"> </span>foo.h<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10745,7 +10816,7 @@ be changed by invoking the following rules:</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._always__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._always__"></a><code>ALWAYS</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule ALWAYS ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">ALWAYS</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10761,7 +10832,7 @@ be updated as well.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._leaves__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._leaves__"></a><code>LEAVES</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule LEAVES ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">LEAVES</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10776,7 +10847,7 @@ updated only if original source files change.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._nocare__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._nocare__"></a><code>NOCARE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule NOCARE ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">NOCARE</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10806,7 +10877,7 @@ nonzero return code, dependent targets will still be built.
 <h6 id="jam.language.rules.builtins.modifying_binding._notfile__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._notfile__"></a><code>NOTFILE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule NOTFILE ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">NOTFILE</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10822,7 +10893,7 @@ pseudotargets.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._noupdate__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._noupdate__"></a><code>NOUPDATE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule NOUPDATE ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">NOUPDATE</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10838,7 +10909,7 @@ directory exists, not when it has last been updated.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._temporary__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._temporary__"></a><code>TEMPORARY</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule TEMPORARY ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">TEMPORARY</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10854,7 +10925,7 @@ archived.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._fail_expected__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._fail_expected__"></a><code>FAIL_EXPECTED</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule FAIL_EXPECTED ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">FAIL_EXPECTED</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10871,7 +10942,7 @@ succeeds, dependent targets are skipped.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._rmold__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._rmold__"></a><code>RMOLD</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule RMOLD ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">RMOLD</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10885,7 +10956,7 @@ arguments to be removed if any of their dependencies fail to build.</p>
 <h6 id="jam.language.rules.builtins.modifying_binding._isfile__"><a class="anchor" href="#jam.language.rules.builtins.modifying_binding._isfile__"></a><code>ISFILE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule ISFILE ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">ISFILE</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10919,7 +10990,7 @@ parsing phase.</p>
 <h6 id="jam.language.rules.builtins.utility._echo__"><a class="anchor" href="#jam.language.rules.builtins.utility._echo__"></a><code>ECHO</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule ECHO ( args * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">ECHO</span><span class="tok-w"> </span>(<span class="tok-w"> </span>args<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10930,7 +11001,7 @@ parsing phase.</p>
 <h6 id="jam.language.rules.builtins.utility._exit__"><a class="anchor" href="#jam.language.rules.builtins.utility._exit__"></a><code>EXIT</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule EXIT ( message * : result-value ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">EXIT</span><span class="tok-w"> </span>(<span class="tok-w"> </span>message<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>result-value<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10951,7 +11022,7 @@ rules and not part of the language, like <code>include</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule GLOB ( directories * : patterns * : downcase-opt ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">GLOB</span><span class="tok-w"> </span>(<span class="tok-w"> </span>directories<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>patterns<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>downcase-opt<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10978,7 +11049,7 @@ Cygwin, and OpenVMS, filenames are always downcased before matching.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule GLOB_ARCHIVE ( archives * : member-patterns * : downcase-opt ? : symbol-patterns ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">GLOB_ARCHIVE</span><span class="tok-w"> </span>(<span class="tok-w"> </span>archives<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>member-patterns<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>downcase-opt<span class="tok-w"> </span>?<span class="tok-w"> </span>:<span class="tok-w"> </span>symbol-patterns<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11015,7 +11086,7 @@ specified.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule MATCH ( regexps + : list * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">MATCH</span><span class="tok-w"> </span>(<span class="tok-w"> </span>regexps<span class="tok-w"> </span>+<span class="tok-w"> </span>:<span class="tok-w"> </span>list<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11028,7 +11099,7 @@ for each string in <em>list</em>, and for each regular expression in <em>regexps
 <h6 id="jam.language.rules.builtins.utility._backtrace__"><a class="anchor" href="#jam.language.rules.builtins.utility._backtrace__"></a><code>BACKTRACE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule BACKTRACE ( )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">BACKTRACE</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11041,7 +11112,7 @@ to generate useful diagnostic messages from Jam rules.</p>
 <h6 id="jam.language.rules.builtins.utility._update__"><a class="anchor" href="#jam.language.rules.builtins.utility._update__"></a><code>UPDATE</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule UPDATE ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">UPDATE</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11069,8 +11140,8 @@ it possible to add targets as such:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local previous-updates = [ UPDATE ] ;
-UPDATE $(previous-updates) a-new-target ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">local</span><span class="tok-w"> </span>previous-updates<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">UPDATE</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">UPDATE</span><span class="tok-w"> </span><span class="tok-si">$(previous-updates)</span><span class="tok-w"> </span>a-new-target<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -11078,7 +11149,7 @@ UPDATE $(previous-updates) a-new-target ;</code></pre>
 <h6 id="jam.language.rules.builtins.utility._w32_getreg__"><a class="anchor" href="#jam.language.rules.builtins.utility._w32_getreg__"></a><code>W32_GETREG</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule W32_GETREG ( path : data ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">W32_GETREG</span><span class="tok-w"> </span>(<span class="tok-w"> </span>path<span class="tok-w"> </span>:<span class="tok-w"> </span>data<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11117,8 +11188,8 @@ an empty list. For example,</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local PSDK-location =
-  [ W32_GETREG HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MicrosoftSDK\\Directories : "Install Dir" ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">local</span><span class="tok-w"> </span>PSDK-location<span class="tok-w"> </span>=<span class="tok-w"></span>
+<span class="tok-w">  </span>[<span class="tok-w"> </span><span class="tok-nb">W32_GETREG</span><span class="tok-w"> </span>HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MicrosoftSDK\\Directories<span class="tok-w"> </span>:<span class="tok-w"> </span>&quot;Install<span class="tok-w"> </span>Dir&quot;<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -11126,7 +11197,7 @@ an empty list. For example,</p>
 <h6 id="jam.language.rules.builtins.utility._w32_getregnames__"><a class="anchor" href="#jam.language.rules.builtins.utility._w32_getregnames__"></a><code>W32_GETREGNAMES</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule W32_GETREGNAMES ( path : result-type )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">W32_GETREGNAMES</span><span class="tok-w"> </span>(<span class="tok-w"> </span>path<span class="tok-w"> </span>:<span class="tok-w"> </span>result-type<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11158,17 +11229,17 @@ retrieved, the rule returns an empty list. Example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">local key = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths" ;
-local subkeys = [ W32_GETREGNAMES "$(key)" : subkeys ] ;
-for local subkey in $(subkeys)
-{
-    local values = [ W32_GETREGNAMES "$(key)\\$(subkey)" : values ] ;
-    for local value in $(values)
-    {
-        local data = [ W32_GETREG "$(key)\\$(subkey)" : "$(value)" ] ;
-        ECHO "Registry path: " $(key)\\$(subkey) ":" $(value) "=" $(data) ;
-    }
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">local</span><span class="tok-w"> </span>key<span class="tok-w"> </span>=<span class="tok-w"> </span>&quot;HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App<span class="tok-w"> </span>Paths&quot;<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">local</span><span class="tok-w"> </span>subkeys<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">W32_GETREGNAMES</span><span class="tok-w"> </span>&quot;$(key)&quot;<span class="tok-w"> </span>:<span class="tok-w"> </span>subkeys<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-k">local</span><span class="tok-w"> </span>subkey<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(subkeys)</span><span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>values<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">W32_GETREGNAMES</span><span class="tok-w"> </span>&quot;$(key)\\$(subkey)&quot;<span class="tok-w"> </span>:<span class="tok-w"> </span>values<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-k">local</span><span class="tok-w"> </span>value<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(values)</span><span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">local</span><span class="tok-w"> </span>data<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">W32_GETREG</span><span class="tok-w"> </span>&quot;$(key)\\$(subkey)&quot;<span class="tok-w"> </span>:<span class="tok-w"> </span>&quot;$(value)&quot;<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-nb">ECHO</span><span class="tok-w"> </span>&quot;Registry<span class="tok-w"> </span>path:<span class="tok-w"> </span>&quot;<span class="tok-w"> </span>$(key)\\$(subkey)<span class="tok-w"> </span>&quot;:&quot;<span class="tok-w"> </span><span class="tok-si">$(value)</span><span class="tok-w"> </span>&quot;=&quot;<span class="tok-w"> </span><span class="tok-si">$(data)</span><span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -11176,7 +11247,7 @@ for local subkey in $(subkeys)
 <h6 id="jam.language.rules.builtins.utility._shell__"><a class="anchor" href="#jam.language.rules.builtins.utility._shell__"></a><code>SHELL</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule SHELL ( command : * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">SHELL</span><span class="tok-w"> </span>(<span class="tok-w"> </span>command<span class="tok-w"> </span>:<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11216,7 +11287,7 @@ case.</p>
 <h6 id="jam.language.rules.builtins.utility._md5__"><a class="anchor" href="#jam.language.rules.builtins.utility._md5__"></a><code>MD5</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule MD5 ( string )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">MD5</span><span class="tok-w"> </span>(<span class="tok-w"> </span>string<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11228,7 +11299,7 @@ returns it.</p>
 <h6 id="jam.language.rules.builtins.utility._split_by_characters__"><a class="anchor" href="#jam.language.rules.builtins.utility._split_by_characters__"></a><code>SPLIT_BY_CHARACTERS</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule SPLIT_BY_CHARACTERS ( string : delimiters )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">SPLIT_BY_CHARACTERS</span><span class="tok-w"> </span>(<span class="tok-w"> </span>string<span class="tok-w"> </span>:<span class="tok-w"> </span>delimiters<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11240,7 +11311,7 @@ character present in <em>delimiters</em> and returns the resulting list.</p>
 <h6 id="jam.language.rules.builtins.utility._precious__"><a class="anchor" href="#jam.language.rules.builtins.utility._precious__"></a><code>PRECIOUS</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule PRECIOUS ( targets * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">PRECIOUS</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11253,7 +11324,7 @@ fails.</p>
 <h6 id="jam.language.rules.builtins.utility._pad__"><a class="anchor" href="#jam.language.rules.builtins.utility._pad__"></a><code>PAD</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule PAD ( string : width )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">PAD</span><span class="tok-w"> </span>(<span class="tok-w"> </span>string<span class="tok-w"> </span>:<span class="tok-w"> </span>width<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11266,7 +11337,7 @@ characters on the right, and returns the result. Otherwise, returns
 <h6 id="jam.language.rules.builtins.utility._file_open__"><a class="anchor" href="#jam.language.rules.builtins.utility._file_open__"></a><code>FILE_OPEN</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule FILE_OPEN ( filename : mode )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">FILE_OPEN</span><span class="tok-w"> </span>(<span class="tok-w"> </span>filename<span class="tok-w"> </span>:<span class="tok-w"> </span>mode<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11280,7 +11351,7 @@ descriptor number.</p>
 <h6 id="jam.language.rules.builtins.utility._update_now__"><a class="anchor" href="#jam.language.rules.builtins.utility._update_now__"></a><code>UPDATE_NOW</code></h6>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule UPDATE_NOW ( targets * : log ? : ignore-minus-n ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">UPDATE_NOW</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>log<span class="tok-w"> </span>?<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-k">ignore</span>-minus-n<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11758,13 +11829,13 @@ in the loop:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">x = 1 2 3 ;
-y = 4 5 6 ;
-for local y in $(x)
-{
-    ECHO $(y) ; # prints "1", "2", or "3"
-}
-ECHO $(y) ;     # prints "4 5 6"</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>x<span class="tok-w"> </span>=<span class="tok-w"> </span>1<span class="tok-w"> </span>2<span class="tok-w"> </span>3<span class="tok-w"> </span>;<span class="tok-w"></span>
+y<span class="tok-w"> </span>=<span class="tok-w"> </span>4<span class="tok-w"> </span>5<span class="tok-w"> </span>6<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-k">local</span><span class="tok-w"> </span>y<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(x)</span><span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-nb">ECHO</span><span class="tok-w"> </span><span class="tok-si">$(y)</span><span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># prints &quot;1&quot;, &quot;2&quot;, or &quot;3&quot;</span>
+}<span class="tok-w"></span>
+<span class="tok-nb">ECHO</span><span class="tok-w"> </span><span class="tok-si">$(y)</span><span class="tok-w"> </span>;<span class="tok-w">     </span><span class="tok-c1"># prints &quot;4 5 6&quot;</span></code></pre>
 </div>
 </div>
 </div>
@@ -11972,7 +12043,7 @@ for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">JAMSHELL = /bin/sh -c % ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>JAMSHELL<span class="tok-w"> </span>=<span class="tok-w"> </span>/bin/sh<span class="tok-w"> </span>-c<span class="tok-w"> </span>%<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11994,24 +12065,24 @@ a multiple host shell. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">#!/bin/sh
+<pre class="pygments highlight"><code data-lang="bash"><span></span><span class="tok-ch">#!/bin/sh</span>
 
-# This sample JAMSHELL uses the SunOS on(1) command to execute a
-# command string with an identical environment on another host.
+<span class="tok-c1"># This sample JAMSHELL uses the SunOS on(1) command to execute a</span>
+<span class="tok-c1"># command string with an identical environment on another host.</span>
 
-# Set JAMSHELL = jamshell ! %
-#
-# where jamshell is the name of this shell file.
-#
-# This version handles up to -j6; after that they get executed
-# locally.
+<span class="tok-c1"># Set JAMSHELL = jamshell ! %</span>
+<span class="tok-c1">#</span>
+<span class="tok-c1"># where jamshell is the name of this shell file.</span>
+<span class="tok-c1">#</span>
+<span class="tok-c1"># This version handles up to -j6; after that they get executed</span>
+<span class="tok-c1"># locally.</span>
 
-case $1 in
-1|4) on winken sh -c "$2";;
-2|5) on blinken sh -c "$2";;
-3|6) on nod sh -c "$2";;
-*) eval "$2";;
-esac</code></pre>
+<span class="tok-k">case</span> <span class="tok-nv">$1</span> in
+<span class="tok-m">1</span><span class="tok-p">|</span><span class="tok-m">4</span><span class="tok-o">)</span> on winken sh -c <span class="tok-s2">&quot;</span><span class="tok-nv">$2</span><span class="tok-s2">&quot;</span><span class="tok-p">;;</span>
+<span class="tok-m">2</span><span class="tok-p">|</span><span class="tok-m">5</span><span class="tok-o">)</span> on blinken sh -c <span class="tok-s2">&quot;</span><span class="tok-nv">$2</span><span class="tok-s2">&quot;</span><span class="tok-p">;;</span>
+<span class="tok-m">3</span><span class="tok-p">|</span><span class="tok-m">6</span><span class="tok-o">)</span> on nod sh -c <span class="tok-s2">&quot;</span><span class="tok-nv">$2</span><span class="tok-s2">&quot;</span><span class="tok-p">;;</span>
+*<span class="tok-o">)</span> <span class="tok-nb">eval</span> <span class="tok-s2">&quot;</span><span class="tok-nv">$2</span><span class="tok-s2">&quot;</span><span class="tok-p">;;</span>
+<span class="tok-k">esac</span></code></pre>
 </div>
 </div>
 </div>
@@ -12025,7 +12096,7 @@ both give diagnostic information about the action that completed. For
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule timing-rule ( args * : target : start end user system )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">timing-rule</span><span class="tok-w"> </span>(<span class="tok-w"> </span>args<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>target<span class="tok-w"> </span>:<span class="tok-w"> </span>start<span class="tok-w"> </span>end<span class="tok-w"> </span>user<span class="tok-w"> </span>system<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12033,7 +12104,7 @@ both give diagnostic information about the action that completed. For
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule action-rule ( args * : target : command status start end user system : output ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">action-rule</span><span class="tok-w"> </span>(<span class="tok-w"> </span>args<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>target<span class="tok-w"> </span>:<span class="tok-w"> </span>command<span class="tok-w"> </span>status<span class="tok-w"> </span>start<span class="tok-w"> </span>end<span class="tok-w"> </span>user<span class="tok-w"> </span>system<span class="tok-w"> </span>:<span class="tok-w"> </span>output<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12126,13 +12197,13 @@ without qualification:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module my_module
-{
-    rule salute ( x ) { ECHO $(x), world ; }
-    rule greet ( ) { salute hello ; }
-    greet ;
-}
-my_module.salute goodbye ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">module</span><span class="tok-w"> </span><span class="tok-nn">my_module</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">salute</span><span class="tok-w"> </span>(<span class="tok-w"> </span>x<span class="tok-w"> </span>)<span class="tok-w"> </span>{<span class="tok-w"> </span><span class="tok-nb">ECHO</span><span class="tok-w"> </span>$(x),<span class="tok-w"> </span>world<span class="tok-w"> </span>;<span class="tok-w"> </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">greet</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"> </span>{<span class="tok-w"> </span>salute<span class="tok-w"> </span>hello<span class="tok-w"> </span>;<span class="tok-w"> </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span>greet<span class="tok-w"> </span>;<span class="tok-w"></span>
+}<span class="tok-w"></span>
+my_module.salute<span class="tok-w"> </span>goodbye<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12142,10 +12213,10 @@ work across modules:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module your_module
-{
-    rule bedtime ( ) { my_module.salute goodnight ; }
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">module</span><span class="tok-w"> </span><span class="tok-nn">your_module</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">bedtime</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"> </span>{<span class="tok-w"> </span>my_module.salute<span class="tok-w"> </span>goodnight<span class="tok-w"> </span>;<span class="tok-w"> </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -12159,28 +12230,28 @@ to B. This applies equally to local and global variables:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module A
-{
-    x = 1 ;
-    rule f ( )
-    {
-        local y = 999 ; # becomes visible again when B.f calls A.g
-        B.f ;
-    }
-    rule g ( )
-    {
-        ECHO $(y) ;     # prints "999"
-    }
-}
-module B
-{
-    y = 2 ;
-    rule f ( )
-    {
-        ECHO $(y) ; # always prints "2"
-        A.g ;
-    }
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">module</span><span class="tok-w"> </span><span class="tok-nn">A</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-w"></span>
+<span class="tok-w">    </span>x<span class="tok-w"> </span>=<span class="tok-w"> </span>1<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">f</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">local</span><span class="tok-w"> </span>y<span class="tok-w"> </span>=<span class="tok-w"> </span>999<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># becomes visible again when B.f calls A.g</span>
+<span class="tok-w">        </span>B.f<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">g</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-nb">ECHO</span><span class="tok-w"> </span><span class="tok-si">$(y)</span><span class="tok-w"> </span>;<span class="tok-w">     </span><span class="tok-c1"># prints &quot;999&quot;</span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span>
+<span class="tok-k">module</span><span class="tok-w"> </span><span class="tok-nn">B</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-w"></span>
+<span class="tok-w">    </span>y<span class="tok-w"> </span>=<span class="tok-w"> </span>2<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">f</span><span class="tok-w"> </span>(<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-nb">ECHO</span><span class="tok-w"> </span><span class="tok-si">$(y)</span><span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># always prints &quot;2&quot;</span>
+<span class="tok-w">        </span>A.g<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12189,13 +12260,13 @@ module:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule peek ( module-name ? : variables + )
-{
-    module $(module-name)
-    {
-        return $($(&gt;)) ;
-    }
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">peek</span><span class="tok-w"> </span>(<span class="tok-w"> </span><span class="tok-k">module</span>-name<span class="tok-w"> </span>?<span class="tok-w"> </span>:<span class="tok-w"> </span>variables<span class="tok-w"> </span>+<span class="tok-w"> </span>)<span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">module</span><span class="tok-w"> </span><span class="tok-nn">$(module-name)</span><span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-p">{</span><span class="tok-w"></span>
+<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span>$($(&gt;))<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12226,7 +12297,7 @@ the result of:</p>
 <h5 id="jam.language.modules.the__rulenames__rule"><a class="anchor" href="#jam.language.modules.the__rulenames__rule"></a>The <code>RULENAMES</code> Rule</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule RULENAMES ( module ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">RULENAMES</span><span class="tok-w"> </span>(<span class="tok-w"> </span><span class="tok-k">module</span><span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12239,7 +12310,7 @@ module are returned.</p>
 <h5 id="jam.language.modules.the__varnames__rule"><a class="anchor" href="#jam.language.modules.the__varnames__rule"></a>The <code>VARNAMES</code> Rule</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule VARNAMES ( module ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">VARNAMES</span><span class="tok-w"> </span>(<span class="tok-w"> </span><span class="tok-k">module</span><span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12268,8 +12339,8 @@ have not returned at the time of the <code>VARNAMES</code> invocation.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule IMPORT ( source_module ? : source_rules *
-            : target_module ? : target_rules * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">IMPORT</span><span class="tok-w"> </span>(<span class="tok-w"> </span>source_module<span class="tok-w"> </span>?<span class="tok-w"> </span>:<span class="tok-w"> </span>source_rules<span class="tok-w"> </span>*<span class="tok-w"></span>
+<span class="tok-w">            </span>:<span class="tok-w"> </span>target_module<span class="tok-w"> </span>?<span class="tok-w"> </span>:<span class="tok-w"> </span>target_rules<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12284,10 +12355,10 @@ number of items than <em>target_rules</em>, an error is issued. For example,</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam"># import m1.rule1 into m2 as local rule m1-rule1.
-IMPORT m1 : rule1 : m2 : m1-rule1 ;
-# import all non-local rules from m1 into m2
-IMPORT m1 : [ RULENAMES m1 ] : m2 : [ RULENAMES m1 ] ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-c1"># import m1.rule1 into m2 as local rule m1-rule1.</span>
+<span class="tok-nb">IMPORT</span><span class="tok-w"> </span>m1<span class="tok-w"> </span>:<span class="tok-w"> </span>rule1<span class="tok-w"> </span>:<span class="tok-w"> </span>m2<span class="tok-w"> </span>:<span class="tok-w"> </span>m1-rule1<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-c1"># import all non-local rules from m1 into m2</span>
+<span class="tok-nb">IMPORT</span><span class="tok-w"> </span>m1<span class="tok-w"> </span>:<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">RULENAMES</span><span class="tok-w"> </span>m1<span class="tok-w"> </span>]<span class="tok-w"> </span>:<span class="tok-w"> </span>m2<span class="tok-w"> </span>:<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">RULENAMES</span><span class="tok-w"> </span>m1<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -12298,7 +12369,7 @@ IMPORT m1 : [ RULENAMES m1 ] : m2 : [ RULENAMES m1 ] ;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule EXPORT ( module ? : rules * )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">EXPORT</span><span class="tok-w"> </span>(<span class="tok-w"> </span><span class="tok-k">module</span><span class="tok-w"> </span>?<span class="tok-w"> </span>:<span class="tok-w"> </span>rules<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12308,12 +12379,12 @@ IMPORT m1 : [ RULENAMES m1 ] : m2 : [ RULENAMES m1 ] ;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module X {
-  local rule r { ECHO X.r ; }
-}
-IMPORT X : r : : r ; # error - r is local in X
-EXPORT X : r ;
-IMPORT X : r : : r ; # OK.</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">module</span><span class="tok-w"> </span><span class="tok-nn">X</span><span class="tok-w"> </span><span class="tok-p">{</span><span class="tok-w"></span>
+<span class="tok-w">  </span><span class="tok-k">local</span><span class="tok-w"> </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">r</span><span class="tok-w"> </span>{<span class="tok-w"> </span><span class="tok-nb">ECHO</span><span class="tok-w"> </span>X.r<span class="tok-w"> </span>;<span class="tok-w"> </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span>
+<span class="tok-nb">IMPORT</span><span class="tok-w"> </span>X<span class="tok-w"> </span>:<span class="tok-w"> </span>r<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>r<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># error - r is local in X</span>
+<span class="tok-nb">EXPORT</span><span class="tok-w"> </span>X<span class="tok-w"> </span>:<span class="tok-w"> </span>r<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">IMPORT</span><span class="tok-w"> </span>X<span class="tok-w"> </span>:<span class="tok-w"> </span>r<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>r<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># OK.</span></code></pre>
 </div>
 </div>
 </div>
@@ -12321,7 +12392,7 @@ IMPORT X : r : : r ; # OK.</code></pre>
 <h5 id="jam.language.modules.the__caller_module__rule"><a class="anchor" href="#jam.language.modules.the__caller_module__rule"></a>The <code>CALLER_MODULE</code> Rule</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule CALLER_MODULE ( levels ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">CALLER_MODULE</span><span class="tok-w"> </span>(<span class="tok-w"> </span>levels<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12334,17 +12405,17 @@ exists, returns the empty list. For example, the following prints "{Y}
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">module X {
-    rule get-caller { return [ CALLER_MODULE ] ; }
-    rule get-caller's-caller { return [ CALLER_MODULE 1 ] ; }
-    rule call-Y { return Y.call-X2 ; }
-}
-module Y {
-    rule call-X { return X.get-caller ; }
-    rule call-X2 { return X.get-caller's-caller ; }
-}
-callers = [ X.get-caller ] [ Y.call-X ] [ X.call-Y ] ;
-ECHO {$(callers)} ;</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">module</span><span class="tok-w"> </span><span class="tok-nn">X</span><span class="tok-w"> </span><span class="tok-p">{</span><span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">get-caller</span><span class="tok-w"> </span>{<span class="tok-w"> </span><span class="tok-k">return</span><span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">CALLER_MODULE</span><span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"> </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">get-caller&#39;s-caller</span><span class="tok-w"> </span>{<span class="tok-w"> </span><span class="tok-k">return</span><span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">CALLER_MODULE</span><span class="tok-w"> </span>1<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"> </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">call-Y</span><span class="tok-w"> </span>{<span class="tok-w"> </span><span class="tok-k">return</span><span class="tok-w"> </span>Y.call-X2<span class="tok-w"> </span>;<span class="tok-w"> </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span>
+<span class="tok-k">module</span><span class="tok-w"> </span><span class="tok-nn">Y</span><span class="tok-w"> </span><span class="tok-p">{</span><span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">call-X</span><span class="tok-w"> </span>{<span class="tok-w"> </span><span class="tok-k">return</span><span class="tok-w"> </span>X.get-caller<span class="tok-w"> </span>;<span class="tok-w"> </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">call-X2</span><span class="tok-w"> </span>{<span class="tok-w"> </span><span class="tok-k">return</span><span class="tok-w"> </span>X.get-caller&#39;s-caller<span class="tok-w"> </span>;<span class="tok-w"> </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span>
+callers<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>X.get-caller<span class="tok-w"> </span>]<span class="tok-w"> </span>[<span class="tok-w"> </span>Y.call-X<span class="tok-w"> </span>]<span class="tok-w"> </span>[<span class="tok-w"> </span>X.call-Y<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">ECHO</span><span class="tok-w"> </span>{$(callers)}<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -12352,7 +12423,7 @@ ECHO {$(callers)} ;</code></pre>
 <h5 id="jam.language.modules.the__delete_module__rule"><a class="anchor" href="#jam.language.modules.the__delete_module__rule"></a>The <code>DELETE_MODULE</code> Rule</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-jam hljs" data-lang="jam">rule DELETE_MODULE ( module ? )</code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">DELETE_MODULE</span><span class="tok-w"> </span>(<span class="tok-w"> </span><span class="tok-k">module</span><span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -13079,8 +13150,5 @@ and WEXITSTATUS.&#8201;&#8212;&#8201;<em>Markus S.</em></p>
 <a href="#_footnoteref_5">5</a>. This create-then-register pattern is caused by limitations of the Boost.Jam language. Python port is likely to never create duplicate targets.
 </div>
 </div>
-<link rel="stylesheet" href="hljs/styles/github.min.css">
-<script src="hljs/highlight.min.js"></script>
-<script>hljs.initHighlighting()</script>
 </body>
 </html>
