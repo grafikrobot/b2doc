@@ -847,7 +847,7 @@ build the release variant of <code>hello</code>, invoke</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 release</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 release</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -867,7 +867,7 @@ again:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 debug release</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 debug release</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -879,7 +879,7 @@ products:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 --clean debug release</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 --clean debug release</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -889,8 +889,8 @@ two commands, respectively, build or clean only the debug version of
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 hello2
-b2 --clean hello2</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 hello2
+b2 --clean hello2</code></pre>
 </div>
 </div>
 </div>
@@ -914,7 +914,7 @@ enabled:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 release inlining=off debug-symbols=on</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 release <span class="tok-nv">inlining</span><span class="tok-o">=</span>off debug-symbols<span class="tok-o">=</span>on</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -932,7 +932,7 @@ the command above could also have been written this way:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 variant=release inlining=off debug-symbols=on</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 <span class="tok-nv">variant</span><span class="tok-o">=</span>release <span class="tok-nv">inlining</span><span class="tok-o">=</span>off debug-symbols<span class="tok-o">=</span>on</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1149,7 +1149,7 @@ library to the list of sources.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 app optimization=full define=USE_ASM</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 app <span class="tok-nv">optimization</span><span class="tok-o">=</span>full <span class="tok-nv">define</span><span class="tok-o">=</span>USE_ASM</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1254,7 +1254,7 @@ build either on the command line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 link=static</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 <span class="tok-nv">link</span><span class="tok-o">=</span>static</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1495,7 +1495,7 @@ site-config.jam”</a>.</p>
 projects using Boost.Build. The information provided here is relatively
 high-level, and the <a href="#bbv2.reference">Reference</a> as well as the on-line
 help system must be used to obtain low-level documentation (see
-<a href="#bbv2.reference.init.options.help"><code>--help</code></a>).</p>
+<a href="#bbv2.overview.invocation.options.help"><code>--help</code></a>).</p>
 </div>
 <div class="paragraph">
 <p>Boost.Build has two parts — a build engine with its own interpreted
@@ -1603,7 +1603,7 @@ generate actual targets.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1615,7 +1615,7 @@ Boost.Build with:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 toolset=gcc toolset=msvc</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 <span class="tok-nv">toolset</span><span class="tok-o">=</span>gcc <span class="tok-nv">toolset</span><span class="tok-o">=</span>msvc</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1673,7 +1673,7 @@ of elements—keywords (which have a special meaning to
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>a = b ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>a<span class="tok-w"> </span>=<span class="tok-w"> </span>b<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1700,7 +1700,7 @@ value can be quoted:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>a = "=" ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>a<span class="tok-w"> </span>=<span class="tok-w"> </span>&quot;=&quot;<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1712,7 +1712,7 @@ syntax. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>a = $(b) $(c) ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>a<span class="tok-w"> </span>=<span class="tok-w"> </span><span class="tok-si">$(b)</span><span class="tok-w"> </span><span class="tok-si">$(c)</span><span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1721,16 +1721,16 @@ the allowed value list size for each parameter.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule example
- (
-     parameter1 :
-     parameter2 ? :
-     parameter3 + :
-     parameter4 *
- )
- {
-    # rule body
- }</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">example</span><span class="tok-w"></span>
+<span class="tok-w"> </span>(<span class="tok-w"></span>
+<span class="tok-w">     </span>parameter1<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">     </span>parameter2<span class="tok-w"> </span>?<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">     </span>parameter3<span class="tok-w"> </span>+<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">     </span>parameter4<span class="tok-w"> </span>*<span class="tok-w"></span>
+<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-w"> </span>{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-c1"># rule body</span>
+<span class="tok-w"> </span>}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1745,8 +1745,8 @@ below:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>helper 1 : 2 : 3 ;
-x = [ helper 1 : 2 : 3 ] ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>helper<span class="tok-w"> </span>1<span class="tok-w"> </span>:<span class="tok-w"> </span>2<span class="tok-w"> </span>:<span class="tok-w"> </span>3<span class="tok-w"> </span>;<span class="tok-w"></span>
+x<span class="tok-w"> </span>=<span class="tok-w"> </span>[<span class="tok-w"> </span>helper<span class="tok-w"> </span>1<span class="tok-w"> </span>:<span class="tok-w"> </span>2<span class="tok-w"> </span>:<span class="tok-w"> </span>3<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1756,7 +1756,7 @@ brackets around the call, like shown on the second line.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>if cond { statements } [ else { statements } ]</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">if</span><span class="tok-w"> </span>cond<span class="tok-w"> </span>{<span class="tok-w"> </span>statements<span class="tok-w"> </span>}<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span>{<span class="tok-w"> </span>statements<span class="tok-w"> </span>}<span class="tok-w"> </span>]<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1782,7 +1782,7 @@ in the left and the right arguments.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>for var in list { statements }</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">for</span><span class="tok-w"> </span>var<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span>list<span class="tok-w"> </span>{<span class="tok-w"> </span>statements<span class="tok-w"> </span>}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1791,7 +1791,7 @@ to the element value.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>while cond { statements }</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">while</span><span class="tok-w"> </span>cond<span class="tok-w"> </span>{<span class="tok-w"> </span>statements<span class="tok-w"> </span>}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1799,7 +1799,7 @@ to the element value.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>return values ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">return</span><span class="tok-w"> </span>values<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1808,8 +1808,8 @@ the caller of the rule.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>import module ;
-import module : rule ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">import</span><span class="tok-w"> </span><span class="tok-k">module</span><span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">import</span><span class="tok-w"> </span><span class="tok-k">module</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">;</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1818,17 +1818,17 @@ are made available using the qualified name: <code>module.rule</code>. The secon
 imports the specified rules only, and they can be called using unqualified
 names.</p>
 </div>
-<div class="paragraph">
+<div id="bbv2.overview.jam_language.actions" class="paragraph">
 <p>Sometimes, you need to specify the actual command lines to be used when
 creating targets. In the jam language, you use named actions to do this.
 For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>actions create-file-from-another
-{
-    create-file-from-another $(&lt;) $(&gt;)
-}</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">actions</span><span class="tok-w"> </span><span class="tok-nf">create-file-from-another</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-sh"></span>
+<span class="tok-sh">    create-file-from-another $(&lt;) $(&gt;)</span>
+<span class="tok-p">}</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1844,17 +1844,17 @@ properties. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule create-file-from-another ( targets * : sources * : properties * )
-{
-   if &lt;variant&gt;debug in $(properties)
-   {
-       OPTIONS on $(targets) = --debug ;
-   }
-}
-actions create-file-from-another
-{
-    create-file-from-another $(OPTIONS) $(&lt;) $(&gt;)
-}</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">create-file-from-another</span><span class="tok-w"> </span>(<span class="tok-w"> </span>targets<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>sources<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>properties<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">   </span><span class="tok-k">if</span><span class="tok-w"> </span>&lt;variant&gt;debug<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(properties)</span><span class="tok-w"></span>
+<span class="tok-w">   </span>{<span class="tok-w"></span>
+<span class="tok-w">       </span>OPTIONS<span class="tok-w"> </span><span class="tok-k">on</span><span class="tok-w"> </span><span class="tok-si">$(targets)</span><span class="tok-w"> </span>=<span class="tok-w"> </span>--debug<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">   </span>}<span class="tok-w"></span>
+}<span class="tok-w"></span>
+<span class="tok-k">actions</span><span class="tok-w"> </span><span class="tok-nf">create-file-from-another</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-sh"></span>
+<span class="tok-sh">    create-file-from-another $(OPTIONS) $(&lt;) $(&gt;)</span>
+<span class="tok-p">}</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1992,7 +1992,7 @@ the following syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using tool-name : ... ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>tool-name<span class="tok-w"> </span>:<span class="tok-w"> </span>...<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2001,7 +2001,7 @@ available to Boost.Build. For example,</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using gcc ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2039,7 +2039,7 @@ out-of-the-box, the list of parameters to <code>using</code> is the same:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using tool-name ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>tool-name<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2048,8 +2048,8 @@ the command that invokes the compiler, for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using gcc : : g++-3.2 ;
-using msvc : : "Z:/Programs/Microsoft Visual Studio/vc98/bin/cl" ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>g++-3.2<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>msvc<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&quot;Z:/Programs/Microsoft<span class="tok-w"> </span>Visual<span class="tok-w"> </span>Studio/vc98/bin/cl&quot;<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2062,7 +2062,7 @@ the operating system. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using msvc : : echo Compiling &amp;&amp; foo/bar/baz/cl ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>msvc<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-nb">echo</span><span class="tok-w"> </span>Compiling<span class="tok-w"> </span>&amp;&amp;<span class="tok-w"> </span>foo/bar/baz/cl<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2074,12 +2074,12 @@ rule multiple times:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using gcc : 3.3 ;
-using gcc : 3.4 : g++-3.4 ;
-using gcc : 3.2 : g++-3.2 ;
-using gcc : 5 ;
-using clang : 3.9 ;
-using msvc : 14.0 ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>3.3<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>3.4<span class="tok-w"> </span>:<span class="tok-w"> </span>g++-3.4<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>3.2<span class="tok-w"> </span>:<span class="tok-w"> </span>g++-3.2<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>5<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>clang<span class="tok-w"> </span>:<span class="tok-w"> </span>3.9<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>msvc<span class="tok-w"> </span>:<span class="tok-w"> </span>14.0<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2100,7 +2100,7 @@ always generates 64-bit code you could write:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using gcc : 3.4 : : &lt;compileflags&gt;-m64 &lt;linkflags&gt;-m64 ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>3.4<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;compileflags&gt;-m64<span class="tok-w"> </span>&lt;linkflags&gt;-m64<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2109,8 +2109,8 @@ concatenated with quotes or have multiple instances of the option tag.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using gcc : 5 : : &lt;cxxflags&gt;"-std=c++14 -O2" ;
-using clang : 3.9 : : &lt;cxxflags&gt;-std=c++14 &lt;cxxflags&gt;-O2 ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>5<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;cxxflags&gt;&quot;-std=c++14<span class="tok-w"> </span>-O2&quot;<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>clang<span class="tok-w"> </span>:<span class="tok-w"> </span>3.9<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;cxxflags&gt;-std=c++14<span class="tok-w"> </span>&lt;cxxflags&gt;-O2<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2121,11 +2121,11 @@ variations.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using gcc : 5 : g++-5 : ; # default is C++ 98
-using gcc : 5~c++03 : g++-5 : &lt;cxxflags&gt;-std=c++03 ; # C++ 03
-using gcc : 5~gnu03 : g++-5 : &lt;cxxflags&gt;-std=gnu++03 ; # C++ 03 with GNU
-using gcc : 5~c++11 : g++-5 : &lt;cxxflags&gt;-std=c++11 ; # C++ 11
-using gcc : 5~c++14 : g++-5 : &lt;cxxflags&gt;-std=c++14 ; # C++ 14</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>5<span class="tok-w"> </span>:<span class="tok-w"> </span>g++-5<span class="tok-w"> </span>:<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># default is C++ 98</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>5~c++03<span class="tok-w"> </span>:<span class="tok-w"> </span>g++-5<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;cxxflags&gt;-std=c++03<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># C++ 03</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>5~gnu03<span class="tok-w"> </span>:<span class="tok-w"> </span>g++-5<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;cxxflags&gt;-std=gnu++03<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># C++ 03 with GNU</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>5~c++11<span class="tok-w"> </span>:<span class="tok-w"> </span>g++-5<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;cxxflags&gt;-std=c++11<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># C++ 11</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>5~c++14<span class="tok-w"> </span>:<span class="tok-w"> </span>g++-5<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;cxxflags&gt;-std=c++14<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># C++ 14</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2133,8 +2133,8 @@ using gcc : 5~c++14 : g++-5 : &lt;cxxflags&gt;-std=c++14 ; # C++ 14</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 toolset=gcc-5 stage
-b2 toolset=gcc-5~c++14 stage</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 <span class="tok-nv">toolset</span><span class="tok-o">=</span>gcc-5 stage
+b2 <span class="tok-nv">toolset</span><span class="tok-o">=</span>gcc-5~c++14 stage</code></pre>
 </div>
 </div>
 <div class="admonitionblock warning">
@@ -2189,7 +2189,7 @@ with the default properties, run:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2197,7 +2197,7 @@ with the default properties, run:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 lib1 subproject//lib2</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 lib1 subproject//lib2</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2206,7 +2206,7 @@ command line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 toolset=gcc variant=debug optimization=space</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 <span class="tok-nv">toolset</span><span class="tok-o">=</span>gcc <span class="tok-nv">variant</span><span class="tok-o">=</span>debug <span class="tok-nv">optimization</span><span class="tok-o">=</span>space</code></pre>
 </div>
 </div>
 </div>
@@ -2217,7 +2217,7 @@ command line:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>--help</code></dt>
+<dt class="hdlist1"><a id="bbv2.overview.invocation.options.help"></a><code>--help</code></dt>
 <dd>
 <p>Invokes the online help system. This prints general information on how
 to use the help system with additional --help* options.</p>
@@ -2508,7 +2508,7 @@ example, if you use</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 link=static link=shared threading=single threading=multi</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 <span class="tok-nv">link</span><span class="tok-o">=</span>static <span class="tok-nv">link</span><span class="tok-o">=</span>shared <span class="tok-nv">threading</span><span class="tok-o">=</span>single <span class="tok-nv">threading</span><span class="tok-o">=</span>multi</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2518,7 +2518,7 @@ elements, you can separate the values with commas, for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 link=static,shared threading=single,multi</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 <span class="tok-nv">link</span><span class="tok-o">=</span>static,shared <span class="tok-nv">threading</span><span class="tok-o">=</span>single,multi</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2527,7 +2527,7 @@ of values, so</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 include=static,shared</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 <span class="tok-nv">include</span><span class="tok-o">=</span>static,shared</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2538,7 +2538,7 @@ of values, so</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 gcc/link=shared msvc/link=static,shared</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 gcc/link<span class="tok-o">=</span>shared msvc/link<span class="tok-o">=</span>static,shared</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2557,7 +2557,7 @@ project in the current directory is built.</p>
 </div>
 <div class="sect2">
 <h3 id="bbv2.overview.targets"><a class="anchor" href="#bbv2.overview.targets"></a>3.5. Declaring Targets</h3>
-<div class="paragraph">
+<div id="bbv2.overview.targets.main" class="paragraph">
 <p>A Main target is a user-defined named entity that can be built, for
 example an executable file. Declaring a main target is usually done
 using one of the main target rules described in
@@ -2566,16 +2566,17 @@ also declare custom main target rules as shown in
 <a href="#bbv2.extending.rules">the section called “Main target rules”</a>.</p>
 </div>
 <div class="paragraph">
-<p>Most main target rules in Boost.Build have the same common signature:</p>
+<p><a id="bbv2.main-target-rule-syntax"></a>
+Most main target rules in Boost.Build have the same common signature:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule rule-name (
-     main-target-name :
-     sources + :
-     requirements * :
-     default-build * :
-     usage-requirements * )</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">rule-name</span><span class="tok-w"> </span>(<span class="tok-w"></span>
+<span class="tok-w">     </span>main-target-name<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">     </span>sources<span class="tok-w"> </span>+<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">     </span>requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">     </span>default-build<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">     </span>usage-requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -2633,8 +2634,8 @@ before the first dot is taken. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>obj test.release : test.cpp : &lt;variant&gt;release ;
-obj test.debug : test.cpp : &lt;variant&gt;debug ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">obj</span><span class="tok-w"> </span>test.release<span class="tok-w"> </span>:<span class="tok-w"> </span>test.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;variant&gt;release<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">obj</span><span class="tok-w"> </span>test.debug<span class="tok-w"> </span>:<span class="tok-w"> </span>test.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;variant&gt;debug<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2654,8 +2655,8 @@ examples:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp ; <i class="conum" data-value="1"></i><b>(1)</b>
-exe b : [ glob *.cpp ] ; <i class="conum" data-value="2"></i><b>(2)</b></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>;<span class="tok-w"> </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">glob</span><span class="tok-w"> </span>*.cpp<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"> </span><i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -2687,10 +2688,10 @@ looked up as project name, and then as directory name. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib helper : helper.cpp ;
-exe a : a.cpp helper ;
-exe b : b.cpp ..//utils ; <i class="conum" data-value="1"></i><b>(1)</b>
-exe c : c.cpp /boost/program_options//program_options ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>helper<span class="tok-w"> </span>:<span class="tok-w"> </span>helper.cpp<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>helper<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>b.cpp<span class="tok-w"> </span>..//utils<span class="tok-w"> </span>;<span class="tok-w"> </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>c<span class="tok-w"> </span>:<span class="tok-w"> </span>c.cpp<span class="tok-w"> </span>/boost/program_options//program_options<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -2719,7 +2720,7 @@ building a target. Typically, they are includes and defines:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe hello : hello.cpp : &lt;include&gt;/opt/boost &lt;define&gt;MY_DEBUG ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/opt/boost<span class="tok-w"> </span>&lt;define&gt;MY_DEBUG<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2730,12 +2731,13 @@ compiled with optimization due to a compiler bug, one can use.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib util : util.cpp : &lt;link&gt;static ;
-obj main : main.cpp : &lt;optimization&gt;off ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>util<span class="tok-w"> </span>:<span class="tok-w"> </span>util.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;link&gt;static<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">obj</span><span class="tok-w"> </span>main<span class="tok-w"> </span>:<span class="tok-w"> </span>main.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;optimization&gt;off<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Sometimes, particular relationships need to be
+<p><a id="bbv2.overview.targets.requirements.conditional"></a>Sometimes, particular
+relationships need to be
 maintained among a target&#8217;s build properties. This can be achieved with
 <em>conditional requirements</em>. For example, you might want to set specific
 <code>#defines</code> when a library is built as shared, or when a target&#8217;s
@@ -2743,10 +2745,10 @@ maintained among a target&#8217;s build properties. This can be achieved with
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib network : network.cpp
-    : &lt;link&gt;shared:&lt;define&gt;NETWORK_LIB_SHARED
-     &lt;variant&gt;release:&lt;define&gt;EXTRA_FAST
-    ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>network<span class="tok-w"> </span>:<span class="tok-w"> </span>network.cpp<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;link&gt;shared:&lt;define&gt;NETWORK_LIB_SHARED<span class="tok-w"></span>
+<span class="tok-w">     </span>&lt;variant&gt;release:&lt;define&gt;EXTRA_FAST<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2758,9 +2760,9 @@ maintained among a target&#8217;s build properties. This can be achieved with
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib network : network.cpp
-    : &lt;toolset&gt;gcc,&lt;optimization&gt;speed:&lt;define&gt;USE_INLINE_ASSEMBLER
-    ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>network<span class="tok-w"> </span>:<span class="tok-w"> </span>network.cpp<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;toolset&gt;gcc,&lt;optimization&gt;speed:&lt;define&gt;USE_INLINE_ASSEMBLER<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2771,18 +2773,18 @@ properties to be added. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib network : network.cpp
-    : &lt;conditional&gt;@my-rule
-    ;
-rule my-rule ( properties * )
-{
-    local result ;
-    if &lt;toolset&gt;gcc &lt;optimization&gt;speed in $(properties)
-    {
-        result += &lt;define&gt;USE_INLINE_ASSEMBLER ;
-    }
-    return $(result) ;
-}</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>network<span class="tok-w"> </span>:<span class="tok-w"> </span>network.cpp<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;conditional&gt;@my-rule<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span>
+<span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">my-rule</span><span class="tok-w"> </span>(<span class="tok-w"> </span>properties<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">local</span><span class="tok-w"> </span>result<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">if</span><span class="tok-w"> </span>&lt;toolset&gt;gcc<span class="tok-w"> </span>&lt;optimization&gt;speed<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span><span class="tok-si">$(properties)</span><span class="tok-w"></span>
+<span class="tok-w">    </span>{<span class="tok-w"></span>
+<span class="tok-w">        </span>result<span class="tok-w"> </span>+=<span class="tok-w"> </span>&lt;define&gt;USE_INLINE_ASSEMBLER<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span>}<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-si">$(result)</span><span class="tok-w"> </span>;<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2797,7 +2799,7 @@ syntax by adding a minus sign before the property, for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe main : main.cpp : -&lt;define&gt;UNNECESSARY_DEFINE ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>main<span class="tok-w"> </span>:<span class="tok-w"> </span>main.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>-&lt;define&gt;UNNECESSARY_DEFINE<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2807,10 +2809,10 @@ this example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>project test : requirements &lt;threading&gt;multi ;
-exe test1 : test1.cpp ;
-exe test2 : test2.cpp : &lt;threading&gt;single ;
-exe test3 : test3.cpp : -&lt;threading&gt;multi ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">project</span><span class="tok-w"> </span>test<span class="tok-w"> </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>&lt;threading&gt;multi<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>test1<span class="tok-w"> </span>:<span class="tok-w"> </span>test1.cpp<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>test2<span class="tok-w"> </span>:<span class="tok-w"> </span>test2.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;threading&gt;single<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>test3<span class="tok-w"> </span>:<span class="tok-w"> </span>test3.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>-&lt;threading&gt;multi<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2835,7 +2837,7 @@ set. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe hello : hello.cpp : : &lt;threading&gt;multi ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;threading&gt;multi<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2855,9 +2857,9 @@ used to build it. We can express this situation using <em>target alternatives</e
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib demangler : dummy_demangler.cpp ;                # alternative 1
-lib demangler : demangler_gcc.cpp : &lt;toolset&gt;gcc ;   # alternative 2
-lib demangler : demangler_msvc.cpp : &lt;toolset&gt;msvc ; # alternative 3</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>dummy_demangler.cpp<span class="tok-w"> </span>;<span class="tok-w">                </span><span class="tok-c1"># alternative 1</span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>demangler_gcc.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;gcc<span class="tok-w"> </span>;<span class="tok-w">   </span><span class="tok-c1"># alternative 2</span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>demangler_msvc.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;msvc<span class="tok-w"> </span>;<span class="tok-w"> </span><span class="tok-c1"># alternative 3</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2871,8 +2873,8 @@ may include calls to other main rules. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe hello : hello.cpp
-    [ obj helpers : helpers.cpp : &lt;optimization&gt;off ] ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"></span>
+<span class="tok-w">    </span>[<span class="tok-w"> </span><span class="tok-nb">obj</span><span class="tok-w"> </span>helpers<span class="tok-w"> </span>:<span class="tok-w"> </span>helpers.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;optimization&gt;off<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2889,7 +2891,7 @@ explicit request, this can be expressed by the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>explicit install_programs ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">explicit</span><span class="tok-w"> </span>install_programs<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -2909,7 +2911,7 @@ syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>project id : attributes ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">project</span><span class="tok-w"> </span>id<span class="tok-w"> </span>:<span class="tok-w"> </span>attributes<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2920,10 +2922,10 @@ shown in the table below. For example, it is possible to write:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>project tennis
-    : requirements &lt;threading&gt;multi
-    : default-build release
-    ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">project</span><span class="tok-w"> </span>tennis<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>&lt;threading&gt;multi<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>default-build<span class="tok-w"> </span>release<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2947,7 +2949,7 @@ the projects as well as all subprojects.</p>
 <p><em>Default build</em> is the build request that should be used when no build
 request is specified explicitly.</p>
 </div>
-<div class="paragraph">
+<div id="bbv2.overview.projects.attributes.projectrule" class="paragraph">
 <p>The default values for those attributes are given in the table below.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
@@ -3083,7 +3085,7 @@ properties. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 app1 lib1//lib1 toolset=gcc variant=debug optimization=full</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 app1 lib1//lib1 <span class="tok-nv">toolset</span><span class="tok-o">=</span>gcc <span class="tok-nv">variant</span><span class="tok-o">=</span>debug <span class="tok-nv">optimization</span><span class="tok-o">=</span>full</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3095,7 +3097,7 @@ property can be omitted. For example, the above can be written as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 app1 lib1//lib1 gcc debug optimization=full</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 app1 lib1//lib1 gcc debug <span class="tok-nv">optimization</span><span class="tok-o">=</span>full</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3180,7 +3182,7 @@ rule:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>explicit hello_test ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">explicit</span><span class="tok-w"> </span>hello_test<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3212,10 +3214,10 @@ have the common signature, described in
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe hello
-    : hello.cpp some_library.lib /some_project//library
-    : &lt;threading&gt;multi
-    ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>some_library.lib<span class="tok-w"> </span>/some_project//library<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;threading&gt;multi<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3252,14 +3254,14 @@ libraries into the same directory. See
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib helpers : helpers.cpp ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>helpers<span class="tok-w"> </span>:<span class="tok-w"> </span>helpers.cpp<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>This will define a library target named <code>helpers</code> built from the
 <code>helpers.cpp</code> source file. It can be either a static library or a shared
 library, depending on the value of the
-<a href="#bbv2.overview.builtins.features.link"><code>&lt;link&gt;</code></a> feature.</p>
+<a href="#bbv2.builtin.features.link"><code>&lt;link&gt;</code></a> feature.</p>
 </div>
 <div class="paragraph">
 <p>Library targets can represent:</p>
@@ -3281,8 +3283,8 @@ can be searched for by the tools using them (typically with the linker&#8217;s
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib z : : &lt;name&gt;z &lt;search&gt;/home/ghost ;
-lib compress : : &lt;file&gt;/opt/libs/compress.a ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>z<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;z<span class="tok-w"> </span>&lt;search&gt;/home/ghost<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>compress<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;file&gt;/opt/libs/compress.a<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3314,8 +3316,8 @@ came from. Thus, given</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib a : : &lt;name&gt;a &lt;search&gt;/pool/release ;
-lib b : : &lt;name&gt;b &lt;search&gt;/pool/debug ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;a<span class="tok-w"> </span>&lt;search&gt;/pool/release<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;b<span class="tok-w"> </span>&lt;search&gt;/pool/debug<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3334,8 +3336,8 @@ libraries with the same name, it&#8217;s safer to use <code>file</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib z ;
-lib gui db aux ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>z<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>gui<span class="tok-w"> </span>db<span class="tok-w"> </span>aux<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3343,10 +3345,10 @@ lib gui db aux ;</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib z : : &lt;name&gt;z ;
-lib gui : : &lt;name&gt;gui ;
-lib db : : &lt;name&gt;db ;
-lib aux : : &lt;name&gt;aux ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>z<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;z<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>gui<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;gui<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>db<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;db<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>aux<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;aux<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3358,8 +3360,8 @@ not work. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib z ;
-lib png : z : &lt;name&gt;png ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>z<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>png<span class="tok-w"> </span>:<span class="tok-w"> </span>z<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;name&gt;png<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -3386,8 +3388,8 @@ need to use the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib b : a.cpp ;
-lib a : a.cpp : &lt;use&gt;b : : &lt;library&gt;b ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;use&gt;b<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;library&gt;b<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3409,7 +3411,7 @@ Jamfile located in that same directory:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib helpers : helpers.cpp : : : &lt;include&gt;. ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>helpers<span class="tok-w"> </span>:<span class="tok-w"> </span>helpers.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;.<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3428,7 +3430,7 @@ the following code:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>alias core : im reader writer ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">alias</span><span class="tok-w"> </span>core<span class="tok-w"> </span>:<span class="tok-w"> </span>im<span class="tok-w"> </span>reader<span class="tok-w"> </span>writer<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3442,7 +3444,7 @@ library, you can write the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>alias threads : /boost/thread//boost_thread : &lt;link&gt;static ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">alias</span><span class="tok-w"> </span>threads<span class="tok-w"> </span>:<span class="tok-w"> </span>/boost/thread//boost_thread<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;link&gt;static<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3454,7 +3456,7 @@ write the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>alias header_only_library : : : :  &lt;include&gt;/usr/include/header_only_library ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">alias</span><span class="tok-w"> </span>header_only_library<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w">  </span>&lt;include&gt;/usr/include/header_only_library<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3464,10 +3466,10 @@ are propagated as well. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib library1 : library1.cpp : : : &lt;include&gt;/library/include1 ;
-lib library2 : library2.cpp : : : &lt;include&gt;/library/include2 ;
-alias static_libraries : library1 library2 : &lt;link&gt;static ;
-exe main : main.cpp static_libraries ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>library1<span class="tok-w"> </span>:<span class="tok-w"> </span>library1.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/library/include1<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>library2<span class="tok-w"> </span>:<span class="tok-w"> </span>library2.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/library/include2<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">alias</span><span class="tok-w"> </span>static_libraries<span class="tok-w"> </span>:<span class="tok-w"> </span>library1<span class="tok-w"> </span>library2<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;link&gt;static<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>main<span class="tok-w"> </span>:<span class="tok-w"> </span>main.cpp<span class="tok-w"> </span>static_libraries<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3490,7 +3492,7 @@ example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>install dist : hello helpers ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">install</span><span class="tok-w"> </span>dist<span class="tok-w"> </span>:<span class="tok-w"> </span>hello<span class="tok-w"> </span>helpers<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3500,7 +3502,7 @@ changed using the <code>location</code> property:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>install dist : hello helpers : &lt;location&gt;/usr/bin ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">install</span><span class="tok-w"> </span>dist<span class="tok-w"> </span>:<span class="tok-w"> </span>hello<span class="tok-w"> </span>helpers<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;location&gt;/usr/bin<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3514,10 +3516,10 @@ fixed, but depends on the build variant or environment variables:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>install dist : hello helpers :
-    &lt;variant&gt;release:&lt;location&gt;dist/release
-    &lt;variant&gt;debug:&lt;location&gt;dist/debug ;
-install dist2 : hello helpers : &lt;location&gt;$(DIST) ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">install</span><span class="tok-w"> </span>dist<span class="tok-w"> </span>:<span class="tok-w"> </span>hello<span class="tok-w"> </span>helpers<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">    </span>&lt;variant&gt;release:&lt;location&gt;dist/release<span class="tok-w"></span>
+<span class="tok-w">    </span>&lt;variant&gt;debug:&lt;location&gt;dist/debug<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">install</span><span class="tok-w"> </span>dist2<span class="tok-w"> </span>:<span class="tok-w"> </span>hello<span class="tok-w"> </span>helpers<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;location&gt;$(DIST)<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3534,10 +3536,10 @@ install, and automatically install all dependencies:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>install dist : hello :
-    &lt;install-dependencies&gt;on &lt;install-type&gt;EXE
-    &lt;install-type&gt;LIB
-    ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">install</span><span class="tok-w"> </span>dist<span class="tok-w"> </span>:<span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"></span>
+<span class="tok-w">    </span>&lt;install-dependencies&gt;on<span class="tok-w"> </span>&lt;install-type&gt;EXE<span class="tok-w"></span>
+<span class="tok-w">    </span>&lt;install-type&gt;LIB<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3563,10 +3565,10 @@ example, if you write:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>install headers
-    : a/b/c.h
-    : &lt;location&gt;/tmp &lt;install-source-root&gt;a
-    ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">install</span><span class="tok-w"> </span>headers<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>a/b/c.h<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;location&gt;/tmp<span class="tok-w"> </span>&lt;install-source-root&gt;a<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3584,11 +3586,11 @@ directory tree.</p>
 <p>The <a href="#bbv2.tasks.alias"><code>alias</code></a> rule can be used when targets need
 to be installed into several directories:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>alias install : install-bin install-lib ;
-install install-bin : applications : /usr/bin ;
-install install-lib : helper : /usr/lib ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">alias</span><span class="tok-w"> </span><span class="tok-nb">install</span><span class="tok-w"> </span>:<span class="tok-w"> </span><span class="tok-nb">install</span>-bin<span class="tok-w"> </span><span class="tok-nb">install</span>-lib<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">install</span><span class="tok-w"> </span><span class="tok-nb">install</span>-bin<span class="tok-w"> </span>:<span class="tok-w"> </span>applications<span class="tok-w"> </span>:<span class="tok-w"> </span>/usr/bin<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">install</span><span class="tok-w"> </span><span class="tok-nb">install</span>-lib<span class="tok-w"> </span>:<span class="tok-w"> </span>helper<span class="tok-w"> </span>:<span class="tok-w"> </span>/usr/lib<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3597,7 +3599,7 @@ install install-lib : helper : /usr/lib ;</pre>
 have no effect when used in requirements of the <code>install</code> rule. The only two
 that matter are
 <a href="#bbv2.builtin.features.dependency"><code>dependency</code></a> and, on Unix,
-<a href="#bbv2.reference.features.dll-path"><code>dll-path</code></a>.</p>
+<a href="#bbv2.builtin.features.dll-path"><code>dll-path</code></a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3626,7 +3628,7 @@ way is the <code>unit-test</code> rule, which follows the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>unit-test helpers_test : helpers_test.cpp helpers ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">unit-test</span><span class="tok-w"> </span>helpers_test<span class="tok-w"> </span>:<span class="tok-w"> </span>helpers_test.cpp<span class="tok-w"> </span>helpers<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3642,10 +3644,10 @@ unit test failure.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule compile ( sources : requirements * : target-name ? )
-rule compile-fail ( sources : requirements * : target-name ? )
-rule link ( sources + : requirements * : target-name ? )
-rule link-fail ( sources + : requirements * : target-name ? )</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">compile</span><span class="tok-w"> </span>(<span class="tok-w"> </span>sources<span class="tok-w"> </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>target-name<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">compile-fail</span><span class="tok-w"> </span>(<span class="tok-w"> </span>sources<span class="tok-w"> </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>target-name<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">link</span><span class="tok-w"> </span>(<span class="tok-w"> </span>sources<span class="tok-w"> </span>+<span class="tok-w"> </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>target-name<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span>
+<span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">link-fail</span><span class="tok-w"> </span>(<span class="tok-w"> </span>sources<span class="tok-w"> </span>+<span class="tok-w"> </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>target-name<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3664,8 +3666,8 @@ signature:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule run ( sources + : args * : input-files * : requirements * : target-name ?
-    : default-build * )</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">run</span><span class="tok-w"> </span>(<span class="tok-w"> </span>sources<span class="tok-w"> </span>+<span class="tok-w"> </span>:<span class="tok-w"> </span>args<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>input-files<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>requirements<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>target-name<span class="tok-w"> </span>?<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>default-build<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3698,7 +3700,7 @@ command-line option. The output will consist of lines of the form:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>boost-test(test-type) path : sources</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>boost-test(test-type)<span class="tok-w"> </span>path<span class="tok-w"> </span>:<span class="tok-w"> </span>sources<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3718,10 +3720,10 @@ included in Boost.Build.</p>
 before the list of input files.</p>
 <div class="listingblock">
 <div class="content">
-<pre>unit-test helpers_test
-    : helpers_test.cpp helpers
-    : &lt;testing.arg&gt;"--foo bar"
-    ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">unit-test</span><span class="tok-w"> </span>helpers_test<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>helpers_test.cpp<span class="tok-w"> </span>helpers<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;testing.arg&gt;&quot;--foo<span class="tok-w"> </span>bar&quot;<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </dd>
@@ -3739,10 +3741,10 @@ property to specify the name of the helper command. For example, if
 you write:</p>
 <div class="listingblock">
 <div class="content">
-<pre>unit-test helpers_test
-    : helpers_test.cpp helpers
-    : &lt;testing.launcher&gt;valgrind
-    ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">unit-test</span><span class="tok-w"> </span>helpers_test<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>helpers_test.cpp<span class="tok-w"> </span>helpers<span class="tok-w"></span>
+<span class="tok-w">    </span>:<span class="tok-w"> </span>&lt;testing.launcher&gt;valgrind<span class="tok-w"></span>
+<span class="tok-w">    </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3750,7 +3752,7 @@ you write:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>valgrind bin/$toolset/debug/helpers_test</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>valgrind bin/<span class="tok-nv">$toolset</span>/debug/helpers_test</code></pre>
 </div>
 </div>
 </dd>
@@ -3793,11 +3795,11 @@ by running the command <code>in2out</code>. Here is how you would do this in Boo
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>make file.out : file.in : @in2out ;
-actions in2out
-{
-    in2out $(&lt;) $(&gt;)
-}</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">make</span><span class="tok-w"> </span>file.out<span class="tok-w"> </span>:<span class="tok-w"> </span>file.in<span class="tok-w"> </span>:<span class="tok-w"> </span>@in2out<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">actions</span><span class="tok-w"> </span><span class="tok-nf">in2out</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-sh"></span>
+<span class="tok-sh">    in2out $(&lt;) $(&gt;)</span>
+<span class="tok-p">}</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3813,11 +3815,11 @@ the <code>notfile</code> rule. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>notfile echo_something : @echo ;
-actions echo
-{
-    echo "something"
-}</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">notfile</span><span class="tok-w"> </span>echo_something<span class="tok-w"> </span>:<span class="tok-w"> </span>@echo<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-k">actions</span><span class="tok-w"> </span><span class="tok-nf">echo</span><span class="tok-w"></span>
+<span class="tok-p">{</span><span class="tok-sh"></span>
+<span class="tok-sh">    echo &quot;something&quot;</span>
+<span class="tok-p">}</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3835,7 +3837,7 @@ following signature:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule generating-rule ( project name : property-set : sources * )</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">generating-rule</span><span class="tok-w"> </span>(<span class="tok-w"> </span><span class="tok-nb">project</span><span class="tok-w"> </span>name<span class="tok-w"> </span>:<span class="tok-w"> </span>property-set<span class="tok-w"> </span>:<span class="tok-w"> </span>sources<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3952,8 +3954,8 @@ feature must be used, for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>lib parser : parser.y ;
-exe app : app.cpp : &lt;implicit-dependency&gt;parser ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>parser<span class="tok-w"> </span>:<span class="tok-w"> </span>parser.y<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>app<span class="tok-w"> </span>:<span class="tok-w"> </span>app.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;implicit-dependency&gt;parser<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3978,7 +3980,7 @@ example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using gcc : arm : arm-none-linux-gnueabi-g++ ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>arm<span class="tok-w"> </span>:<span class="tok-w"> </span>arm-none-linux-gnueabi-g++<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3987,7 +3989,7 @@ you can just request that this compiler version be used:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>b2 toolset=gcc-arm</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>b2 <span class="tok-nv">toolset</span><span class="tok-o">=</span>gcc-arm</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3997,21 +3999,21 @@ example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># On windows box
+<pre class="pygments highlight"><code data-lang="bat"><span></span># On windows box
 b2 toolset=gcc-arm target-os=linux
 # On Linux box
-b2 toolset=gcc-mingw target-os=windows</pre>
+b2 toolset=gcc-mingw target-os=windows</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>For the complete list of allowed opeating system names, please see the
-documentation for <a href="#bbv2.reference.features.target-os">target-os
+documentation for <a href="#bbv2.builtin.features.target-os">target-os
 feature</a>.</p>
 </div>
 <div class="paragraph">
 <p>When using the msvc compiler, it&#8217;s only possible to cross-compile to a
 64-bit system on a 32-bit host. Please see
-<a href="#v2.reference.tools.compiler.msvc.64">the section called “64-bit support”</a>
+<a href="#bbv2.reference.tools.compiler.msvc.64">the section called “64-bit support”</a>
 for details.</p>
 </div>
 </div>
@@ -4035,7 +4037,7 @@ location by calling the boost-build rule:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule boost-build ( location ? )</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">boost-build</span><span class="tok-w"> </span>(<span class="tok-w"> </span>location<span class="tok-w"> </span>?<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4051,7 +4053,7 @@ containing:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>boost-build build-system ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>boost-build<span class="tok-w"> </span>build-system<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4072,37 +4074,37 @@ Jamfile—both rules that define new targets and auxiliary rules.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>exe</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.exe"></a><code>exe</code></dt>
 <dd>
 <p>Creates an executable file. See
 <a href="#bbv2.tasks.programs">the section called “Programs”</a>.</p>
 </dd>
-<dt class="hdlist1"><code>lib</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.lib"></a><code>lib</code></dt>
 <dd>
 <p>Creates an library file. See
 <a href="#bbv2.tasks.libraries">the section called “Libraries”</a>.</p>
 </dd>
-<dt class="hdlist1"><code>install</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.install"></a><code>install</code></dt>
 <dd>
 <p>Installs built targets and other files. See
 <a href="#bbv2.tasks.installing">the section called “Installing”</a>.</p>
 </dd>
-<dt class="hdlist1"><code>alias</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.alias"></a><code>alias</code></dt>
 <dd>
 <p>Creates an alias for other targets. See
 <a href="#bbv2.tasks.alias">the section called “Alias”</a>.</p>
 </dd>
-<dt class="hdlist1"><code>unit-test</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.unit-test"></a><code>unit-test</code></dt>
 <dd>
 <p>Creates an executable that will be automatically run. See
 <a href="#bbv2.builtins.testing">the section called “Testing”</a>.</p>
 </dd>
-<dt class="hdlist1"><code>compile</code>; <code>compile-fail</code>; <code>link</code>; <code>link-fail</code>; <code>run</code>; <code>run-fail</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.test"></a><code>compile</code>; <code>compile-fail</code>; <code>link</code>; <code>link-fail</code>; <code>run</code>; <code>run-fail</code></dt>
 <dd>
 <p>Specialized rules for testing. See
 <a href="#bbv2.builtins.testing">the section called “Testing”</a>.</p>
 </dd>
-<dt class="hdlist1"><code>check-target-builds</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.check-target-builds"></a><code>check-target-builds</code></dt>
 <dd>
 <p>The <code>check-target-builds</code> allows you to conditionally use different
 properties depending on whether some metatarget builds, or not. This
@@ -4134,17 +4136,17 @@ like so:</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1"><code>obj</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.obj"></a><code>obj</code></dt>
 <dd>
 <p>Creates an object file. Useful when a single source file must be
 compiled with special properties.</p>
 </dd>
-<dt class="hdlist1"><code>preprocessed</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.preprocessed"></a><code>preprocessed</code></dt>
 <dd>
 <p>Creates an preprocessed source file. The arguments follow the
 <a href="#bbv2.main-target-rule-syntax">common syntax</a>.</p>
 </dd>
-<dt class="hdlist1"><code>glob</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.glob"></a><code>glob</code></dt>
 <dd>
 <p>The <code>glob</code> rule takes a list shell pattern and returns the list of
 files in the project&#8217;s source directory that match the pattern. For
@@ -4166,7 +4168,7 @@ example:</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1"><code>glob-tree</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.glob-tree"></a><code>glob-tree</code></dt>
 <dd>
 <p>The <code>glob-tree</code> is similar to the <code>glob</code> except that it operates
 recursively from the directory of the containing Jamfile. For example:</p>
@@ -4181,17 +4183,17 @@ exclude pattern prevents the <code>glob-tree</code> rule from entering
 administrative directories of the Subversion version control system.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>project</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.project"></a><code>project</code></dt>
 <dd>
 <p>Declares project id and attributes, including project requirements.
 See <a href="#bbv2.overview.projects">the section called “Projects”</a>.</p>
 </dd>
-<dt class="hdlist1"><code>use-project</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.use-project"></a><code>use-project</code></dt>
 <dd>
 <p>Assigns a symbolic project ID to a project at a given path. This rule
 must be better documented!</p>
 </dd>
-<dt class="hdlist1"><code>explicit</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.explicit"></a><code>explicit</code></dt>
 <dd>
 <p>The <code>explicit</code> rule takes a single parameter&#8212;&#8203;a list of target names.
 The named targets will be marked explicit, and will be built only if
@@ -4199,7 +4201,7 @@ they are explicitly requested on the command line, or if their
 dependents are built. Compare this to ordinary targets, that are built
 implicitly when their containing project is built.</p>
 </dd>
-<dt class="hdlist1"><code>always</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.always"></a><code>always</code></dt>
 <dd>
 <p>The <code>always</code> function takes a single parameter—a list of metatarget
 names. The top-level targets produced by the named metatargets will be
@@ -4218,7 +4220,7 @@ if a build of <code>hello</code> is not requested, for example you specify just
 <code>bye</code> on the command line, <code>hello</code> will not be relinked.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>constant</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.constant"></a><code>constant</code></dt>
 <dd>
 <p>Sets project-wide constant. Takes two parameters: variable name and a
 value and makes the specified variable name accessible in this Jamfile
@@ -4229,7 +4231,7 @@ and any child Jamfiles. For example:</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1"><code>path-constant</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.path-constant"></a><code>path-constant</code></dt>
 <dd>
 <p>Same as <code>constant</code> except that the value is treated as path relative
 to Jamfile location. For example, if <code>b2</code> is invoked in the current
@@ -4245,7 +4247,7 @@ directory, and Jamfile in <code>helper</code> subdirectory has:</p>
 will be set to <code>data/a.txt</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>build-project</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.build-project"></a><code>build-project</code></dt>
 <dd>
 <p>Cause some other project to be built. This rule takes a single
 parameter—a directory name relative to the containing Jamfile. When
@@ -4254,7 +4256,7 @@ will be built as well. At the moment, the parameter to this rule
 should be a directory name. Project ID or general target references
 are not allowed.</p>
 </dd>
-<dt class="hdlist1"><code>test-suite</code></dt>
+<dt class="hdlist1"><a id="bbv2.reference.rules.test-suite"></a><code>test-suite</code></dt>
 <dd>
 <p>This rule is deprecated and equivalent to <code>alias</code>.</p>
 </dd>
@@ -4270,7 +4272,7 @@ default value listed first.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>variant</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.variant"></a><code>variant</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>debug</code>, <code>release</code>, <code>profile</code>.</p>
 <div class="paragraph">
@@ -4319,14 +4321,14 @@ people used to various IDEs.
 </table>
 </div>
 </dd>
-<dt class="hdlist1"><code>link</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.link"></a><code>link</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>shared</code>, <code>static</code></p>
 <div class="paragraph">
 <p>A feature controlling how libraries are built.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>runtime-link</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.runtime-link"></a><code>runtime-link</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>shared</code>, <code>static</code></p>
 <div class="paragraph">
@@ -4338,7 +4340,7 @@ runtime requires extreme care. Check your compiler documentation for
 more details.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>threading</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.threading"></a><code>threading</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>single</code>, <code>multi</code></p>
 <div class="paragraph">
@@ -4350,7 +4352,7 @@ libraries, and define additional preprocessor symbols (for example,
 the compiled code depends on the code itself.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>source</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.source"></a><code>source</code></dt>
 <dd>
 <p>The <code>&lt;source&gt;X</code> feature has the same effect on building a target as
 putting X in the list of sources. It is useful when you want to add
@@ -4360,7 +4362,7 @@ requirements, see
 <a href="#bbv2.tutorial.conditions">the section called “Conditions and alternatives”</a>).
 See also the <code>&lt;library&gt;</code> feature.</p>
 </dd>
-<dt class="hdlist1"><code>library</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.library"></a><code>library</code></dt>
 <dd>
 <p>This feature is almost equivalent to the <code>&lt;source&gt;</code> feature, except
 that it takes effect only for linking. When you want to link all
@@ -4368,13 +4370,13 @@ targets in a Jamfile to certain library, the <code>&lt;library&gt;</code> featur
 preferred over <code>&lt;source&gt;X</code>--the latter will add the library to all
 targets, even those that have nothing to do with libraries.</p>
 </dd>
-<dt class="hdlist1"><code>dependency</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.dependency"></a><code>dependency</code></dt>
 <dd>
 <p>Introduces a dependency on the target named by the value of this
 feature (so it will be brought up-to-date whenever the target being
 declared is). The dependency is not used in any other way.</p>
 </dd>
-<dt class="hdlist1"><code>implicit-dependency</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.implicit-dependency"></a><code>implicit-dependency</code></dt>
 <dd>
 <p>Indicates that the target named by the value of this feature may
 produce files that are included by the sources of the target being
@@ -4382,7 +4384,7 @@ declared. See
 <a href="#bbv2.reference.generated_headers">the section called “Generated headers”</a>
 for more information.</p>
 </dd>
-<dt class="hdlist1"><code>use</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.use"></a><code>use</code></dt>
 <dd>
 <p>Introduces a dependency on the target named by the value of this
 feature (so it will be brought up-to-date whenever the target being
@@ -4392,7 +4394,7 @@ way. The primary use case is when you want the usage requirements
 (such as <code>#include</code> paths) of some library to be applied, but do not
 want to link to it.</p>
 </dd>
-<dt class="hdlist1"><code>dll-path</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.dll-path"></a><code>dll-path</code></dt>
 <dd>
 <p>Specify an additional directory where the system should look for
 shared libraries when the executable or shared library is run. This
@@ -4400,7 +4402,7 @@ feature only affects Unix compilers. Please see
 <a href="#bbv2.faq.dll-path">the FAQ: “Why are the dll-path and hardcode-dll-paths properties useful? ”</a>
 in <a href="#bbv2.faq">Frequently Asked Questions</a> for details.</p>
 </dd>
-<dt class="hdlist1"><code>hardcode-dll-paths</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.hardcode-dll-paths"></a><code>hardcode-dll-paths</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>true</code>, <code>false</code>.</p>
 <div class="paragraph">
@@ -4417,7 +4419,7 @@ that on Mac OSX, the paths are unconditionally hardcoded by the
 linker, and it is not possible to disable that behaviour.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>cflags</code>; <code>cxxflags</code>; <code>linkflags</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.flags"></a><code>cflags</code>; <code>cxxflags</code>; <code>linkflags</code></dt>
 <dd>
 <p>The value of those features is passed without modification to the
 corresponding tools. For <code>cflags</code> that is both the C and C
@@ -4426,19 +4428,19 @@ compilers, for `cxxflags` that is the C compiler, and for
 trying to do something special that cannot be achieved by a
 higher-level feature in Boost.Build.</p>
 </dd>
-<dt class="hdlist1"><code>include</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.include"></a><code>include</code></dt>
 <dd>
 <p>Specifies an additional include path that is to be passed to C and C++
 compilers.</p>
 </dd>
-<dt class="hdlist1"><code>define</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.define"></a><code>define</code></dt>
 <dd>
 <p>Specifies an preprocessor symbol that should be defined on the command
 line. You may either specify just the symbol, which will be defined
 without any value, or both the symbol and the value, separated by
 equal sign.</p>
 </dd>
-<dt class="hdlist1"><code>warnings</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.warnings"></a><code>warnings</code></dt>
 <dd>
 <p>The <code>&lt;warnings&gt;</code> feature controls the warning level of compilers. It
 has the following values:</p>
@@ -4459,13 +4461,13 @@ has the following values:</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1"><code>warnings-as-errors</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.warnings-as-errors"></a><code>warnings-as-errors</code></dt>
 <dd>
 <p>The <code>&lt;warnings-as-errors&gt;</code> makes it possible to treat warnings as
 errors and abort compilation on a warning. The value <code>on</code> enables this
 behaviour. The default value is <code>off</code>.</p>
 </dd>
-<dt class="hdlist1"><code>build</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.build"></a><code>build</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>no</code></p>
 <div class="paragraph">
@@ -4476,7 +4478,7 @@ allows you to skip building some target in configurations where the
 build is known to fail.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>tag</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.tag"></a><code>tag</code></dt>
 <dd>
 <p>The <code>tag</code> feature is used to customize the name of the generated
 files. The value should have the form:</p>
@@ -4509,7 +4511,7 @@ generated header file and other targets for which changing names does
 not make sense.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>debug-symbols</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.debug-symbols"></a><code>debug-symbols</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>on</code>, <code>off</code>.</p>
 <div class="paragraph">
@@ -4521,7 +4523,7 @@ most common usage is to build release variant with debugging
 information.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>runtime-debugging</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.runtime-debugging"></a><code>runtime-debugging</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>on</code>, <code>off</code>.</p>
 <div class="paragraph">
@@ -4533,7 +4535,7 @@ specified by the user. The most common usage is to build release
 variant with debugging output.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>target-os</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.target-os"></a><code>target-os</code></dt>
 <dd>
 <p>The operating system for which the code is to be generated. The
 compiler you used should be the compiler for that operating system.
@@ -4551,7 +4553,7 @@ openbsd, osf, qnx, qnxnto, sgi, solaris, unix, unixware, windows.</p>
 for details of crosscompilation.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>architecture</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.architecture"></a><code>architecture</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>x86</code>, <code>ia64</code>, <code>sparc</code>, <code>power</code>, <code>mips1</code>, <code>mips2</code>,
 <code>mips3</code>, <code>mips4</code>, <code>mips32</code>, <code>mips32r2</code>, <code>mips64</code>, <code>parisc</code>, <code>arm</code>,
@@ -4561,7 +4563,7 @@ for details of crosscompilation.</p>
 generate code for.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>instruction-set</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.instruction-set"></a><code>instruction-set</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> depends on the used toolset.</p>
 <div class="paragraph">
@@ -4577,7 +4579,7 @@ use. Please see
 for details.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>address-model</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.address-model"></a><code>address-model</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>32</code>, <code>64</code>.</p>
 <div class="paragraph">
@@ -4589,7 +4591,7 @@ values of the <code>architecture</code> <code>instruction-set</code> features. P
 for details.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>c++-template-depth</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.cpp-template-depth"></a><code>c++-template-depth</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> Any positive integer.</p>
 <div class="paragraph">
@@ -4615,7 +4617,7 @@ needed, user can easily add it by calling the feature.extend rule.
 </table>
 </div>
 </dd>
-<dt class="hdlist1"><code>embed-manifest</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.embed-manifest"></a><code>embed-manifest</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> <code>on</code>, <code>off</code>.</p>
 <div class="paragraph">
@@ -4628,7 +4630,7 @@ Configuration Properties &#8594; Manifest Tool &#8594; Input and Output &#8594; 
 manifest.</p>
 </div>
 </dd>
-<dt class="hdlist1"><code>embed-manifest-file</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.embed-manifest-file"></a><code>embed-manifest-file</code></dt>
 <dd>
 <p>This feature is specific to the msvc toolset (see
 <a href="#bbv2.reference.tools.compiler.msvc">the section called “Microsoft Visual C++”</a>),
@@ -4637,7 +4639,7 @@ shared libraries. This feature corresponds to the IDE option found in the
 project settings dialog, under Configuration Properties &#8594; Manifest
 Tool &#8594; Input and Output &#8594; Additional Manifest Files.</p>
 </dd>
-<dt class="hdlist1"><code>relevant</code></dt>
+<dt class="hdlist1"><a id="bbv2.builtin.features.relevant"></a><code>relevant</code></dt>
 <dd>
 <p><strong>Allowed values:</strong> the name of any feature.</p>
 <div class="paragraph">
@@ -4739,7 +4741,7 @@ for example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using gcc ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4748,7 +4750,7 @@ example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using gcc : 4.0 : g++-4.0 ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>gcc<span class="tok-w"> </span>:<span class="tok-w"> </span>4.0<span class="tok-w"> </span>:<span class="tok-w"> </span>g++-4.0<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5659,7 +5661,7 @@ using the following syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using stlport : version : header-path : library-path ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>stlport<span class="tok-w"> </span>:<span class="tok-w"> </span>version<span class="tok-w"> </span>:<span class="tok-w"> </span>header-path<span class="tok-w"> </span>:<span class="tok-w"> </span>library-path<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5687,7 +5689,7 @@ from source.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using zlib : version : options : condition : is-default ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>zlib<span class="tok-w"> </span>:<span class="tok-w"> </span>version<span class="tok-w"> </span>:<span class="tok-w"> </span>options<span class="tok-w"> </span>:<span class="tok-w"> </span>condition<span class="tok-w"> </span>:<span class="tok-w"> </span>is-default<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5740,16 +5742,16 @@ precompiled binaries.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># Find zlib in the default system location
-using zlib ;
-# Build zlib from source
-using zlib : 1.2.7 : &lt;source&gt;/home/steven/zlib-1.2.7 ;
-# Find zlib in /usr/local
-using zlib : 1.2.7 : &lt;include&gt;/usr/local/include &lt;search&gt;/usr/local/lib ;
-# Build zlib from source for msvc and find
-# prebuilt binaries for gcc.
-using zlib : 1.2.7 : &lt;source&gt;C:/Devel/src/zlib-1.2.7 : &lt;toolset&gt;msvc ;
-using zlib : 1.2.7 : : &lt;toolset&gt;gcc ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-c1"># Find zlib in the default system location</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>zlib<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-c1"># Build zlib from source</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>zlib<span class="tok-w"> </span>:<span class="tok-w"> </span>1.2.7<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;source&gt;/home/steven/zlib-1.2.7<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-c1"># Find zlib in /usr/local</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>zlib<span class="tok-w"> </span>:<span class="tok-w"> </span>1.2.7<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/usr/local/include<span class="tok-w"> </span>&lt;search&gt;/usr/local/lib<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-c1"># Build zlib from source for msvc and find</span>
+<span class="tok-c1"># prebuilt binaries for gcc.</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>zlib<span class="tok-w"> </span>:<span class="tok-w"> </span>1.2.7<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;source&gt;C:/Devel/src/zlib-1.2.7<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;msvc<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>zlib<span class="tok-w"> </span>:<span class="tok-w"> </span>1.2.7<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;gcc<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -5765,7 +5767,7 @@ from source.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using bzip2 : version : options : condition : is-default ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>bzip2<span class="tok-w"> </span>:<span class="tok-w"> </span>version<span class="tok-w"> </span>:<span class="tok-w"> </span>options<span class="tok-w"> </span>:<span class="tok-w"> </span>condition<span class="tok-w"> </span>:<span class="tok-w"> </span>is-default<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5818,16 +5820,16 @@ precompiled binaries.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># Find bzip in the default system location
-using bzip2 ;
-# Build bzip from source
-using bzip2 : 1.0.6 : &lt;source&gt;/home/sergey/src/bzip2-1.0.6 ;
-# Find bzip in /usr/local
-using bzip2 : 1.0.6 : &lt;include&gt;/usr/local/include &lt;search&gt;/usr/local/lib ;
-# Build bzip from source for msvc and find
-# prebuilt binaries for gcc.
-using bzip2 : 1.0.6 : &lt;source&gt;C:/Devel/src/bzip2-1.0.6 : &lt;toolset&gt;msvc ;
-using bzip2 : 1.0.6 : : &lt;toolset&gt;gcc ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-c1"># Find bzip in the default system location</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>bzip2<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-c1"># Build bzip from source</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>bzip2<span class="tok-w"> </span>:<span class="tok-w"> </span>1.0.6<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;source&gt;/home/sergey/src/bzip2-1.0.6<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-c1"># Find bzip in /usr/local</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>bzip2<span class="tok-w"> </span>:<span class="tok-w"> </span>1.0.6<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;include&gt;/usr/local/include<span class="tok-w"> </span>&lt;search&gt;/usr/local/lib<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-c1"># Build bzip from source for msvc and find</span>
+<span class="tok-c1"># prebuilt binaries for gcc.</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>bzip2<span class="tok-w"> </span>:<span class="tok-w"> </span>1.0.6<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;source&gt;C:/Devel/src/bzip2-1.0.6<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;msvc<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>bzip2<span class="tok-w"> </span>:<span class="tok-w"> </span>1.0.6<span class="tok-w"> </span>:<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;gcc<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -5842,7 +5844,7 @@ environment to be linked in as a library.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using python : [version] : [command-or-prefix] : [includes] : [libraries] : [conditions] : [extension-suffix] ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>python<span class="tok-w"> </span>:<span class="tok-w"> </span>[version]<span class="tok-w"> </span>:<span class="tok-w"> </span>[command-or-prefix]<span class="tok-w"> </span>:<span class="tok-w"> </span>[includes]<span class="tok-w"> </span>:<span class="tok-w"> </span>[libraries]<span class="tok-w"> </span>:<span class="tok-w"> </span>[conditions]<span class="tok-w"> </span>:<span class="tok-w"> </span>[extension-suffix]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5894,46 +5896,46 @@ and &lt;python-debugging&gt; is set).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre># Find python in the default system location
-using python ;
-# 2.7
-using python : 2.7 ;
-# 3.5
-using python : 3.5 ;
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-c1"># Find python in the default system location</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>python<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-c1"># 2.7</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>python<span class="tok-w"> </span>:<span class="tok-w"> </span>2.7<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-c1"># 3.5</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>python<span class="tok-w"> </span>:<span class="tok-w"> </span>3.5<span class="tok-w"> </span>;<span class="tok-w"></span>
 
-# On ubuntu 16.04
-using python
-: 2.7 # version
-: # Interpreter/path to dir
-: /usr/include/python2.7 # includes
-: /usr/lib/x86_64-linux-gnu # libs
-: # conditions
-;
+<span class="tok-c1"># On ubuntu 16.04</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>python<span class="tok-w"></span>
+:<span class="tok-w"> </span>2.7<span class="tok-w"> </span><span class="tok-c1"># version</span>
+:<span class="tok-w"> </span><span class="tok-c1"># Interpreter/path to dir</span>
+:<span class="tok-w"> </span>/usr/include/python2.7<span class="tok-w"> </span><span class="tok-c1"># includes</span>
+:<span class="tok-w"> </span>/usr/lib/x86_64-linux-gnu<span class="tok-w"> </span><span class="tok-c1"># libs</span>
+:<span class="tok-w"> </span><span class="tok-c1"># conditions</span>
+;<span class="tok-w"></span>
 
-using python
-: 3.5 # version
-: # Interpreter/path to dir
-: /usr/include/python3.5 # includes
-: /usr/lib/x86_64-linux-gnu # libs
-: # conditions
-;
+<span class="tok-nb">using</span><span class="tok-w"> </span>python<span class="tok-w"></span>
+:<span class="tok-w"> </span>3.5<span class="tok-w"> </span><span class="tok-c1"># version</span>
+:<span class="tok-w"> </span><span class="tok-c1"># Interpreter/path to dir</span>
+:<span class="tok-w"> </span>/usr/include/python3.5<span class="tok-w"> </span><span class="tok-c1"># includes</span>
+:<span class="tok-w"> </span>/usr/lib/x86_64-linux-gnu<span class="tok-w"> </span><span class="tok-c1"># libs</span>
+:<span class="tok-w"> </span><span class="tok-c1"># conditions</span>
+;<span class="tok-w"></span>
 
-# On windows
-using python
-: 2.7 # version
-: C:\\Python27-32\\python.exe # Interperter/path to dir
-: C:\\Python27-32\\include # includes
-: C:\\Python27-32\\libs # libs
-: &lt;address-model&gt;32 &lt;address-model&gt; # conditions - both 32 and unspecified
-;
+<span class="tok-c1"># On windows</span>
+<span class="tok-nb">using</span><span class="tok-w"> </span>python<span class="tok-w"></span>
+:<span class="tok-w"> </span>2.7<span class="tok-w"> </span><span class="tok-c1"># version</span>
+:<span class="tok-w"> </span>C:\\Python27-32\\python.exe<span class="tok-w"> </span><span class="tok-c1"># Interperter/path to dir</span>
+:<span class="tok-w"> </span>C:\\Python27-32\\include<span class="tok-w"> </span><span class="tok-c1"># includes</span>
+:<span class="tok-w"> </span>C:\\Python27-32\\libs<span class="tok-w"> </span><span class="tok-c1"># libs</span>
+:<span class="tok-w"> </span>&lt;address-model&gt;32<span class="tok-w"> </span>&lt;address-model&gt;<span class="tok-w"> </span><span class="tok-c1"># conditions - both 32 and unspecified</span>
+;<span class="tok-w"></span>
 
-using python
-: 2.7 # version
-: C:\\Python27-64\\python.exe # Interperter/path to dir
-: C:\\Python27-64\\include # includes
-: C:\\Python27-64\\libs # libs
-: &lt;address-model&gt;64 # conditions
-;</pre>
+<span class="tok-nb">using</span><span class="tok-w"> </span>python<span class="tok-w"></span>
+:<span class="tok-w"> </span>2.7<span class="tok-w"> </span><span class="tok-c1"># version</span>
+:<span class="tok-w"> </span>C:\\Python27-64\\python.exe<span class="tok-w"> </span><span class="tok-c1"># Interperter/path to dir</span>
+:<span class="tok-w"> </span>C:\\Python27-64\\include<span class="tok-w"> </span><span class="tok-c1"># includes</span>
+:<span class="tok-w"> </span>C:\\Python27-64\\libs<span class="tok-w"> </span><span class="tok-c1"># libs</span>
+:<span class="tok-w"> </span>&lt;address-model&gt;64<span class="tok-w"> </span><span class="tok-c1"># conditions</span>
+;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -5952,7 +5954,7 @@ syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using xsltproc : xsltproc ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>xsltproc<span class="tok-w"> </span>:<span class="tok-w"> </span>xsltproc<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6022,7 +6024,7 @@ syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using boostbook : docbook-xsl-dir : docbook-dtd-dir : boostbook-dir ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>boostbook<span class="tok-w"> </span>:<span class="tok-w"> </span>docbook-xsl-dir<span class="tok-w"> </span>:<span class="tok-w"> </span>docbook-dtd-dir<span class="tok-w"> </span>:<span class="tok-w"> </span>boostbook-dir<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6090,7 +6092,7 @@ syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using doxygen : name ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>doxygen<span class="tok-w"> </span>:<span class="tok-w"> </span>name<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6184,7 +6186,7 @@ syntax:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using quickbook : command ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>quickbook<span class="tok-w"> </span>:<span class="tok-w"> </span>command<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6204,7 +6206,7 @@ objects to Postscript and PDF.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>using fop : fop-command : java-home : java ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">using</span><span class="tok-w"> </span>fop<span class="tok-w"> </span>:<span class="tok-w"> </span>fop-command<span class="tok-w"> </span>:<span class="tok-w"> </span>java-home<span class="tok-w"> </span>:<span class="tok-w"> </span>java<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6451,51 +6453,51 @@ consisting of slash only.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>rule make ( native )</code></p>
+<p><a id="bbv2.reference.modules.path.make"></a> <code>rule make ( native )</code></p>
 <div class="paragraph">
 <p>Converts the native path into normalized form.</p>
 </div>
 </li>
 <li>
-<p><code>rule native ( path )</code></p>
+<p><a id="bbv2.reference.modules.path.native"></a> <code>rule native ( path )</code></p>
 <div class="paragraph">
 <p>Builds the native representation of the path.</p>
 </div>
 </li>
 <li>
-<p><code>rule is-rooted ( path )</code></p>
+<p><a id="bbv2.reference.modules.path.is-rooted"></a> <code>rule is-rooted ( path )</code></p>
 <div class="paragraph">
 <p>Tests if a path is rooted.</p>
 </div>
 </li>
 <li>
-<p><code>rule has-parent ( path )</code></p>
+<p><a id="bbv2.reference.modules.path.has-parent"></a> <code>rule has-parent ( path )</code></p>
 <div class="paragraph">
 <p>Tests if a path has a parent.</p>
 </div>
 </li>
 <li>
-<p><code>rule basename ( path )</code></p>
+<p><a id="bbv2.reference.modules.path.basename"></a> <code>rule basename ( path )</code></p>
 <div class="paragraph">
 <p>Returns the path without any directory components.</p>
 </div>
 </li>
 <li>
-<p><code>rule parent ( path )</code></p>
+<p><a id="bbv2.reference.modules.path.parent"></a> <code>rule parent ( path )</code></p>
 <div class="paragraph">
 <p>Returns the parent directory of the path. If no parent exists, an error
 is issued.</p>
 </div>
 </li>
 <li>
-<p><code>rule reverse ( path )</code></p>
+<p><a id="bbv2.reference.modules.path.reverse"></a> <code>rule reverse ( path )</code></p>
 <div class="paragraph">
 <p>Returns <code>path2</code> such that <code>[ join path path2 ] = "."</code>. The path may not
 contain <code>".."</code> element or be rooted.</p>
 </div>
 </li>
 <li>
-<p><code>rule join ( elements + )</code></p>
+<p><a id="bbv2.reference.modules.path.join"></a> <code>rule join ( elements + )</code></p>
 <div class="paragraph">
 <p>Concatenates the passed path elements. Generates an error if any element
 other than the first one is rooted. Skips any empty or undefined path
@@ -6503,20 +6505,20 @@ elements.</p>
 </div>
 </li>
 <li>
-<p><code>rule root ( path root )</code></p>
+<p><a id="bbv2.reference.modules.path.root"></a> <code>rule root ( path root )</code></p>
 <div class="paragraph">
 <p>If <code>path</code> is relative, it is rooted at <code>root</code>. Otherwise, it is
 unchanged.</p>
 </div>
 </li>
 <li>
-<p><code>rule pwd ( )</code></p>
+<p><a id="bbv2.reference.modules.path.pwd"></a> <code>rule pwd ( )</code></p>
 <div class="paragraph">
 <p>Returns the current working directory.</p>
 </div>
 </li>
 <li>
-<p><code>rule glob ( dirs * : patterns + : exclude-patterns * )</code></p>
+<p><a id="bbv2.reference.modules.path.glob"></a> <code>rule glob ( dirs * : patterns + : exclude-patterns * )</code></p>
 <div class="paragraph">
 <p>Returns the list of files matching the given pattern in the specified
 directory. Both directories and patterns are supplied as portable paths.
@@ -6547,7 +6549,7 @@ example:</p>
 </div>
 </li>
 <li>
-<p><code>rule glob-tree ( roots * : patterns + : exclude-patterns * )</code></p>
+<p><a id="bbv2.reference.modules.path.glob-tree"></a> <code>rule glob-tree ( roots * : patterns + : exclude-patterns * )</code></p>
 <div class="paragraph">
 <p>Recursive version of <a href="#bbv2.reference.modules.path.glob">glob</a>.
 Builds the glob of files while also searching in the subdirectories of
@@ -6558,13 +6560,13 @@ patterns will not be searched.</p>
 </div>
 </li>
 <li>
-<p><code>rule exists ( file )</code></p>
+<p><a id="bbv2.reference.modules.path.exists"></a> <code>rule exists ( file )</code></p>
 <div class="paragraph">
 <p>Returns true if the specified file exists.</p>
 </div>
 </li>
 <li>
-<p><code>rule all-parents ( path : upper_limit ? : cwd ? )</code></p>
+<p><a id="bbv2.reference.modules.path.all-parents"></a> <code>rule all-parents ( path : upper_limit ? : cwd ? )</code></p>
 <div class="paragraph">
 <p>Find out the absolute name of path and return the list of all the
 parents, starting with the immediate one. Parents are returned as
@@ -6573,7 +6575,7 @@ be pruned.</p>
 </div>
 </li>
 <li>
-<p><code>rule glob-in-parents ( dir : patterns + : upper-limit ? )</code></p>
+<p><a id="bbv2.reference.modules.path.glob-in-parents"></a> <code>rule glob-in-parents ( dir : patterns + : upper-limit ? )</code></p>
 <div class="paragraph">
 <p>Search for <code>patterns</code> in parent directories of <code>dir</code>, up to and
 including <code>upper_limit</code>, if it is specified, or till the filesystem root
@@ -6581,27 +6583,27 @@ otherwise.</p>
 </div>
 </li>
 <li>
-<p><code>rule relative ( child parent : no-error ? )</code></p>
+<p><a id="bbv2.reference.modules.path.relative"></a> <code>rule relative ( child parent : no-error ? )</code></p>
 <div class="paragraph">
 <p>Assuming <code>child</code> is a subdirectory of <code>parent</code>, return the relative path
 from <code>parent</code> to <code>child</code>.</p>
 </div>
 </li>
 <li>
-<p><code>rule relative-to ( path1 path2 )</code></p>
+<p><a id="bbv2.reference.modules.path.relative-to"></a> <code>rule relative-to ( path1 path2 )</code></p>
 <div class="paragraph">
 <p>Returns the minimal path to path2 that is relative path1.</p>
 </div>
 </li>
 <li>
-<p><code>rule programs-path ( )</code></p>
+<p><a id="bbv2.reference.modules.path.programs-path"></a> <code>rule programs-path ( )</code></p>
 <div class="paragraph">
 <p>Returns the list of paths which are used by the operating system for
 looking up programs.</p>
 </div>
 </li>
 <li>
-<p><code>rule makedirs ( path )</code></p>
+<p><a id="bbv2.reference.modules.path.makedirs"></a> <code>rule makedirs ( path )</code></p>
 <div class="paragraph">
 <p>Creates a directory and all parent directories that do not already
 exist.</p>
@@ -6652,7 +6654,7 @@ exist.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>rule split ( string separator )</code></p>
+<p><a id="bbv2.reference.modules.regex.split"></a> <code>rule split ( string separator )</code></p>
 <div class="paragraph">
 <p>Returns a list of the following substrings:</p>
 </div>
@@ -6675,7 +6677,7 @@ end,</p>
 </div>
 </li>
 <li>
-<p><code>rule split-list ( list * : separator )</code></p>
+<p><a id="bbv2.reference.modules.regex.split-list"></a> <code>rule split-list ( list * : separator )</code></p>
 <div class="paragraph">
 <p>Returns the concatenated results of applying
 <a href="#bbv2.reference.modules.regex.split">regex.split</a> to every element
@@ -6683,14 +6685,14 @@ of the list using the separator pattern.</p>
 </div>
 </li>
 <li>
-<p><code>rule match ( pattern : string : indices * )</code></p>
+<p><a id="bbv2.reference.modules.regex.match"></a> <code>rule match ( pattern : string : indices * )</code></p>
 <div class="paragraph">
 <p>Match <code>string</code> against <code>pattern</code>, and return the elements indicated by
 <code>indices</code>.</p>
 </div>
 </li>
 <li>
-<p><code>rule transform ( list * : pattern : indices * )</code></p>
+<p><a id="bbv2.reference.modules.regex.transform"></a> <code>rule transform ( list * : pattern : indices * )</code></p>
 <div class="paragraph">
 <p>Matches all elements of <code>list</code> against the <code>pattern</code> and returns a list
 of elements indicated by <code>indices</code> of all successful matches. If
@@ -6699,21 +6701,21 @@ successful matches.</p>
 </div>
 </li>
 <li>
-<p><code>rule escape ( string : symbols : escape-symbol )</code></p>
+<p><a id="bbv2.reference.modules.regex.escape"></a> <code>rule escape ( string : symbols : escape-symbol )</code></p>
 <div class="paragraph">
 <p>Escapes all of the characters in <code>symbols</code> using the escape symbol
 <code>escape-symbol</code> for the given string, and returns the escaped string.</p>
 </div>
 </li>
 <li>
-<p><code>rule replace ( string match replacement )</code></p>
+<p><a id="bbv2.reference.modules.regex.replace"></a> <code>rule replace ( string match replacement )</code></p>
 <div class="paragraph">
 <p>Replaces occurrences of a match string in a given string and returns the
 new string. The match string can be a regex expression.</p>
 </div>
 </li>
 <li>
-<p><code>rule replace-list ( list * : match : replacement )</code></p>
+<p><a id="bbv2.reference.modules.regex.replace-list"></a> <code>rule replace-list ( list * : match : replacement )</code></p>
 <div class="paragraph">
 <p>Replaces occurrences of a match string in a given list of strings and
 returns a list of new strings. The match string can be a regex
@@ -6797,8 +6799,7 @@ the elements will be unchanged.</p>
 <p><code>rule max-element ( elements + : ordered ? )</code></p>
 <div class="paragraph">
 <p>Returns the maximum number in <code>elements</code>. Uses <code>ordered</code> for comparisons
-or <a href="#bbv2.reference.modules.numbers.less">numbers.less</a> if none is
-provided.</p>
+or <code>numbers.less</code> if none is provided.</p>
 </div>
 </li>
 <li>
@@ -6820,7 +6821,7 @@ supports typed targets.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>rule register ( type : suffixes * : base-type ? )</code></p>
+<p><a id="bbv2.reference.modules.type.register"></a> <code>rule register ( type : suffixes * : base-type ? )</code></p>
 <div class="paragraph">
 <p>Registers a target type, possible derived from a <code>base-type</code>. Providing
 a list of suffixes here is a shortcut for separately calling the
@@ -6831,7 +6832,7 @@ rule with the first given suffix.</p>
 </div>
 </li>
 <li>
-<p><code>rule register-suffixes ( suffixes + : type )</code></p>
+<p><a id="bbv2.reference.modules.type.register-suffixes"></a> <code>rule register-suffixes ( suffixes + : type )</code></p>
 <div class="paragraph">
 <p>Specifies that files with suffix from <code>suffixes</code> be recognized as
 targets of type <code>type</code>. Issues an error if a different type is already
@@ -6839,59 +6840,59 @@ specified for any of the suffixes.</p>
 </div>
 </li>
 <li>
-<p><code>rule registered ( type )</code></p>
+<p><a id="bbv2.reference.modules.type.registered"></a> <code>rule registered ( type )</code></p>
 <div class="paragraph">
 <p>Returns true iff type has been registered.</p>
 </div>
 </li>
 <li>
-<p><code>rule validate ( type )</code></p>
+<p><a id="bbv2.reference.modules.type.validate"></a> <code>rule validate ( type )</code></p>
 <div class="paragraph">
 <p>Issues an error if <code>type</code> is unknown.</p>
 </div>
 </li>
 <li>
-<p><code>rule set-scanner ( type : scanner )</code></p>
+<p><a id="bbv2.reference.modules.type.set-scanner"></a> <code>rule set-scanner ( type : scanner )</code></p>
 <div class="paragraph">
 <p>Sets a scanner class that will be used for this type.</p>
 </div>
 </li>
 <li>
-<p><code>rule get-scanner ( type : property-set )</code></p>
+<p><a id="bbv2.reference.modules.type.get-scanner"></a> <code>rule get-scanner ( type : property-set )</code></p>
 <div class="paragraph">
 <p>Returns a scanner instance appropriate to <code>type</code> and <code>property-set</code>.</p>
 </div>
 </li>
 <li>
-<p><code>rule base ( type )</code></p>
+<p><a id="bbv2.reference.modules.type.base"></a> <code>rule base ( type )</code></p>
 <div class="paragraph">
 <p>Returns a base type for the given type or nothing in case the given type
 is not derived.</p>
 </div>
 </li>
 <li>
-<p><code>rule all-bases ( type )</code></p>
+<p><a id="bbv2.reference.modules.type.all-bases"></a> <code>rule all-bases ( type )</code></p>
 <div class="paragraph">
 <p>Returns the given type and all of its base types in order of their
 distance from type.</p>
 </div>
 </li>
 <li>
-<p><code>rule all-derived ( type )</code></p>
+<p><a id="bbv2.reference.modules.type.all-derived"></a> <code>rule all-derived ( type )</code></p>
 <div class="paragraph">
 <p>Returns the given type and all of its derived types in order of their
 distance from type.</p>
 </div>
 </li>
 <li>
-<p><code>rule is-derived ( type base )</code></p>
+<p><a id="bbv2.reference.modules.type.is-derived"></a> <code>rule is-derived ( type base )</code></p>
 <div class="paragraph">
 <p>Returns true if <code>type</code> is equal to <code>base</code> or has <code>base</code> as its direct or
 indirect base.</p>
 </div>
 </li>
 <li>
-<p><code>rule set-generated-target-suffix ( type : properties * : suffix )</code></p>
+<p><a id="bbv2.reference.modules.type.set-generated-target-suffix"></a> <code>rule set-generated-target-suffix ( type : properties * : suffix )</code></p>
 <div class="paragraph">
 <p>Sets a file suffix to be used when generating a target of <code>type</code> with
 the specified properties. Can be called with no properties if no suffix
@@ -6909,21 +6910,21 @@ rule.</p>
 </div>
 </li>
 <li>
-<p><code>rule change-generated-target-suffix ( type : properties * : suffix )</code></p>
+<p><a id="bbv2.reference.modules.type.change-generated-target-suffix"></a> <code>rule change-generated-target-suffix ( type : properties * : suffix )</code></p>
 <div class="paragraph">
 <p>Change the suffix previously registered for this type/properties
 combination. If suffix is not yet specified, sets it.</p>
 </div>
 </li>
 <li>
-<p><code>rule generated-target-suffix ( type : property-set )</code></p>
+<p><a id="bbv2.reference.modules.type.generated-target-suffix"></a> <code>rule generated-target-suffix ( type : property-set )</code></p>
 <div class="paragraph">
 <p>Returns the suffix used when generating a file of <code>type</code> with the given
 properties.</p>
 </div>
 </li>
 <li>
-<p><code>rule set-generated-target-prefix ( type : properties * : prefix )</code></p>
+<p><a id="bbv2.reference.modules.type.set-generated-target-prefix"></a> <code>rule set-generated-target-prefix ( type : properties * : prefix )</code></p>
 <div class="paragraph">
 <p>Sets a target prefix that should be used when generating targets of
 <code>type</code> with the specified properties. Can be called with empty
@@ -6938,21 +6939,21 @@ prefix should be used.</p>
 </div>
 </li>
 <li>
-<p><code>rule change-generated-target-prefix ( type : properties * : prefix )</code></p>
+<p><a id="bbv2.reference.modules.type.change-generated-target-prefix"></a> <code>rule change-generated-target-prefix ( type : properties * : prefix )</code></p>
 <div class="paragraph">
 <p>Change the prefix previously registered for this type/properties
 combination. If prefix is not yet specified, sets it.</p>
 </div>
 </li>
 <li>
-<p><code>rule generated-target-prefix ( type : property-set )</code></p>
+<p><a id="bbv2.reference.modules.type.generated-target-prefix"></a> <code>rule generated-target-prefix ( type : property-set )</code></p>
 <div class="paragraph">
 <p>Returns the prefix used when generating a file of <code>type</code> with the given
 properties.</p>
 </div>
 </li>
 <li>
-<p><code>rule type ( filename )</code></p>
+<p><a id="bbv2.reference.modules.type.type"></a> <code>rule type ( filename )</code></p>
 <div class="paragraph">
 <p>Returns file type given its name. If there are several dots in filename,
 tries each suffix. E.g. for name of "file.so.1.2" suffixes "2", "1", and
@@ -7045,7 +7046,7 @@ target.</p>
 </div>
 </li>
 <li>
-<p><code>rule generate ( property-set )</code></p>
+<p><a id="bbv2.reference.class.abstract-target.generate"></a> <code>rule generate ( property-set )</code></p>
 <div class="paragraph">
 <p>Generates virtual targets for this abstract target using the specified
 properties, unless a different value of some feature is required by the
@@ -7109,7 +7110,7 @@ in a way specific to the derived class.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>rule generate ( property-set )</code></p>
+<p><a id="bbv2.reference.class.project-target.generate"></a> <code>rule generate ( property-set )</code></p>
 <div class="paragraph">
 <p>Overrides
 <a href="#bbv2.reference.class.abstract-target.generate">abstract-target.generate</a>.
@@ -7189,7 +7190,7 @@ top-level target in a Jamfile.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>rule generate ( property-set )</code></p>
+<p><a id="bbv2.reference.class.main-target.generate"></a> <code>rule generate ( property-set )</code></p>
 <div class="paragraph">
 <p>Overrides
 <a href="#bbv2.reference.class.abstract-target.generate">abstract-target.generate</a>.
@@ -7261,7 +7262,7 @@ target is declared.</p>
 </div>
 </li>
 <li>
-<p><code>rule generate ( property-set )</code></p>
+<p><a id="bbv2.reference.class.basic-target.generate"></a> <code>rule generate ( property-set )</code></p>
 <div class="paragraph">
 <p>Overrides
 <a href="#bbv2.reference.class.abstract-target.generate">abstract-target.generate</a>.
@@ -7284,7 +7285,7 @@ method should not be overridden.</p>
 </div>
 </li>
 <li>
-<p><code>rule construct ( name : source-targets * : property-set )</code></p>
+<p><a id="bbv2.reference.class.basic-target.construct"></a> <code>rule construct ( name : source-targets * : property-set )</code></p>
 <div class="paragraph">
 <p>Constructs virtual targets for this abstract target. Returns a
 usage-requirements property-set and a list of virtual targets. Should be
@@ -7433,7 +7434,7 @@ properties in this
 </div>
 </li>
 <li>
-<p><code>rule add ( ps )</code></p>
+<p><a id="bbv2.reference.class.property-set.add"></a> <code>rule add ( ps )</code></p>
 <div class="paragraph">
 <p>Returns a new <a href="#bbv2.reference.class.property-set">property-set</a>
 containing the union of the properties in this
@@ -7463,7 +7464,7 @@ takes a list of properties instead of a
 </div>
 </li>
 <li>
-<p><code>rule refine ( ps )</code></p>
+<p><a id="bbv2.reference.class.property-set.refine"></a> <code>rule refine ( ps )</code></p>
 <div class="paragraph">
 <p>Refines properties by overriding any non-free and non-conditional
 properties for which a different value is specified in <code>ps</code>. Returns the
@@ -7603,9 +7604,9 @@ property. For example, the following example works as expected:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp
-      : &lt;toolset&gt;gcc:&lt;variant&gt;release
-        &lt;variant&gt;release:&lt;define&gt;FOO ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"></span>
+<span class="tok-w">      </span>:<span class="tok-w"> </span>&lt;toolset&gt;gcc:&lt;variant&gt;release<span class="tok-w"></span>
+<span class="tok-w">        </span>&lt;variant&gt;release:&lt;define&gt;FOO<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -7636,7 +7637,7 @@ feature completely overrides the default build directory. For example,</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp : &lt;location&gt;. ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;location&gt;.<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7649,7 +7650,7 @@ project&#8217;s build directory. For example,</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe a : a.cpp : &lt;location-prefix&gt;subdir ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;location-prefix&gt;subdir<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7730,7 +7731,7 @@ build request. We also refer to the attributes of properties, so that an
 <div class="ulist">
 <ul>
 <li>
-<p><em>incidental</em></p>
+<p><a id="bbv2.reference.features.attributes.incidental"></a> <em>incidental</em></p>
 <div class="paragraph">
 <p>Incidental features are assumed not to affect build products at all. As
 a consequence, the build system may use the same file for targets whose
@@ -7742,11 +7743,11 @@ incidental feature.</p>
 <p>Non-incidental features are assumed to affect build products, so the
 files for targets whose build specification differs in non-incidental
 features are placed in different directories as described in
-<a href="#bbv2.reference.buildprocess.targetpath">section_title</a>.</p>
+<a href="#bbv2.reference.buildprocess.targetpath">Target Paths</a>.</p>
 </div>
 </li>
 <li>
-<p><em>propagated</em></p>
+<p><a id="bbv2.reference.features.attributes.propagated"></a> <em>propagated</em></p>
 <div class="paragraph">
 <p>Features of this kind are propagated to dependencies. That is, if a
 <a href="#bbv2.overview.targets.main">main target</a> is built using a
@@ -7758,7 +7759,7 @@ feature is propagated.</p>
 </div>
 </li>
 <li>
-<p><em>free</em></p>
+<p><a id="bbv2.reference.features.attributes.free"></a> <em>free</em></p>
 <div class="paragraph">
 <p>Most features have a finite set of allowed values, and can only take on
 a single value from that set in a given build specification. Free
@@ -7773,7 +7774,7 @@ several preprocessor symbols defined simultaneously:</p>
 </div>
 </li>
 <li>
-<p><em>optional</em></p>
+<p><a id="bbv2.reference.features.attributes.optional"></a> <em>optional</em></p>
 <div class="paragraph">
 <p>An optional feature is a feature that is not required to appear in a
 build specification. Every non-optional non-free feature has a default
@@ -7784,7 +7785,7 @@ in the feature&#8217;s declaration.&#8201;&#8212;&#8201;move this elsewhere - dw
 </div>
 </li>
 <li>
-<p><em>symmetric</em></p>
+<p><a id="bbv2.reference.features.attributes.symmetric"></a> <em>symmetric</em></p>
 <div class="paragraph">
 <p>Normally a feature only generates a subvariant directory when its value
 differs from its default value, leading to an asymmetric subvariant
@@ -7793,7 +7794,7 @@ feature always generates a corresponding subvariant directory.</p>
 </div>
 </li>
 <li>
-<p><em>path</em></p>
+<p><a id="bbv2.reference.features.attributes.path"></a> <em>path</em></p>
 <div class="paragraph">
 <p>The value of a path feature specifies a path. The path is treated as
 relative to the directory of Jamfile where path feature is used and is
@@ -7802,7 +7803,7 @@ from a different directory</p>
 </div>
 </li>
 <li>
-<p><em>implicit</em></p>
+<p><a id="bbv2.reference.features.attributes.implicit"></a> <em>implicit</em></p>
 <div class="paragraph">
 <p>Values of implicit features alone identify the feature. For example, a
 user is not required to write "&lt;toolset&gt;gcc", but can simply write
@@ -7813,7 +7814,7 @@ to avoid possible name clashes.</p>
 </div>
 </li>
 <li>
-<p><em>composite</em></p>
+<p><a id="bbv2.reference.features.attributes.composite"></a> <em>composite</em></p>
 <div class="paragraph">
 <p>Composite features actually correspond to groups of properties. For
 example, a build variant is a composite feature. When generating targets
@@ -7824,7 +7825,7 @@ composite features in a build property set.</p>
 </div>
 </li>
 <li>
-<p><em>dependency</em></p>
+<p><a id="bbv2.reference.features.attributes.dependency"></a> <em>dependency</em></p>
 <div class="paragraph">
 <p>The value of a dependency feature is a target reference. When used for
 building of a main target, the value of dependency feature is treated as
@@ -7852,7 +7853,7 @@ the <code>feature</code> module:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule feature ( name : allowed-values * : attributes * )</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">feature</span><span class="tok-w"> </span>(<span class="tok-w"> </span>name<span class="tok-w"> </span>:<span class="tok-w"> </span>allowed-values<span class="tok-w"> </span>*<span class="tok-w"> </span>:<span class="tok-w"> </span>attributes<span class="tok-w"> </span>*<span class="tok-w"> </span>)<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7901,7 +7902,7 @@ that. Their syntax is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe hello : hello.cpp : &lt;toolset&gt;yfc:&lt;cxxflags&gt;-disable-pointless-warning ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;yfc:&lt;cxxflags&gt;-disable-pointless-warning<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7909,7 +7910,7 @@ that. Their syntax is:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe hello : hello.cpp : &lt;os&gt;NT,&lt;toolset&gt;gcc:&lt;link&gt;static ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>hello<span class="tok-w"> </span>:<span class="tok-w"> </span>hello.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;os&gt;NT,&lt;toolset&gt;gcc:&lt;link&gt;static<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
@@ -7996,7 +7997,7 @@ just slash), because:</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
+<div id="bbv2.reference.targets.references" class="paragraph">
 <p><em>Target reference</em> is used to specify a source target, and may
 additionally specify desired properties for that target. It has this
 syntax:</p>
@@ -8012,7 +8013,7 @@ requested-properties -&gt; property-path</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>exe compiler : compiler.cpp libs/cmdline/&lt;optimization&gt;space ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>compiler<span class="tok-w"> </span>:<span class="tok-w"> </span>compiler.cpp<span class="tok-w"> </span>libs/cmdline/&lt;optimization&gt;space<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8145,7 +8146,7 @@ Jamfile.jam</pre>
 <p>This section explains how to extend Boost.Build to accomodate your local
 requirements&#8201;&#8212;&#8201;primarily to add support for non-standard tools you
 have. Before we start, be sure you have read and understoon the concept
-of metatarget, <a href="#bbv2.overview.concepts">???</a>, which is critical to
+of metatarget, <a href="#bbv2.overview.concepts">Concepts</a>, which is critical to
 understanding the remaining material.</p>
 </div>
 <div class="paragraph">
@@ -8836,7 +8837,7 @@ allow the user to pass any value to the command line parameters for a
 particular tool, if so desired. For example, the <code>&lt;cxxflags&gt;</code> feature
 allows you to pass any command line options to a C++ compiler. The
 <code>&lt;include&gt;</code> feature allows you to pass any string preceded by <code>-I</code> and
-the interpretation is tool-specific. (See <a href="#bbv2.faq.external">???</a>
+the interpretation is tool-specific. (See <a href="#bbv2.faq.external">Can I get capture external program output using a Boost.Jam variable?</a>
 for an example of very smart usage of that feature). Of course one
 should always strive to use portable features, but these are still be
 provided as a backdoor just to make sure Boost.Build does not take away
@@ -9034,7 +9035,8 @@ quite likely that you&#8217;ll want to declare your own and there are two ways
 to do that.</p>
 </div>
 <div class="paragraph">
-<p>The first way applies when your target rule should just produce a target
+<p><a id="bbv2.extending.rules.main-type"></a>The first way applies when your target rule
+should just produce a target
 of specific type. In that case, a rule is already defined for you! When
 you define a new type, Boost.Build automatically defines a corresponding
 rule. The name of the rule is obtained from the name of the type, by
@@ -9200,7 +9202,7 @@ are two ways you can use that value:</p>
 <ul>
 <li>
 <p>Use conditional requirements or indirect conditional requirements. See
-<a href="#bbv2.overview.targets.requirements.conditional">???</a>.</p>
+<a href="#bbv2.overview.targets.requirements.conditional">the section called “Requirements”</a>.</p>
 </li>
 <li>
 <p>Define a custom generator and a custom main target type. The custom
@@ -9943,7 +9945,7 @@ scripts accept these arguments:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>build [toolset]</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span>build <span class="tok-o">[</span>toolset<span class="tok-o">]</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9952,8 +9954,8 @@ success. On Windows platforms from a command console do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cd jam source location
-.\build.bat</pre>
+<pre class="pygments highlight"><code data-lang="bat"><span></span><span class="tok-k">cd</span> jam source location
+.\build.bat</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -9961,8 +9963,8 @@ success. On Windows platforms from a command console do:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>cd jam source location
-sh ./build.sh</pre>
+<pre class="pygments highlight"><code data-lang="shell"><span></span><span class="tok-nb">cd</span> jam <span class="tok-nb">source</span> location
+sh ./build.sh</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10558,7 +10560,7 @@ resulting variable), and 'return' (value of its arguments).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rule rulename { statements }</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">rulename</span><span class="tok-w"> </span>{<span class="tok-w"> </span>statements<span class="tok-w"> </span>}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10566,7 +10568,7 @@ resulting variable), and 'return' (value of its arguments).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>actions [ modifiers ] rulename { commands }</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">actions</span><span class="tok-w"> </span><span class="tok-nf">[</span><span class="tok-w"> </span><span class="tok-nv">modifiers</span><span class="tok-w"> </span><span class="tok-nv">]</span><span class="tok-w"> </span><span class="tok-nv">rulename</span><span class="tok-w"> </span><span class="tok-p">{</span><span class="tok-sh"> commands </span><span class="tok-p">}</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10574,7 +10576,7 @@ resulting variable), and 'return' (value of its arguments).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>rulename field1 : field2 : ... : fieldN ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>rulename<span class="tok-w"> </span>field1<span class="tok-w"> </span>:<span class="tok-w"> </span>field2<span class="tok-w"> </span>:<span class="tok-w"> </span>...<span class="tok-w"> </span>:<span class="tok-w"> </span>fieldN<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10582,7 +10584,7 @@ resulting variable), and 'return' (value of its arguments).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>on target rulename field1 : field2 : ... : fieldN ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">on</span><span class="tok-w"> </span>target<span class="tok-w"> </span>rulename<span class="tok-w"> </span>field1<span class="tok-w"> </span>:<span class="tok-w"> </span>field2<span class="tok-w"> </span>:<span class="tok-w"> </span>...<span class="tok-w"> </span>:<span class="tok-w"> </span>fieldN<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10590,8 +10592,8 @@ resulting variable), and 'return' (value of its arguments).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>[ rulename field1 : field2 : ... : fieldN ]
-[ on target rulename field1 : field2 : ... : fieldN ]</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>[<span class="tok-w"> </span>rulename<span class="tok-w"> </span>field1<span class="tok-w"> </span>:<span class="tok-w"> </span>field2<span class="tok-w"> </span>:<span class="tok-w"> </span>...<span class="tok-w"> </span>:<span class="tok-w"> </span>fieldN<span class="tok-w"> </span>]<span class="tok-w"></span>
+[<span class="tok-w"> </span><span class="tok-k">on</span><span class="tok-w"> </span>target<span class="tok-w"> </span>rulename<span class="tok-w"> </span>field1<span class="tok-w"> </span>:<span class="tok-w"> </span>field2<span class="tok-w"> </span>:<span class="tok-w"> </span>...<span class="tok-w"> </span>:<span class="tok-w"> </span>fieldN<span class="tok-w"> </span>]<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10619,12 +10621,12 @@ replaced by bound versions of the target names. See Binding above.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>$(var) field1 : field2 : ... : fieldN ;
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-si">$(var)</span><span class="tok-w"> </span>field1<span class="tok-w"> </span>:<span class="tok-w"> </span>field2<span class="tok-w"> </span>:<span class="tok-w"> </span>...<span class="tok-w"> </span>:<span class="tok-w"> </span>fieldN<span class="tok-w"> </span>;<span class="tok-w"></span>
 
-on target $(var) field1 : field2 : ... : fieldN ;
+<span class="tok-k">on</span><span class="tok-w"> </span>target<span class="tok-w"> </span><span class="tok-si">$(var)</span><span class="tok-w"> </span>field1<span class="tok-w"> </span>:<span class="tok-w"> </span>field2<span class="tok-w"> </span>:<span class="tok-w"> </span>...<span class="tok-w"> </span>:<span class="tok-w"> </span>fieldN<span class="tok-w"> </span>;<span class="tok-w"></span>
 
-[ $(var) field1 : field2 : ... : fieldN ]
-[ on target $(var) field1 : field2 : ... : fieldN ]</pre>
+[<span class="tok-w"> </span><span class="tok-si">$(var)</span><span class="tok-w"> </span>field1<span class="tok-w"> </span>:<span class="tok-w"> </span>field2<span class="tok-w"> </span>:<span class="tok-w"> </span>...<span class="tok-w"> </span>:<span class="tok-w"> </span>fieldN<span class="tok-w"> </span>]<span class="tok-w"></span>
+[<span class="tok-w"> </span><span class="tok-k">on</span><span class="tok-w"> </span>target<span class="tok-w"> </span><span class="tok-si">$(var)</span><span class="tok-w"> </span>field1<span class="tok-w"> </span>:<span class="tok-w"> </span>field2<span class="tok-w"> </span>:<span class="tok-w"> </span>...<span class="tok-w"> </span>:<span class="tok-w"> </span>fieldN<span class="tok-w"> </span>]<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10734,14 +10736,14 @@ cause <code>b2</code> to exit with an error code:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>### argument error
-# rule report ( pronoun index ?  : state  : names + )
-# called with: ( I 2 foo  : sorry  : Joe Dave Pete )
-# extra argument foo
-### argument error
-# rule report ( pronoun index ?  : state  : names + )
-# called with: ( I 2  : sorry )
-# missing argument names</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-c1">### argument error</span>
+<span class="tok-c1"># rule report ( pronoun index ?  : state  : names + )</span>
+<span class="tok-c1"># called with: ( I 2 foo  : sorry  : Joe Dave Pete )</span>
+<span class="tok-c1"># extra argument foo</span>
+<span class="tok-c1">### argument error</span>
+<span class="tok-c1"># rule report ( pronoun index ?  : state  : names + )</span>
+<span class="tok-c1"># called with: ( I 2  : sorry )</span>
+<span class="tok-c1"># missing argument names</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11372,7 +11374,7 @@ specified on the command line.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>for var in list { statements }</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">for</span><span class="tok-w"> </span>var<span class="tok-w"> </span><span class="tok-k">in</span><span class="tok-w"> </span>list<span class="tok-w"> </span>{<span class="tok-w"> </span>statements<span class="tok-w"> </span>}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11381,8 +11383,8 @@ specified on the command line.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>if cond { statements }
-[ else { statements } ]</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">if</span><span class="tok-w"> </span>cond<span class="tok-w"> </span>{<span class="tok-w"> </span>statements<span class="tok-w"> </span>}<span class="tok-w"></span>
+[<span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span>{<span class="tok-w"> </span>statements<span class="tok-w"> </span>}<span class="tok-w"> </span>]<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11445,7 +11447,7 @@ elements</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>include file ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">include</span><span class="tok-w"> </span>file<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11461,7 +11463,7 @@ files.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>local vars [ = values ] ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">local</span><span class="tok-w"> </span>vars<span class="tok-w"> </span>[<span class="tok-w"> </span>=<span class="tok-w"> </span>values<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11476,7 +11478,7 @@ uninitialized otherwise.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>return values ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">return</span><span class="tok-w"> </span>values<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11485,12 +11487,12 @@ invocation of the rule and returns to the caller.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>switch value
-{
-    case pattern1 : statements ;
-    case pattern2 : statements ;
-    ...
-}</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">switch</span><span class="tok-w"> </span>value<span class="tok-w"></span>
+{<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">case</span><span class="tok-w"> </span>pattern1<span class="tok-w"> </span>:<span class="tok-w"> </span>statements<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span><span class="tok-k">case</span><span class="tok-w"> </span>pattern2<span class="tok-w"> </span>:<span class="tok-w"> </span>statements<span class="tok-w"> </span>;<span class="tok-w"></span>
+<span class="tok-w">    </span>...<span class="tok-w"></span>
+}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11525,7 +11527,7 @@ values may include the following wildcards:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>while cond { statements }</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">while</span><span class="tok-w"> </span>cond<span class="tok-w"> </span>{<span class="tok-w"> </span>statements<span class="tok-w"> </span>}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11534,7 +11536,7 @@ values may include the following wildcards:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>break ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">break</span><span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11542,7 +11544,7 @@ values may include the following wildcards:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>continue ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">continue</span><span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11568,12 +11570,12 @@ specific target.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>variable = elements ;
-variable += elements ;
-variable on targets = elements ;
-variable on targets += elements ;
-variable default = elements ;
-variable ?= elements ;</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>variable<span class="tok-w"> </span>=<span class="tok-w"> </span>elements<span class="tok-w"> </span>;<span class="tok-w"></span>
+variable<span class="tok-w"> </span>+=<span class="tok-w"> </span>elements<span class="tok-w"> </span>;<span class="tok-w"></span>
+variable<span class="tok-w"> </span><span class="tok-k">on</span><span class="tok-w"> </span>targets<span class="tok-w"> </span>=<span class="tok-w"> </span>elements<span class="tok-w"> </span>;<span class="tok-w"></span>
+variable<span class="tok-w"> </span><span class="tok-k">on</span><span class="tok-w"> </span>targets<span class="tok-w"> </span>+=<span class="tok-w"> </span>elements<span class="tok-w"> </span>;<span class="tok-w"></span>
+variable<span class="tok-w"> </span>default<span class="tok-w"> </span>=<span class="tok-w"> </span>elements<span class="tok-w"> </span>;<span class="tok-w"></span>
+variable<span class="tok-w"> </span>?=<span class="tok-w"> </span>elements<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12185,7 +12187,7 @@ to write Jam rules which provide a more elegant module interface.</p>
 <h5 id="jam.language.modules.declaration"><a class="anchor" href="#jam.language.modules.declaration"></a>Declaration</h5>
 <div class="listingblock">
 <div class="content">
-<pre>module expression { ... }</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">module</span><span class="tok-w"> </span><span class="tok-nn">expression</span><span class="tok-w"> </span><span class="tok-p">{</span><span class="tok-w"> </span>...<span class="tok-w"> </span>}<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12279,7 +12281,7 @@ explains the use of <code>$(&gt;)</code> in the peek rule above.</p>
 <h5 id="jam.language.modules.local_rules"><a class="anchor" href="#jam.language.modules.local_rules"></a>Local Rules</h5>
 <div class="listingblock">
 <div class="content">
-<pre>local rule rulename...</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-k">local</span><span class="tok-w"> </span><span class="tok-k">rule</span><span class="tok-w"> </span><span class="tok-nf">rulename...</span><span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -12289,7 +12291,7 @@ the result of:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>[ RULENAMES module-name ]</pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span>[<span class="tok-w"> </span><span class="tok-nb">RULENAMES</span><span class="tok-w"> </span><span class="tok-k">module</span>-name<span class="tok-w"> </span>]<span class="tok-w"></span></code></pre>
 </div>
 </div>
 </div>
