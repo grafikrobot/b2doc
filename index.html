@@ -424,7 +424,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
 .listingblock .pygments .hll { background-color: #ffffcc }
 .listingblock .pygments, .listingblock .pygments code { background: #f0f0f0; }
@@ -731,6 +730,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
+<style>
+.admonitionblock .icon .title {
+font-size: 2.5em;
+text-shadow: 1px 1px 2px rgba(0,0,0,.5); }
+.caution .icon .title { color: rgba(192,51,0,.8); }
+.important .icon .title { color: rgba(192,0,0,.8); }
+.note .icon .title { color: rgba(26,64,128,.8); }
+.tip .icon .title { color: rgba(255,192,0,.8); }
+.warning .icon .title { color: rgba(192,102,0,.8); }
+</style>
 <div class="paragraph">
 <p>Want to learn about Boost.Build features? Start with the
 <a href="#bbv2.tutorial">tutorial</a> and continue with the <a href="#bbv2.overview">overview</a>.
@@ -982,7 +991,7 @@ augment) the build request.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">☀</div>
 </td>
 <td class="content">
 The value of the <code>&lt;include&gt;</code> feature is relative to the location of
@@ -1056,7 +1065,7 @@ layout:</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 When we refer to a “Jamfile,” set in normal type, we mean a file called
@@ -1134,7 +1143,7 @@ reference to another target: a library <code>bar</code> declared in the Jamfile 
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">☀</div>
 </td>
 <td class="content">
 Some other build system have special syntax for listing dependent
@@ -1215,7 +1224,7 @@ are not allowed to assign the same project id to different directories.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">☀</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1314,7 +1323,7 @@ reference to a target and possibly change the properties.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">☀</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -1343,7 +1352,7 @@ to be linked with both <code>core</code> and <code>utils</code>.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 (Note for non-UNIX system). Typically, shared libraries must be
@@ -1390,9 +1399,9 @@ toolset used to build it. We can express this situation using target
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>dummy_demangler.cpp<span class="tok-w"> </span>;<span class="tok-w">                </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>demangler_gcc.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;gcc<span class="tok-w"> </span>;<span class="tok-w">   </span><i class="conum" data-value="2"></i><b>(2)</b>
-<span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>demangler_msvc.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;msvc<span class="tok-w"> </span>;<span class="tok-w"> </span><i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>dummy_demangler.cpp<span class="tok-w"> </span>;<span class="tok-w">                </span><b class="conum">(1)</b>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>demangler_gcc.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;gcc<span class="tok-w"> </span>;<span class="tok-w">   </span><b class="conum">(2)</b>
+<span class="tok-nb">lib</span><span class="tok-w"> </span>demangler<span class="tok-w"> </span>:<span class="tok-w"> </span>demangler_msvc.cpp<span class="tok-w"> </span>:<span class="tok-w"> </span>&lt;toolset&gt;msvc<span class="tok-w"> </span>;<span class="tok-w"> </span><b class="conum">(3)</b></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1684,7 +1693,7 @@ keywords, while <code>a</code> and <code>b</code> are literals.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">⚠</div>
 </td>
 <td class="content">
 All syntax elements, even keywords, must be separated by spaces. For
@@ -1975,7 +1984,7 @@ searched.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">☀</div>
 </td>
 <td class="content">
 You can use the <code>--debug-configuration</code> option to find which
@@ -2141,7 +2150,7 @@ b2 <span class="tok-nv">toolset</span><span class="tok-o">=</span>gcc-5~c++14 st
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">⚠</div>
 </td>
 <td class="content">
 Although the syntax used to specify toolset options is very similar
@@ -2655,21 +2664,19 @@ examples:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>;<span class="tok-w"> </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">glob</span><span class="tok-w"> </span>*.cpp<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"> </span><i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+<pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>;<span class="tok-w"> </span><b class="conum">(1)</b>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>[<span class="tok-w"> </span><span class="tok-nb">glob</span><span class="tok-w"> </span>*.cpp<span class="tok-w"> </span>]<span class="tok-w"> </span>;<span class="tok-w"> </span><b class="conum">(2)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><code>a.cpp</code> is the only source file</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>all <code>.cpp</code> files in this directory are sources</td>
-</tr>
-</table>
+<ol>
+<li>
+<p><code>a.cpp</code> is the only source file</p>
+</li>
+<li>
+<p>all <code>.cpp</code> files in this directory are sources</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>Unless you specify a file with an absolute path, the name is considered
@@ -2690,17 +2697,16 @@ looked up as project name, and then as directory name. For example:</p>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="jam"><span></span><span class="tok-nb">lib</span><span class="tok-w"> </span>helper<span class="tok-w"> </span>:<span class="tok-w"> </span>helper.cpp<span class="tok-w"> </span>;<span class="tok-w"></span>
 <span class="tok-nb">exe</span><span class="tok-w"> </span>a<span class="tok-w"> </span>:<span class="tok-w"> </span>a.cpp<span class="tok-w"> </span>helper<span class="tok-w"> </span>;<span class="tok-w"></span>
-<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>b.cpp<span class="tok-w"> </span>..//utils<span class="tok-w"> </span>;<span class="tok-w"> </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-nb">exe</span><span class="tok-w"> </span>b<span class="tok-w"> </span>:<span class="tok-w"> </span>b.cpp<span class="tok-w"> </span>..//utils<span class="tok-w"> </span>;<span class="tok-w"> </span><b class="conum">(1)</b>
 <span class="tok-nb">exe</span><span class="tok-w"> </span>c<span class="tok-w"> </span>:<span class="tok-w"> </span>c.cpp<span class="tok-w"> </span>/boost/program_options//program_options<span class="tok-w"> </span>;<span class="tok-w"></span></code></pre>
 </div>
 </div>
 <div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Since all project ids start with slash, &#8220;..&#8221; is a directory name.</td>
-</tr>
-</table>
+<ol>
+<li>
+<p>Since all project ids start with slash, &#8220;..&#8221; is a directory name.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>The first exe uses the library defined in the same project. The second
@@ -3034,7 +3040,7 @@ no specific order should be assumed.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 Giving the root project the special name “<code>Jamroot</code>” ensures that
@@ -3067,7 +3073,7 @@ files.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">☀</div>
 </td>
 <td class="content">
 This means that for Boost.Build, you cannot directly obtain a build
@@ -3231,7 +3237,7 @@ automatically try to convert targets of other types.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<div class="title">☀</div>
 </td>
 <td class="content">
 On Windows, if an application uses shared libraries, and both the
@@ -3305,7 +3311,7 @@ of the <code>name</code> and <code>search</code> features is that <code>file</co
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">⚠</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -3368,7 +3374,7 @@ not work. For example:</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 <div class="paragraph">
@@ -3605,7 +3611,7 @@ that matter are
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 (Unix specific) On Unix, executables built using Boost.Build typically
@@ -4311,7 +4317,7 @@ from the <code>common</code> module.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 Runtime debugging is on in debug builds to suit the expectations of
@@ -4604,7 +4610,7 @@ compilers provide a corresponding command-line option.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 Due to some internal details in the current Boost.Build
@@ -4699,7 +4705,7 @@ value is relevant</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 This isn&#8217;t really a conditional, although for most purposes it
@@ -6139,7 +6145,7 @@ place the images generated from LaTex formulae.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">⚠</div>
 </td>
 <td class="content">
 The path is interpreted relative to the current working directory,
@@ -6240,7 +6246,7 @@ code is executed the first time the module is loaded.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 A Jamfile is a special kind of module which is managed by the build
@@ -6265,7 +6271,7 @@ the name of the module.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 <code>$(<em>file</em>)</code> does not contain the full path to the file. If you need
@@ -6330,7 +6336,7 @@ accesses module globals or is a local rule).</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 rules called this way may accept at most 8 parameters.
@@ -6397,7 +6403,7 @@ is supplied, it must have the same number of elements as <code>rules-opt</code>.
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 The <code>import</code> rule is available without qualification in all modules.
@@ -7367,7 +7373,7 @@ usage requirements and a list of virtual targets.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 This function is invoked automatically by
@@ -7444,7 +7450,7 @@ containing the union of the properties in this
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 If <code>ps</code> contains non-free properties that should override the values in
@@ -8181,7 +8187,7 @@ used inside the command line patterns.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">⚠</div>
 </td>
 <td class="content">
 All of the Boost.Jam target-related builtin functions, like
@@ -9482,7 +9488,7 @@ for finer control:</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 This entry is specific to Unix systems.
@@ -9909,7 +9915,7 @@ Hello!</code></pre>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 The actual paths in the <code>bin</code> sub-directory will depend on your
@@ -9981,7 +9987,7 @@ is readily available in the <code>PATH</code>.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 The toolset used to build Boost.Jam is independent of the toolsets used
@@ -10865,7 +10871,7 @@ included files may not exist. For example, if an <code>#include</code> is within
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">⚠</div>
 </td>
 <td class="content">
 For targets with build actions: if their build actions exit with a
@@ -10972,7 +10978,7 @@ a directory named exception in the header search path.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<div class="title">⚠</div>
 </td>
 <td class="content">
 This is currently not fully implemented.
@@ -12162,7 +12168,7 @@ output reflects the use of the <code>-pX</code> option.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 If both variables are set for a target both are called, first
@@ -12324,7 +12330,7 @@ the global module are returned.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 This includes any local variables in rules from the call stack which
@@ -12438,7 +12444,7 @@ system.</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">ℹ</div>
 </td>
 <td class="content">
 Though it won&#8217;t affect rules that are currently executing until they
